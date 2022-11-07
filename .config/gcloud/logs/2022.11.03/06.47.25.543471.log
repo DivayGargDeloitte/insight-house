@@ -1,0 +1,22 @@
+2022-11-03 06:47:25,544 DEBUG    root            Loaded Command Group: ['gcloud', 'auth']
+2022-11-03 06:47:25,547 DEBUG    root            Loaded Command Group: ['gcloud', 'auth', 'configure_docker']
+2022-11-03 06:47:25,549 DEBUG    root            Running [gcloud.auth.configure-docker] with arguments: [REGISTRIES: "us-central1-docker.pkg.dev"]
+2022-11-03 06:47:25,580 WARNING  root            Your config file at [/home/jupyter/.docker/config.json] contains these credential helper entries:
+
+{
+  "credHelpers": {
+    "gcr.io": "gcloud",
+    "us.gcr.io": "gcloud",
+    "eu.gcr.io": "gcloud",
+    "asia.gcr.io": "gcloud",
+    "staging-k8s.gcr.io": "gcloud",
+    "marketplace.gcr.io": "gcloud"
+  }
+}
+2022-11-03 06:47:25,581 INFO     ___FILE_ONLY___ Adding credentials for: us-central1-docker.pkg.dev
+
+2022-11-03 06:48:22,421 INFO     ___FILE_ONLY___ 
+
+Command killed by keyboard interrupt
+
+
