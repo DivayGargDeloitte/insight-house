@@ -1,0 +1,39 @@
+2022-11-25 02:17:44,490 DEBUG    root            Loaded Command Group: ['gcloud', 'components']
+2022-11-25 02:17:44,493 DEBUG    root            Loaded Command Group: ['gcloud', 'components', 'install']
+2022-11-25 02:17:44,495 DEBUG    root            Running [gcloud.components.install] with arguments: [COMPONENT-IDS:1: "['kubectl']"]
+2022-11-25 02:17:44,508 DEBUG    root            (gcloud.components.install) 
+You cannot perform this action because the Google Cloud CLI component manager 
+is disabled for this installation. You can run the following command 
+to achieve the same result for this installation: 
+
+sudo apt-get install kubectl
+
+Traceback (most recent call last):
+  File "/usr/lib/google-cloud-sdk/lib/googlecloudsdk/calliope/cli.py", line 987, in Execute
+    resources = calliope_command.Run(cli=self, args=args)
+  File "/usr/lib/google-cloud-sdk/lib/googlecloudsdk/calliope/backend.py", line 807, in Run
+    resources = command_instance.Run(args)
+  File "/usr/lib/google-cloud-sdk/lib/surface/components/install.py", line 90, in Run
+    update_manager.Install(
+  File "/usr/lib/google-cloud-sdk/lib/googlecloudsdk/core/updater/update_manager.py", line 947, in Install
+    return self.Update(
+  File "/usr/lib/google-cloud-sdk/lib/googlecloudsdk/core/updater/update_manager.py", line 983, in Update
+    self._CheckIfDisabledAndThrowError(
+  File "/usr/lib/google-cloud-sdk/lib/googlecloudsdk/core/updater/update_manager.py", line 609, in _CheckIfDisabledAndThrowError
+    raise UpdaterDisabledError(mapping_message)
+googlecloudsdk.core.updater.update_manager.UpdaterDisabledError: 
+You cannot perform this action because the Google Cloud CLI component manager 
+is disabled for this installation. You can run the following command 
+to achieve the same result for this installation: 
+
+sudo apt-get install kubectl
+
+
+2022-11-25 02:17:44,510 ERROR    root            (gcloud.components.install) 
+You cannot perform this action because the Google Cloud CLI component manager 
+is disabled for this installation. You can run the following command 
+to achieve the same result for this installation: 
+
+sudo apt-get install kubectl
+
+

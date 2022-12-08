@@ -1,0 +1,109 @@
+stages:
+  - churn_container_images
+  - compile_mtn_churn_eda_pipeline
+  - upload_mtn_churn_eda_pipeline_kfp
+  
+default:
+  image: google/cloud-sdk:latest
+  services:
+   - name: docker:19.03.12-dind
+   - name: registry.hub.docker.com/library/docker:19.03.12-dind
+     alias: docker
+  before_script:
+    - base64 -d $IMAGE_ACCESSOR > image_accessor.json
+    - gcloud auth activate-service-account --key-file $CI_PROJECT_DIR/image_accessor.json
+    - gcloud auth configure-docker
+  
+variables:
+    DOCKER_HOST: tcp://docker:2375/
+    DOCKER_TLS_CERTDIR: ""
+
+deploy_eda_image:
+  stage: churn_container_images
+  only:
+    refs:
+      - master
+    changes:
+      - data_preparation/*
+
+  inherit:
+    default: True
+    variables: True
+  script:
+    - cd data_preparation
+    - docker build -t latest .
+    - docker tag latest eu.gcr.io/$ADAM_MANCO_PROJECT_ID/$CHURN_DATA_ANALYSIS_IMAGE
+    - docker push eu.gcr.io/$ADAM_MANCO_PROJECT_ID/$CHURN_DATA_ANALYSIS_IMAGE
+    - base64 -d $SERVICE_ACCOUNT > service_account.json
+    - gcloud auth activate-service-account --key-file $CI_PROJECT_DIR/data_preparation/service_account.json
+    - gcloud auth configure-docker
+    - docker tag latest eu.gcr.io/$INTERNAL_PROJECT_ID/$CHURN_DATA_ANALYSIS_IMAGE
+    - docker push eu.gcr.io/$INTERNAL_PROJECT_ID/$CHURN_DATA_ANALYSIS_IMAGE
+
+
+compile_mtn_churn_eda_pipeline:
+  stage: compile_mtn_churn_eda_pipeline
+  only:
+    refs:
+      - master
+    changes:
+      - pipeline/*
+  image: eu.gcr.io/$ADAM_MANCO_PROJECT_ID/$KFP_CLI:latest
+
+  script:
+    - cd pipeline
+    - dsl-compile --py  pipeline_data_analysis.py --output $PIPELINE_ARTIFACTS
+
+  artifacts:
+    paths:
+      - $CI_PROJECT_DIR/pipeline/$PIPELINE_ARTIFACTS
+
+  variables:
+    DATA_PREPARATION_IMAGE: eu.gcr.io/$INTERNAL_PROJECT_ID/$CHURN_DATA_ANALYSIS_IMAGE
+
+upload_mtn_churn_eda_pipeline_kfp:    
+  stage: upload_mtn_churn_eda_pipeline_kfp
+  only:
+    refs:
+      - master
+    changes:
+      - pipeline/*
+  image: google/cloud-sdk:latest
+  dependencies:
+    - compile_mtn_churn_eda_pipeline
+  before_script:
+    - base64 -d $SERVICE_ACCOUNT > service_account.json
+    - gcloud auth activate-service-account --key-file $CI_PROJECT_DIR/service_account.json
+    - gcloud config set project $INTERNAL_PROJECT_ID
+    - gcloud config set compute/zone $ZONE
+    - gcloud config set compute/region $REGION
+    - git config --global user.email $SERVICE_ACCOUNT_EMAIL
+    - git config --global user.name "Service Account"
+
+  script:
+    # Create cloudbuild.yaml file
+    - cat > cloudbuild.yaml 
+    - echo "steps:" > cloudbuild.yaml
+    - echo -n "- name:" >> cloudbuild.yaml
+    - echo " 'eu.gcr.io/$INTERNAL_PROJECT_ID/$KFP_CLI'" >> cloudbuild.yaml
+    - echo "  args:" >> cloudbuild.yaml
+    - echo "    - '-c'" >> cloudbuild.yaml
+    - echo "    - |" >> cloudbuild.yaml
+    - echo "      python3 Run_pipeline.py -ENDPOINT $INTERNAL_KUBEFLOW_URL -pipeline_file_name $PIPELINE_ARTIFACTS -pipeline_name mtn_sa_churn_eda_pipeline" >> cloudbuild.yaml
+    # Push files to repo
+    - gcloud init && git config --global credential.https://source.developers.google.com.helper gcloud.sh
+    - if git ls-remote https://source.developers.google.com/p/$INTERNAL_PROJECT_ID/r/kubeflow-upload-mtn-churn-eda-pipeline-yaml-file ; then echo "repo is there."; else gcloud source repos create kubeflow-upload-mtn-churn-eda-pipeline-yaml-file; fi
+    - gcloud source repos clone kubeflow-upload-mtn-churn-eda-pipeline-yaml-file --project=$INTERNAL_PROJECT_ID
+    - cp $CI_PROJECT_DIR/pipeline/$PIPELINE_ARTIFACTS kubeflow-upload-mtn-churn-eda-pipeline-yaml-file
+    - cp cloudbuild.yaml kubeflow-upload-mtn-churn-eda-pipeline-yaml-file
+    - cp $CI_PROJECT_DIR/default_pipeline_run/__init__.py kubeflow-upload-mtn-churn-eda-pipeline-yaml-file
+    - cp $CI_PROJECT_DIR/default_pipeline_run/Run_pipeline.py kubeflow-upload-mtn-churn-eda-pipeline-yaml-file
+    - cd kubeflow-upload-mtn-churn-eda-pipeline-yaml-file
+    - git remote add google https://source.developers.google.com/p/$INTERNAL_PROJECT_ID/r/kubeflow-upload-mtn-churn-eda-pipeline-yaml-file
+    - git add .
+    - git commit -m "from GitLab"
+    - git push --all google
+
+  artifacts:
+    paths:
+      - $CI_PROJECT_DIR/cloudbuild.yaml

@@ -1,0 +1,50 @@
+2022-11-14 13:20:28,836 DEBUG    root            Loaded Command Group: ['gcloud', 'init']
+2022-11-14 13:20:28,839 DEBUG    root            Running [gcloud.init] with arguments: []
+2022-11-14 13:20:28,839 INFO     ___FILE_ONLY___ Welcome! This command will take you through the configuration of gcloud.
+
+
+2022-11-14 13:20:28,841 INFO     ___FILE_ONLY___ Settings from your current configuration [default] are:
+
+2022-11-14 13:20:28,848 INFO     ___FILE_ONLY___ core:
+  account: 554650739751-compute@developer.gserviceaccount.com
+  disable_usage_reporting: 'True'
+  project: insight-tool-321814
+
+2022-11-14 13:20:28,848 INFO     ___FILE_ONLY___ 
+
+2022-11-14 13:20:39,881 INFO     ___FILE_ONLY___ Your current configuration has been set to: [default]
+
+
+2022-11-14 13:20:39,881 INFO     ___FILE_ONLY___ You can skip diagnostics next time by using the following flag:
+
+2022-11-14 13:20:39,881 INFO     ___FILE_ONLY___   gcloud init --skip-diagnostics
+
+
+2022-11-14 13:20:39,881 INFO     ___FILE_ONLY___ Network diagnostic detects and fixes local network connection issues.
+
+2022-11-14 13:20:39,882 INFO     ___FILE_ONLY___ Checking network connection...
+2022-11-14 13:20:40,163 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): accounts.google.com:443
+2022-11-14 13:20:40,197 DEBUG    urllib3.connectionpool https://accounts.google.com:443 "GET / HTTP/1.1" 302 338
+2022-11-14 13:20:40,245 DEBUG    urllib3.connectionpool https://accounts.google.com:443 "GET /ServiceLogin?passive=1209600&continue=https%3A%2F%2Faccounts.google.com%2F&followup=https%3A%2F%2Faccounts.google.com%2F HTTP/1.1" 302 523
+2022-11-14 13:20:40,306 DEBUG    urllib3.connectionpool https://accounts.google.com:443 "GET /v3/signin/identifier?dsh=S50836733%3A1668432040229053&continue=https%3A%2F%2Faccounts.google.com%2F&followup=https%3A%2F%2Faccounts.google.com%2F&passive=1209600&flowName=WebLiteSignIn&flowEntry=ServiceLogin&ifkv=ARgdvAtu1u8t1rLUbHXWVZDtXd7TAtJ397C0FVZdW_Kxl3iY-ynm-NOFATkIFyYdEVCCTsj2ssTF HTTP/1.1" 200 None
+2022-11-14 13:20:40,383 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudresourcemanager.googleapis.com:443
+2022-11-14 13:20:40,401 DEBUG    urllib3.connectionpool https://cloudresourcemanager.googleapis.com:443 "GET /v1beta1/projects HTTP/1.1" 401 None
+2022-11-14 13:20:40,404 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+2022-11-14 13:20:40,418 DEBUG    urllib3.connectionpool https://www.googleapis.com:443 "GET /auth/cloud-platform HTTP/1.1" 200 14
+2022-11-14 13:20:40,421 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): dl.google.com:443
+2022-11-14 13:20:40,435 DEBUG    urllib3.connectionpool https://dl.google.com:443 "GET /dl/cloudsdk/channels/rapid/components-2.json HTTP/1.1" 200 203446
+2022-11-14 13:20:40,484 INFO     ___FILE_ONLY___ Reachability Check passed.
+
+2022-11-14 13:20:40,485 INFO     ___FILE_ONLY___ Network diagnostic passed (1/1 checks passed).
+
+
+2022-11-14 13:20:46,175 DEBUG    root            Loaded Command Group: ['gcloud', 'auth']
+2022-11-14 13:20:46,295 DEBUG    root            Loaded Command Group: ['gcloud', 'auth', 'login']
+2022-11-14 13:20:46,297 INFO     root            Executing: [gcloud auth login --force --brief]
+2022-11-14 13:20:46,299 DEBUG    root            Running [gcloud.auth.login] with arguments: [--brief: "True", --force: "True"]
+2022-11-14 13:20:54,305 DEBUG    requests_oauthlib.oauth2_session Generated new state N5tDvEtJygNV8YnahdW5JCtynYzZuZ.
+2022-11-14 13:20:54,306 INFO     ___FILE_ONLY___ Go to the following link in your browser:
+
+    https://accounts.google.com/o/oauth2/auth?response_type=code&client_id=32555940559.apps.googleusercontent.com&redirect_uri=https%3A%2F%2Fsdk.cloud.google.com%2Fauthcode.html&scope=openid+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloud-platform+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fappengine.admin+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fsqlservice.login+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcompute+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Faccounts.reauth&state=N5tDvEtJygNV8YnahdW5JCtynYzZuZ&prompt=consent&access_type=offline&code_challenge=aDMM1vysO1cdplNaTinGNqPp_cM-I_uf9Kp7dzJa8nU&code_challenge_method=S256
+
+

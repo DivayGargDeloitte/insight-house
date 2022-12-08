@@ -1,0 +1,5 @@
+2022-11-24 14:34:53,308 DEBUG    root            Loaded Command Group: ['gcloud', 'auth']
+2022-11-24 14:34:53,310 DEBUG    root            Loaded Command Group: ['gcloud', 'auth', 'git_helper']
+2022-11-24 14:34:53,313 DEBUG    root            Running [gcloud.auth.git-helper] with arguments: [--ignore-unknown: "True", METHOD: "store"]
+2022-11-24 14:34:53,314 INFO     root            Display format: "default"
+2022-11-24 14:34:53,314 DEBUG    root            SDK update checks are disabled.

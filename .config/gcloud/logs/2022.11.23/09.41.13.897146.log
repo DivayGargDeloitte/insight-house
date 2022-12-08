@@ -1,0 +1,16 @@
+2022-11-23 09:41:13,897 DEBUG    root            Loaded Command Group: ['gcloud', 'auth']
+2022-11-23 09:41:13,900 DEBUG    root            Loaded Command Group: ['gcloud', 'auth', 'docker_helper']
+2022-11-23 09:41:13,902 DEBUG    root            Running [gcloud.auth.docker-helper] with arguments: [METHOD: "get"]
+2022-11-23 09:41:13,907 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/554650739751-compute@developer.gserviceaccount.com/?recursive=true
+2022-11-23 09:41:13,909 DEBUG    urllib3.connectionpool Starting new HTTP connection (1): metadata.google.internal:80
+2022-11-23 09:41:13,910 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/554650739751-compute@developer.gserviceaccount.com/?recursive=true HTTP/1.1" 200 155
+2022-11-23 09:41:13,911 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/554650739751-compute@developer.gserviceaccount.com/token
+2022-11-23 09:41:13,913 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/554650739751-compute@developer.gserviceaccount.com/token HTTP/1.1" 200 267
+2022-11-23 09:41:13,922 INFO     root            Display format: "json"
+2022-11-23 09:41:13,923 INFO     ___FILE_ONLY___ {
+  "Secret": "ya29.c.b0Aa9VdymtPGksQy3b60YKYAoe1W2_x_WMZZQoNeypo7D7L87V1CFYzqqfW0lDeX4aj3Yj0oqstqeYdjJOAniFdwL6O6e-ADgojzhiDsfy_vt_I-FDhrxiFniAv12E57tVKvNs1sXhCIQ0s3xgNwtr_YPKTIwBFmc_dDmAj0iI2WqZK-Uxkhz3Yec3KfHxCoDK5kZLjVdgktw............................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................",
+  "Username": "_dcgcloud_token"
+}
+2022-11-23 09:41:13,923 INFO     ___FILE_ONLY___ 
+
+2022-11-23 09:41:13,923 DEBUG    root            SDK update checks are disabled.

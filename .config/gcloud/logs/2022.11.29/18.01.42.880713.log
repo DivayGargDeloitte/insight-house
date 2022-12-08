@@ -1,0 +1,119 @@
+2022-11-29 18:01:42,882 DEBUG    root            Loaded Command Group: ['gcloud', 'functions']
+2022-11-29 18:01:42,940 DEBUG    root            Loaded Command Group: ['gcloud', 'functions', 'deploy']
+2022-11-29 18:01:42,968 DEBUG    root            Running [gcloud.functions.deploy] with arguments: [--allow-unauthenticated: "True", --entry-point: "hello_gcs", --region: "us-central1", --runtime: "python37", --source: "https://source.developers.google.com/projects/insight-tool-321814/repos/House-mlops/moveable-aliases/main", --trigger-bucket: "gs://lifesight_house/", NAME: "funtdeploy"]
+2022-11-29 18:01:42,975 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/554650739751-compute@developer.gserviceaccount.com/?recursive=true
+2022-11-29 18:01:42,978 DEBUG    urllib3.connectionpool Starting new HTTP connection (1): metadata.google.internal:80
+2022-11-29 18:01:42,979 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/554650739751-compute@developer.gserviceaccount.com/?recursive=true HTTP/1.1" 200 155
+2022-11-29 18:01:42,980 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/554650739751-compute@developer.gserviceaccount.com/token
+2022-11-29 18:01:42,983 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/554650739751-compute@developer.gserviceaccount.com/token HTTP/1.1" 200 267
+2022-11-29 18:01:42,999 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/554650739751-compute@developer.gserviceaccount.com/?recursive=true
+2022-11-29 18:01:43,001 DEBUG    urllib3.connectionpool Starting new HTTP connection (1): metadata.google.internal:80
+2022-11-29 18:01:43,003 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/554650739751-compute@developer.gserviceaccount.com/?recursive=true HTTP/1.1" 200 155
+2022-11-29 18:01:43,004 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/554650739751-compute@developer.gserviceaccount.com/token
+2022-11-29 18:01:43,006 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/554650739751-compute@developer.gserviceaccount.com/token HTTP/1.1" 200 267
+2022-11-29 18:01:43,013 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudfunctions.googleapis.com:443
+2022-11-29 18:01:43,212 DEBUG    urllib3.connectionpool https://cloudfunctions.googleapis.com:443 "GET /v1/projects/insight-tool-321814/locations/us-central1/functions/funtdeploy?alt=json HTTP/1.1" 404 None
+2022-11-29 18:01:43,221 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/554650739751-compute@developer.gserviceaccount.com/?recursive=true
+2022-11-29 18:01:43,222 DEBUG    urllib3.connectionpool Starting new HTTP connection (1): metadata.google.internal:80
+2022-11-29 18:01:43,224 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/554650739751-compute@developer.gserviceaccount.com/?recursive=true HTTP/1.1" 200 155
+2022-11-29 18:01:43,225 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/554650739751-compute@developer.gserviceaccount.com/token
+2022-11-29 18:01:43,227 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/554650739751-compute@developer.gserviceaccount.com/token HTTP/1.1" 200 267
+2022-11-29 18:01:43,341 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): serviceusage.googleapis.com:443
+2022-11-29 18:01:43,793 DEBUG    urllib3.connectionpool https://serviceusage.googleapis.com:443 "GET /v1/projects/insight-tool-321814/services/cloudbuild.googleapis.com?alt=json HTTP/1.1" 200 None
+2022-11-29 18:01:43,852 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/554650739751-compute@developer.gserviceaccount.com/?recursive=true
+2022-11-29 18:01:43,854 DEBUG    urllib3.connectionpool Starting new HTTP connection (1): metadata.google.internal:80
+2022-11-29 18:01:43,856 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/554650739751-compute@developer.gserviceaccount.com/?recursive=true HTTP/1.1" 200 155
+2022-11-29 18:01:43,857 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/554650739751-compute@developer.gserviceaccount.com/token
+2022-11-29 18:01:43,860 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/554650739751-compute@developer.gserviceaccount.com/token HTTP/1.1" 200 267
+2022-11-29 18:01:43,869 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/554650739751-compute@developer.gserviceaccount.com/?recursive=true
+2022-11-29 18:01:43,871 DEBUG    urllib3.connectionpool Starting new HTTP connection (1): metadata.google.internal:80
+2022-11-29 18:01:43,873 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/554650739751-compute@developer.gserviceaccount.com/?recursive=true HTTP/1.1" 200 155
+2022-11-29 18:01:43,873 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/554650739751-compute@developer.gserviceaccount.com/token
+2022-11-29 18:01:43,876 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/554650739751-compute@developer.gserviceaccount.com/token HTTP/1.1" 200 267
+2022-11-29 18:01:43,882 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/554650739751-compute@developer.gserviceaccount.com/?recursive=true
+2022-11-29 18:01:43,884 DEBUG    urllib3.connectionpool Starting new HTTP connection (1): metadata.google.internal:80
+2022-11-29 18:01:43,886 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/554650739751-compute@developer.gserviceaccount.com/?recursive=true HTTP/1.1" 200 155
+2022-11-29 18:01:43,887 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/554650739751-compute@developer.gserviceaccount.com/token
+2022-11-29 18:01:43,890 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/554650739751-compute@developer.gserviceaccount.com/token HTTP/1.1" 200 267
+2022-11-29 18:01:43,897 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudfunctions.googleapis.com:443
+2022-11-29 18:01:44,331 DEBUG    urllib3.connectionpool https://cloudfunctions.googleapis.com:443 "POST /v1/projects/insight-tool-321814/locations/us-central1/functions?alt=json HTTP/1.1" 200 None
+2022-11-29 18:01:44,340 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/554650739751-compute@developer.gserviceaccount.com/?recursive=true
+2022-11-29 18:01:44,342 DEBUG    urllib3.connectionpool Starting new HTTP connection (1): metadata.google.internal:80
+2022-11-29 18:01:44,344 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/554650739751-compute@developer.gserviceaccount.com/?recursive=true HTTP/1.1" 200 155
+2022-11-29 18:01:44,344 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/554650739751-compute@developer.gserviceaccount.com/token
+2022-11-29 18:01:44,347 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/554650739751-compute@developer.gserviceaccount.com/token HTTP/1.1" 200 268
+2022-11-29 18:01:44,362 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/554650739751-compute@developer.gserviceaccount.com/?recursive=true
+2022-11-29 18:01:44,364 DEBUG    urllib3.connectionpool Starting new HTTP connection (1): metadata.google.internal:80
+2022-11-29 18:01:44,366 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/554650739751-compute@developer.gserviceaccount.com/?recursive=true HTTP/1.1" 200 155
+2022-11-29 18:01:44,367 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/554650739751-compute@developer.gserviceaccount.com/token
+2022-11-29 18:01:44,370 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/554650739751-compute@developer.gserviceaccount.com/token HTTP/1.1" 200 268
+2022-11-29 18:01:44,375 INFO     ___FILE_ONLY___ Deploying function (may take a while - up to 2 minutes)...
+2022-11-29 18:01:44,377 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudfunctions.googleapis.com:443
+2022-11-29 18:01:44,551 DEBUG    urllib3.connectionpool https://cloudfunctions.googleapis.com:443 "GET /v1/operations/aW5zaWdodC10b29sLTMyMTgxNC91cy1jZW50cmFsMS9mdW50ZGVwbG95L2VDZUtoTU5xT1dJ?alt=json HTTP/1.1" 200 None
+2022-11-29 18:01:46,106 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudfunctions.googleapis.com:443
+2022-11-29 18:01:46,375 DEBUG    urllib3.connectionpool https://cloudfunctions.googleapis.com:443 "GET /v1/operations/aW5zaWdodC10b29sLTMyMTgxNC91cy1jZW50cmFsMS9mdW50ZGVwbG95L2VDZUtoTU5xT1dJ?alt=json HTTP/1.1" 200 None
+2022-11-29 18:01:48,226 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudfunctions.googleapis.com:443
+2022-11-29 18:01:48,378 DEBUG    urllib3.connectionpool https://cloudfunctions.googleapis.com:443 "GET /v1/operations/aW5zaWdodC10b29sLTMyMTgxNC91cy1jZW50cmFsMS9mdW50ZGVwbG95L2VDZUtoTU5xT1dJ?alt=json HTTP/1.1" 200 None
+2022-11-29 18:01:48,384 INFO     ___FILE_ONLY___ 
+For Cloud Build Logs, visit: https://console.cloud.google.com/cloud-build/builds;region=us-central1/ee469dc5-ae87-4a44-969f-1c9ac765fe0d?project=554650739751
+
+2022-11-29 18:01:50,025 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudfunctions.googleapis.com:443
+2022-11-29 18:01:50,275 DEBUG    urllib3.connectionpool https://cloudfunctions.googleapis.com:443 "GET /v1/operations/aW5zaWdodC10b29sLTMyMTgxNC91cy1jZW50cmFsMS9mdW50ZGVwbG95L2VDZUtoTU5xT1dJ?alt=json HTTP/1.1" 200 None
+2022-11-29 18:01:52,202 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudfunctions.googleapis.com:443
+2022-11-29 18:01:52,484 DEBUG    urllib3.connectionpool https://cloudfunctions.googleapis.com:443 "GET /v1/operations/aW5zaWdodC10b29sLTMyMTgxNC91cy1jZW50cmFsMS9mdW50ZGVwbG95L2VDZUtoTU5xT1dJ?alt=json HTTP/1.1" 200 None
+2022-11-29 18:01:54,078 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudfunctions.googleapis.com:443
+2022-11-29 18:01:54,227 DEBUG    urllib3.connectionpool https://cloudfunctions.googleapis.com:443 "GET /v1/operations/aW5zaWdodC10b29sLTMyMTgxNC91cy1jZW50cmFsMS9mdW50ZGVwbG95L2VDZUtoTU5xT1dJ?alt=json HTTP/1.1" 200 None
+2022-11-29 18:01:55,829 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudfunctions.googleapis.com:443
+2022-11-29 18:01:55,973 DEBUG    urllib3.connectionpool https://cloudfunctions.googleapis.com:443 "GET /v1/operations/aW5zaWdodC10b29sLTMyMTgxNC91cy1jZW50cmFsMS9mdW50ZGVwbG95L2VDZUtoTU5xT1dJ?alt=json HTTP/1.1" 200 None
+2022-11-29 18:01:57,397 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudfunctions.googleapis.com:443
+2022-11-29 18:01:57,547 DEBUG    urllib3.connectionpool https://cloudfunctions.googleapis.com:443 "GET /v1/operations/aW5zaWdodC10b29sLTMyMTgxNC91cy1jZW50cmFsMS9mdW50ZGVwbG95L2VDZUtoTU5xT1dJ?alt=json HTTP/1.1" 200 None
+2022-11-29 18:01:58,827 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudfunctions.googleapis.com:443
+2022-11-29 18:01:59,069 DEBUG    urllib3.connectionpool https://cloudfunctions.googleapis.com:443 "GET /v1/operations/aW5zaWdodC10b29sLTMyMTgxNC91cy1jZW50cmFsMS9mdW50ZGVwbG95L2VDZUtoTU5xT1dJ?alt=json HTTP/1.1" 200 None
+2022-11-29 18:02:00,385 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudfunctions.googleapis.com:443
+2022-11-29 18:02:00,555 DEBUG    urllib3.connectionpool https://cloudfunctions.googleapis.com:443 "GET /v1/operations/aW5zaWdodC10b29sLTMyMTgxNC91cy1jZW50cmFsMS9mdW50ZGVwbG95L2VDZUtoTU5xT1dJ?alt=json HTTP/1.1" 200 None
+2022-11-29 18:02:02,107 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudfunctions.googleapis.com:443
+2022-11-29 18:02:02,285 DEBUG    urllib3.connectionpool https://cloudfunctions.googleapis.com:443 "GET /v1/operations/aW5zaWdodC10b29sLTMyMTgxNC91cy1jZW50cmFsMS9mdW50ZGVwbG95L2VDZUtoTU5xT1dJ?alt=json HTTP/1.1" 200 None
+2022-11-29 18:02:03,567 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudfunctions.googleapis.com:443
+2022-11-29 18:02:03,694 DEBUG    urllib3.connectionpool https://cloudfunctions.googleapis.com:443 "GET /v1/operations/aW5zaWdodC10b29sLTMyMTgxNC91cy1jZW50cmFsMS9mdW50ZGVwbG95L2VDZUtoTU5xT1dJ?alt=json HTTP/1.1" 200 None
+2022-11-29 18:02:05,063 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudfunctions.googleapis.com:443
+2022-11-29 18:02:05,213 DEBUG    urllib3.connectionpool https://cloudfunctions.googleapis.com:443 "GET /v1/operations/aW5zaWdodC10b29sLTMyMTgxNC91cy1jZW50cmFsMS9mdW50ZGVwbG95L2VDZUtoTU5xT1dJ?alt=json HTTP/1.1" 200 None
+2022-11-29 18:02:06,939 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudfunctions.googleapis.com:443
+2022-11-29 18:02:07,108 DEBUG    urllib3.connectionpool https://cloudfunctions.googleapis.com:443 "GET /v1/operations/aW5zaWdodC10b29sLTMyMTgxNC91cy1jZW50cmFsMS9mdW50ZGVwbG95L2VDZUtoTU5xT1dJ?alt=json HTTP/1.1" 200 None
+2022-11-29 18:02:08,355 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudfunctions.googleapis.com:443
+2022-11-29 18:02:08,476 DEBUG    urllib3.connectionpool https://cloudfunctions.googleapis.com:443 "GET /v1/operations/aW5zaWdodC10b29sLTMyMTgxNC91cy1jZW50cmFsMS9mdW50ZGVwbG95L2VDZUtoTU5xT1dJ?alt=json HTTP/1.1" 200 None
+2022-11-29 18:02:10,076 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudfunctions.googleapis.com:443
+2022-11-29 18:02:10,229 DEBUG    urllib3.connectionpool https://cloudfunctions.googleapis.com:443 "GET /v1/operations/aW5zaWdodC10b29sLTMyMTgxNC91cy1jZW50cmFsMS9mdW50ZGVwbG95L2VDZUtoTU5xT1dJ?alt=json HTTP/1.1" 200 None
+2022-11-29 18:02:11,441 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudfunctions.googleapis.com:443
+2022-11-29 18:02:11,588 DEBUG    urllib3.connectionpool https://cloudfunctions.googleapis.com:443 "GET /v1/operations/aW5zaWdodC10b29sLTMyMTgxNC91cy1jZW50cmFsMS9mdW50ZGVwbG95L2VDZUtoTU5xT1dJ?alt=json HTTP/1.1" 200 None
+2022-11-29 18:02:13,263 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudfunctions.googleapis.com:443
+2022-11-29 18:02:13,397 DEBUG    urllib3.connectionpool https://cloudfunctions.googleapis.com:443 "GET /v1/operations/aW5zaWdodC10b29sLTMyMTgxNC91cy1jZW50cmFsMS9mdW50ZGVwbG95L2VDZUtoTU5xT1dJ?alt=json HTTP/1.1" 200 None
+2022-11-29 18:02:15,234 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudfunctions.googleapis.com:443
+2022-11-29 18:02:15,499 DEBUG    urllib3.connectionpool https://cloudfunctions.googleapis.com:443 "GET /v1/operations/aW5zaWdodC10b29sLTMyMTgxNC91cy1jZW50cmFsMS9mdW50ZGVwbG95L2VDZUtoTU5xT1dJ?alt=json HTTP/1.1" 200 None
+2022-11-29 18:02:16,523 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudfunctions.googleapis.com:443
+2022-11-29 18:02:16,678 DEBUG    urllib3.connectionpool https://cloudfunctions.googleapis.com:443 "GET /v1/operations/aW5zaWdodC10b29sLTMyMTgxNC91cy1jZW50cmFsMS9mdW50ZGVwbG95L2VDZUtoTU5xT1dJ?alt=json HTTP/1.1" 200 None
+2022-11-29 18:02:18,393 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudfunctions.googleapis.com:443
+2022-11-29 18:02:18,667 DEBUG    urllib3.connectionpool https://cloudfunctions.googleapis.com:443 "GET /v1/operations/aW5zaWdodC10b29sLTMyMTgxNC91cy1jZW50cmFsMS9mdW50ZGVwbG95L2VDZUtoTU5xT1dJ?alt=json HTTP/1.1" 200 None
+2022-11-29 18:02:18,671 DEBUG    root            (gcloud.functions.deploy) OperationError: code=3, message=Build failed: missing main.py and GOOGLE_FUNCTION_SOURCE not specified. Either create the function in main.py or specify GOOGLE_FUNCTION_SOURCE to point to the file that contains the function; Error ID: 5c04ec9c
+Traceback (most recent call last):
+  File "/usr/lib/google-cloud-sdk/lib/googlecloudsdk/calliope/cli.py", line 987, in Execute
+    resources = calliope_command.Run(cli=self, args=args)
+  File "/usr/lib/google-cloud-sdk/lib/googlecloudsdk/calliope/backend.py", line 807, in Run
+    resources = command_instance.Run(args)
+  File "/usr/lib/google-cloud-sdk/lib/surface/functions/deploy.py", line 108, in Run
+    return command_v1.Run(args, track=self.ReleaseTrack())
+  File "/usr/lib/google-cloud-sdk/lib/googlecloudsdk/command_lib/functions/v1/deploy/command.py", line 616, in Run
+    api_util.WaitForFunctionUpdateOperation(
+  File "/usr/lib/google-cloud-sdk/lib/googlecloudsdk/api_lib/functions/v1/util.py", line 388, in CatchHTTPErrorRaiseHTTPExceptionFn
+    return func(*args, **kwargs)
+  File "/usr/lib/google-cloud-sdk/lib/googlecloudsdk/api_lib/functions/v1/util.py", line 438, in WaitForFunctionUpdateOperation
+    operations.Wait(op, client.MESSAGES_MODULE, client, _DEPLOY_WAIT_NOTICE,
+  File "/usr/lib/google-cloud-sdk/lib/googlecloudsdk/api_lib/functions/v1/operations.py", line 150, in Wait
+    _WaitForOperation(client, request, notice, try_set_invoker,
+  File "/usr/lib/google-cloud-sdk/lib/googlecloudsdk/api_lib/functions/v1/operations.py", line 113, in _WaitForOperation
+    retryer.RetryOnResult(_GetOperationStatus,
+  File "/usr/lib/google-cloud-sdk/lib/googlecloudsdk/core/util/retry.py", line 239, in RetryOnResult
+    result = func(*args, **kwargs)
+  File "/usr/lib/google-cloud-sdk/lib/googlecloudsdk/api_lib/functions/v1/operations.py", line 73, in _GetOperationStatus
+    raise exceptions.FunctionsError(OperationErrorToString(op.error))
+googlecloudsdk.api_lib.functions.v1.exceptions.FunctionsError: OperationError: code=3, message=Build failed: missing main.py and GOOGLE_FUNCTION_SOURCE not specified. Either create the function in main.py or specify GOOGLE_FUNCTION_SOURCE to point to the file that contains the function; Error ID: 5c04ec9c
+2022-11-29 18:02:18,731 ERROR    root            (gcloud.functions.deploy) OperationError: code=3, message=Build failed: missing main.py and GOOGLE_FUNCTION_SOURCE not specified. Either create the function in main.py or specify GOOGLE_FUNCTION_SOURCE to point to the file that contains the function; Error ID: 5c04ec9c

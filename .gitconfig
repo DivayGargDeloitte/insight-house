@@ -2,3 +2,7 @@
 	email = divaygarg@deloitte.com
 	name = DivayGargDeloitte
 	password = divay@deloitte123
+[http]
+	cookiefile = %USERPROFILE%\\.gitcookies
+[credential "https://source.developers.google.com"]
+	helper = gcloud.sh

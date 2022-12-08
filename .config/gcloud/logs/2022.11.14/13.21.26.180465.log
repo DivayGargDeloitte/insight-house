@@ -1,0 +1,222 @@
+2022-11-14 13:21:26,185 DEBUG    root            Loaded Command Group: ['gcloud', 'init']
+2022-11-14 13:21:26,189 DEBUG    root            Running [gcloud.init] with arguments: []
+2022-11-14 13:21:26,189 INFO     ___FILE_ONLY___ Welcome! This command will take you through the configuration of gcloud.
+
+
+2022-11-14 13:21:26,191 INFO     ___FILE_ONLY___ Settings from your current configuration [default] are:
+
+2022-11-14 13:21:26,206 INFO     ___FILE_ONLY___ core:
+  account: 554650739751-compute@developer.gserviceaccount.com
+  disable_usage_reporting: 'True'
+  project: insight-tool-321814
+
+2022-11-14 13:21:26,206 INFO     ___FILE_ONLY___ 
+
+2022-11-14 13:21:44,821 INFO     ___FILE_ONLY___ Your current configuration has been set to: [default]
+
+
+2022-11-14 13:21:44,821 INFO     ___FILE_ONLY___ You can skip diagnostics next time by using the following flag:
+
+2022-11-14 13:21:44,821 INFO     ___FILE_ONLY___   gcloud init --skip-diagnostics
+
+
+2022-11-14 13:21:44,821 INFO     ___FILE_ONLY___ Network diagnostic detects and fixes local network connection issues.
+
+2022-11-14 13:21:44,823 INFO     ___FILE_ONLY___ Checking network connection...
+2022-11-14 13:21:45,100 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): accounts.google.com:443
+2022-11-14 13:21:45,134 DEBUG    urllib3.connectionpool https://accounts.google.com:443 "GET / HTTP/1.1" 302 338
+2022-11-14 13:21:45,180 DEBUG    urllib3.connectionpool https://accounts.google.com:443 "GET /ServiceLogin?passive=1209600&continue=https%3A%2F%2Faccounts.google.com%2F&followup=https%3A%2F%2Faccounts.google.com%2F HTTP/1.1" 302 526
+2022-11-14 13:21:45,234 DEBUG    urllib3.connectionpool https://accounts.google.com:443 "GET /v3/signin/identifier?dsh=S-1190396730%3A1668432105164379&continue=https%3A%2F%2Faccounts.google.com%2F&followup=https%3A%2F%2Faccounts.google.com%2F&passive=1209600&flowName=WebLiteSignIn&flowEntry=ServiceLogin&ifkv=ARgdvAt4uRl6AUa9fddVzXch5drKdlUbfoDCZnCv2J0vBuw9aUxLmfXZyc3gnJ2h512VE3YvMByI HTTP/1.1" 200 None
+2022-11-14 13:21:45,311 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudresourcemanager.googleapis.com:443
+2022-11-14 13:21:45,332 DEBUG    urllib3.connectionpool https://cloudresourcemanager.googleapis.com:443 "GET /v1beta1/projects HTTP/1.1" 401 None
+2022-11-14 13:21:45,335 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): www.googleapis.com:443
+2022-11-14 13:21:45,349 DEBUG    urllib3.connectionpool https://www.googleapis.com:443 "GET /auth/cloud-platform HTTP/1.1" 200 14
+2022-11-14 13:21:45,352 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): dl.google.com:443
+2022-11-14 13:21:45,371 DEBUG    urllib3.connectionpool https://dl.google.com:443 "GET /dl/cloudsdk/channels/rapid/components-2.json HTTP/1.1" 200 203446
+2022-11-14 13:21:45,425 INFO     ___FILE_ONLY___ Reachability Check passed.
+
+2022-11-14 13:21:45,425 INFO     ___FILE_ONLY___ Network diagnostic passed (1/1 checks passed).
+
+
+2022-11-14 13:21:57,377 DEBUG    root            Loaded Command Group: ['gcloud', 'auth']
+2022-11-14 13:21:57,381 DEBUG    root            Loaded Command Group: ['gcloud', 'auth', 'login']
+2022-11-14 13:21:57,383 INFO     root            Executing: [gcloud auth login --force --brief]
+2022-11-14 13:21:57,385 DEBUG    root            Running [gcloud.auth.login] with arguments: [--brief: "True", --force: "True"]
+2022-11-14 13:22:07,850 DEBUG    requests_oauthlib.oauth2_session Generated new state csdgCJIuKnDOAJDYiVrIlB6e1SZQWm.
+2022-11-14 13:22:07,851 INFO     ___FILE_ONLY___ Go to the following link in your browser:
+
+    https://accounts.google.com/o/oauth2/auth?response_type=code&client_id=32555940559.apps.googleusercontent.com&redirect_uri=https%3A%2F%2Fsdk.cloud.google.com%2Fauthcode.html&scope=openid+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloud-platform+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fappengine.admin+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fsqlservice.login+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcompute+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Faccounts.reauth&state=csdgCJIuKnDOAJDYiVrIlB6e1SZQWm&prompt=consent&access_type=offline&code_challenge=sTzS_1nzrCwtrnNMcY61tFZmEfI08mTPv_ijhTYVlRs&code_challenge_method=S256
+
+
+2022-11-14 13:22:42,162 DEBUG    requests_oauthlib.oauth2_session Requesting url https://oauth2.googleapis.com/token using method POST.
+2022-11-14 13:22:42,162 DEBUG    requests_oauthlib.oauth2_session Supplying headers {b'Accept': b'application/json', b'Content-Type': b'application/x-www-form-urlencoded;charset=UTF-8', b'user-agent': b'google-cloud-sdk gcloud/408.0.0 command/gcloud.auth.login invocation-id/c30ff3882bc34c5fa8035cfb3ca04b1d environment/GCE environment-version/None interactive/True from-script/False python/3.9.12 term/xterm-256color (Linux 4.19.0-22-cloud-amd64)'} and data {'grant_type': 'authorization_code', 'client_id': '32555940559.apps.googleusercontent.com', 'client_secret': 'ZmssLNjJy2998hD4CTg2ejr2', 'code': 'Acegik@1357####', 'redirect_uri': 'https://sdk.cloud.google.com/authcode.html', 'code_verifier': '4Ygod6mLzWDa~4dsc6pj0BZUuwyXNXSs3uENXFtAn9dPRv9gBG2TIy3Jol1RAB_K5nMBNhjBWijDkbXZ-fU3uDAYtj35xHkT80n.4ra2a9QVvuiFDVgesv4KlphCLyZi'}
+2022-11-14 13:22:42,162 DEBUG    requests_oauthlib.oauth2_session Passing through key word arguments {'json': None, 'timeout': None, 'auth': None, 'verify': None, 'proxies': None}.
+2022-11-14 13:22:42,163 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): oauth2.googleapis.com:443
+2022-11-14 13:22:42,189 DEBUG    urllib3.connectionpool https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 400 None
+2022-11-14 13:22:42,190 DEBUG    requests_oauthlib.oauth2_session Prepared fetch token request body grant_type=authorization_code&client_id=32555940559.apps.googleusercontent.com&client_secret=ZmssLNjJy2998hD4CTg2ejr2&code=Acegik%401357%23%23%23%23&redirect_uri=https%3A%2F%2Fsdk.cloud.google.com%2Fauthcode.html&code_verifier=4Ygod6mLzWDa~4dsc6pj0BZUuwyXNXSs3uENXFtAn9dPRv9gBG2TIy3Jol1RAB_K5nMBNhjBWijDkbXZ-fU3uDAYtj35xHkT80n.4ra2a9QVvuiFDVgesv4KlphCLyZi
+2022-11-14 13:22:42,190 DEBUG    requests_oauthlib.oauth2_session Request to fetch token completed with status 400.
+2022-11-14 13:22:42,190 DEBUG    requests_oauthlib.oauth2_session Request headers were {'user-agent': b'google-cloud-sdk gcloud/408.0.0 command/gcloud.auth.login invocation-id/c30ff3882bc34c5fa8035cfb3ca04b1d environment/GCE environment-version/None interactive/True from-script/False python/3.9.12 term/xterm-256color (Linux 4.19.0-22-cloud-amd64)', 'Accept-Encoding': 'gzip, deflate', 'Accept': b'application/json', 'Connection': 'keep-alive', 'Content-Type': b'application/x-www-form-urlencoded;charset=UTF-8', 'Content-Length': '355'}
+2022-11-14 13:22:42,190 DEBUG    requests_oauthlib.oauth2_session Request body was grant_type=authorization_code&client_id=32555940559.apps.googleusercontent.com&client_secret=ZmssLNjJy2998hD4CTg2ejr2&code=Acegik%401357%23%23%23%23&redirect_uri=https%3A%2F%2Fsdk.cloud.google.com%2Fauthcode.html&code_verifier=4Ygod6mLzWDa~4dsc6pj0BZUuwyXNXSs3uENXFtAn9dPRv9gBG2TIy3Jol1RAB_K5nMBNhjBWijDkbXZ-fU3uDAYtj35xHkT80n.4ra2a9QVvuiFDVgesv4KlphCLyZi
+2022-11-14 13:22:42,190 DEBUG    requests_oauthlib.oauth2_session Response headers were {'Pragma': 'no-cache', 'Expires': 'Mon, 01 Jan 1990 00:00:00 GMT', 'Date': 'Mon, 14 Nov 2022 13:22:42 GMT', 'Cache-Control': 'no-cache, no-store, max-age=0, must-revalidate', 'Content-Type': 'application/json; charset=utf-8', 'Vary': 'Origin, X-Origin, Referer', 'Content-Encoding': 'gzip', 'Server': 'scaffolding on HTTPServer2', 'X-XSS-Protection': '0', 'X-Frame-Options': 'SAMEORIGIN', 'X-Content-Type-Options': 'nosniff', 'Transfer-Encoding': 'chunked'} and content {
+  "error": "invalid_grant",
+  "error_description": "Malformed auth code."
+}.
+2022-11-14 13:22:42,190 DEBUG    requests_oauthlib.oauth2_session Invoking 0 token response hooks.
+2022-11-14 13:22:42,191 DEBUG    root            (invalid_grant) Malformed auth code.
+Traceback (most recent call last):
+  File "/usr/lib/google-cloud-sdk/lib/googlecloudsdk/calliope/cli.py", line 987, in Execute
+    resources = calliope_command.Run(cli=self, args=args)
+  File "/usr/lib/google-cloud-sdk/lib/googlecloudsdk/calliope/backend.py", line 807, in Run
+    resources = command_instance.Run(args)
+  File "/usr/lib/google-cloud-sdk/lib/surface/auth/login.py", line 247, in Run
+    creds = auth_util.DoInstalledAppBrowserFlowGoogleAuth(
+  File "/usr/lib/google-cloud-sdk/lib/googlecloudsdk/api_lib/auth/util.py", line 316, in DoInstalledAppBrowserFlowGoogleAuth
+    user_creds = RemoteLoginWithAuthProxyFlowRunner(
+  File "/usr/lib/google-cloud-sdk/lib/googlecloudsdk/api_lib/auth/util.py", line 141, in Run
+    return self._flow.Run(**kwargs)
+  File "/usr/lib/google-cloud-sdk/lib/googlecloudsdk/core/credentials/flow.py", line 233, in Run
+    return self._Run(**kwargs)
+  File "/usr/lib/google-cloud-sdk/lib/googlecloudsdk/core/credentials/flow.py", line 699, in _Run
+    self.fetch_token(code=code, include_client_id=True, verify=None)
+  File "/usr/bin/../lib/google-cloud-sdk/lib/third_party/google_auth_oauthlib/flow.py", line 280, in fetch_token
+    return self.oauth2session.fetch_token(
+  File "/usr/bin/../lib/google-cloud-sdk/lib/third_party/requests_oauthlib/oauth2_session.py", line 345, in fetch_token
+    self._client.parse_request_body_response(r.text, scope=self.scope)
+  File "/usr/bin/../lib/google-cloud-sdk/lib/third_party/oauthlib/oauth2/rfc6749/clients/base.py", line 451, in parse_request_body_response
+    self.token = parse_token_response(body, scope=scope)
+  File "/usr/bin/../lib/google-cloud-sdk/lib/third_party/oauthlib/oauth2/rfc6749/parameters.py", line 435, in parse_token_response
+    validate_token_parameters(params)
+  File "/usr/bin/../lib/google-cloud-sdk/lib/third_party/oauthlib/oauth2/rfc6749/parameters.py", line 442, in validate_token_parameters
+    raise_from_error(params.get('error'), params)
+  File "/usr/bin/../lib/google-cloud-sdk/lib/third_party/oauthlib/oauth2/rfc6749/errors.py", line 406, in raise_from_error
+    raise cls(**kwargs)
+oauthlib.oauth2.rfc6749.errors.InvalidGrantError: (invalid_grant) Malformed auth code.
+2022-11-14 13:22:42,331 INFO     root            Failed to run [auth login --force --brief]
+
+2022-11-14 13:22:42,331 DEBUG    root            (invalid_grant) Malformed auth code.
+Traceback (most recent call last):
+  File "/usr/lib/google-cloud-sdk/lib/googlecloudsdk/calliope/cli.py", line 987, in Execute
+    resources = calliope_command.Run(cli=self, args=args)
+  File "/usr/lib/google-cloud-sdk/lib/googlecloudsdk/calliope/backend.py", line 807, in Run
+    resources = command_instance.Run(args)
+  File "/usr/lib/google-cloud-sdk/lib/surface/init.py", line 157, in Run
+    if not self._PickAccount(
+  File "/usr/lib/google-cloud-sdk/lib/surface/init.py", line 229, in _PickAccount
+    if not self._RunCmd(['auth', 'login'],
+  File "/usr/lib/google-cloud-sdk/lib/surface/init.py", line 522, in _RunCmd
+    self.ExecuteCommandDoNotUse(args))
+  File "/usr/lib/google-cloud-sdk/lib/googlecloudsdk/calliope/base.py", line 617, in ExecuteCommandDoNotUse
+    return self._cli_power_users_only.Execute(args, call_arg_complete=False)
+  File "/usr/lib/google-cloud-sdk/lib/googlecloudsdk/calliope/cli.py", line 1013, in Execute
+    self._HandleAllErrors(exc, command_path_string, specified_arg_names)
+  File "/usr/lib/google-cloud-sdk/lib/googlecloudsdk/calliope/cli.py", line 1050, in _HandleAllErrors
+    exceptions.HandleError(exc, command_path_string, self.__known_error_handler)
+  File "/usr/lib/google-cloud-sdk/lib/googlecloudsdk/calliope/exceptions.py", line 549, in HandleError
+    core_exceptions.reraise(exc)
+  File "/usr/lib/google-cloud-sdk/lib/googlecloudsdk/core/exceptions.py", line 146, in reraise
+    six.reraise(type(exc_value), exc_value, tb)
+  File "/usr/bin/../lib/google-cloud-sdk/lib/third_party/six/__init__.py", line 693, in reraise
+    raise value
+  File "/usr/lib/google-cloud-sdk/lib/googlecloudsdk/calliope/cli.py", line 987, in Execute
+    resources = calliope_command.Run(cli=self, args=args)
+  File "/usr/lib/google-cloud-sdk/lib/googlecloudsdk/calliope/backend.py", line 807, in Run
+    resources = command_instance.Run(args)
+  File "/usr/lib/google-cloud-sdk/lib/surface/auth/login.py", line 247, in Run
+    creds = auth_util.DoInstalledAppBrowserFlowGoogleAuth(
+  File "/usr/lib/google-cloud-sdk/lib/googlecloudsdk/api_lib/auth/util.py", line 316, in DoInstalledAppBrowserFlowGoogleAuth
+    user_creds = RemoteLoginWithAuthProxyFlowRunner(
+  File "/usr/lib/google-cloud-sdk/lib/googlecloudsdk/api_lib/auth/util.py", line 141, in Run
+    return self._flow.Run(**kwargs)
+  File "/usr/lib/google-cloud-sdk/lib/googlecloudsdk/core/credentials/flow.py", line 233, in Run
+    return self._Run(**kwargs)
+  File "/usr/lib/google-cloud-sdk/lib/googlecloudsdk/core/credentials/flow.py", line 699, in _Run
+    self.fetch_token(code=code, include_client_id=True, verify=None)
+  File "/usr/bin/../lib/google-cloud-sdk/lib/third_party/google_auth_oauthlib/flow.py", line 280, in fetch_token
+    return self.oauth2session.fetch_token(
+  File "/usr/bin/../lib/google-cloud-sdk/lib/third_party/requests_oauthlib/oauth2_session.py", line 345, in fetch_token
+    self._client.parse_request_body_response(r.text, scope=self.scope)
+  File "/usr/bin/../lib/google-cloud-sdk/lib/third_party/oauthlib/oauth2/rfc6749/clients/base.py", line 451, in parse_request_body_response
+    self.token = parse_token_response(body, scope=scope)
+  File "/usr/bin/../lib/google-cloud-sdk/lib/third_party/oauthlib/oauth2/rfc6749/parameters.py", line 435, in parse_token_response
+    validate_token_parameters(params)
+  File "/usr/bin/../lib/google-cloud-sdk/lib/third_party/oauthlib/oauth2/rfc6749/parameters.py", line 442, in validate_token_parameters
+    raise_from_error(params.get('error'), params)
+  File "/usr/bin/../lib/google-cloud-sdk/lib/third_party/oauthlib/oauth2/rfc6749/errors.py", line 406, in raise_from_error
+    raise cls(**kwargs)
+oauthlib.oauth2.rfc6749.errors.InvalidGrantError: (invalid_grant) Malformed auth code.
+2022-11-14 13:22:42,441 ERROR    ___FILE_ONLY___ BEGIN CRASH STACKTRACE
+Traceback (most recent call last):
+  File "/usr/lib/google-cloud-sdk/lib/googlecloudsdk/command_lib/crash_handling.py", line 191, in Wrapper
+    target_function(*args, **kwargs)
+  File "/usr/lib/google-cloud-sdk/lib/googlecloudsdk/gcloud_main.py", line 186, in main
+    gcloud_cli.Execute()
+  File "/usr/lib/google-cloud-sdk/lib/googlecloudsdk/calliope/cli.py", line 1013, in Execute
+    self._HandleAllErrors(exc, command_path_string, specified_arg_names)
+  File "/usr/lib/google-cloud-sdk/lib/googlecloudsdk/calliope/cli.py", line 1050, in _HandleAllErrors
+    exceptions.HandleError(exc, command_path_string, self.__known_error_handler)
+  File "/usr/lib/google-cloud-sdk/lib/googlecloudsdk/calliope/exceptions.py", line 549, in HandleError
+    core_exceptions.reraise(exc)
+  File "/usr/lib/google-cloud-sdk/lib/googlecloudsdk/core/exceptions.py", line 146, in reraise
+    six.reraise(type(exc_value), exc_value, tb)
+  File "/usr/bin/../lib/google-cloud-sdk/lib/third_party/six/__init__.py", line 693, in reraise
+    raise value
+  File "/usr/lib/google-cloud-sdk/lib/googlecloudsdk/calliope/cli.py", line 987, in Execute
+    resources = calliope_command.Run(cli=self, args=args)
+  File "/usr/lib/google-cloud-sdk/lib/googlecloudsdk/calliope/backend.py", line 807, in Run
+    resources = command_instance.Run(args)
+  File "/usr/lib/google-cloud-sdk/lib/surface/init.py", line 157, in Run
+    if not self._PickAccount(
+  File "/usr/lib/google-cloud-sdk/lib/surface/init.py", line 229, in _PickAccount
+    if not self._RunCmd(['auth', 'login'],
+  File "/usr/lib/google-cloud-sdk/lib/surface/init.py", line 522, in _RunCmd
+    self.ExecuteCommandDoNotUse(args))
+  File "/usr/lib/google-cloud-sdk/lib/googlecloudsdk/calliope/base.py", line 617, in ExecuteCommandDoNotUse
+    return self._cli_power_users_only.Execute(args, call_arg_complete=False)
+  File "/usr/lib/google-cloud-sdk/lib/googlecloudsdk/calliope/cli.py", line 1013, in Execute
+    self._HandleAllErrors(exc, command_path_string, specified_arg_names)
+  File "/usr/lib/google-cloud-sdk/lib/googlecloudsdk/calliope/cli.py", line 1050, in _HandleAllErrors
+    exceptions.HandleError(exc, command_path_string, self.__known_error_handler)
+  File "/usr/lib/google-cloud-sdk/lib/googlecloudsdk/calliope/exceptions.py", line 549, in HandleError
+    core_exceptions.reraise(exc)
+  File "/usr/lib/google-cloud-sdk/lib/googlecloudsdk/core/exceptions.py", line 146, in reraise
+    six.reraise(type(exc_value), exc_value, tb)
+  File "/usr/bin/../lib/google-cloud-sdk/lib/third_party/six/__init__.py", line 693, in reraise
+    raise value
+  File "/usr/lib/google-cloud-sdk/lib/googlecloudsdk/calliope/cli.py", line 987, in Execute
+    resources = calliope_command.Run(cli=self, args=args)
+  File "/usr/lib/google-cloud-sdk/lib/googlecloudsdk/calliope/backend.py", line 807, in Run
+    resources = command_instance.Run(args)
+  File "/usr/lib/google-cloud-sdk/lib/surface/auth/login.py", line 247, in Run
+    creds = auth_util.DoInstalledAppBrowserFlowGoogleAuth(
+  File "/usr/lib/google-cloud-sdk/lib/googlecloudsdk/api_lib/auth/util.py", line 316, in DoInstalledAppBrowserFlowGoogleAuth
+    user_creds = RemoteLoginWithAuthProxyFlowRunner(
+  File "/usr/lib/google-cloud-sdk/lib/googlecloudsdk/api_lib/auth/util.py", line 141, in Run
+    return self._flow.Run(**kwargs)
+  File "/usr/lib/google-cloud-sdk/lib/googlecloudsdk/core/credentials/flow.py", line 233, in Run
+    return self._Run(**kwargs)
+  File "/usr/lib/google-cloud-sdk/lib/googlecloudsdk/core/credentials/flow.py", line 699, in _Run
+    self.fetch_token(code=code, include_client_id=True, verify=None)
+  File "/usr/bin/../lib/google-cloud-sdk/lib/third_party/google_auth_oauthlib/flow.py", line 280, in fetch_token
+    return self.oauth2session.fetch_token(
+  File "/usr/bin/../lib/google-cloud-sdk/lib/third_party/requests_oauthlib/oauth2_session.py", line 345, in fetch_token
+    self._client.parse_request_body_response(r.text, scope=self.scope)
+  File "/usr/bin/../lib/google-cloud-sdk/lib/third_party/oauthlib/oauth2/rfc6749/clients/base.py", line 451, in parse_request_body_response
+    self.token = parse_token_response(body, scope=scope)
+  File "/usr/bin/../lib/google-cloud-sdk/lib/third_party/oauthlib/oauth2/rfc6749/parameters.py", line 435, in parse_token_response
+    validate_token_parameters(params)
+  File "/usr/bin/../lib/google-cloud-sdk/lib/third_party/oauthlib/oauth2/rfc6749/parameters.py", line 442, in validate_token_parameters
+    raise_from_error(params.get('error'), params)
+  File "/usr/bin/../lib/google-cloud-sdk/lib/third_party/oauthlib/oauth2/rfc6749/errors.py", line 406, in raise_from_error
+    raise cls(**kwargs)
+oauthlib.oauth2.rfc6749.errors.InvalidGrantError: (invalid_grant) Malformed auth code.
+2022-11-14 13:22:42,478 ERROR    root            gcloud crashed (InvalidGrantError): (invalid_grant) Malformed auth code.
+2022-11-14 13:22:42,479 INFO     ___FILE_ONLY___ 
+If you would like to report this issue, please run the following command:
+
+2022-11-14 13:22:42,479 INFO     ___FILE_ONLY___   gcloud feedback
+
+2022-11-14 13:22:42,479 INFO     ___FILE_ONLY___ 
+To check gcloud for common problems, please run the following command:
+
+2022-11-14 13:22:42,479 INFO     ___FILE_ONLY___   gcloud info --run-diagnostics
+

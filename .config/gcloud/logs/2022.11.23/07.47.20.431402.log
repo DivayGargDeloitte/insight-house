@@ -1,0 +1,21 @@
+2022-11-23 07:47:20,432 DEBUG    root            Loaded Command Group: ['gcloud', 'auth']
+2022-11-23 07:47:20,435 DEBUG    root            Loaded Command Group: ['gcloud', 'auth', 'docker_helper']
+2022-11-23 07:47:20,437 DEBUG    root            Running [gcloud.auth.docker-helper] with arguments: [METHOD: "get"]
+2022-11-23 07:47:20,442 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/554650739751-compute@developer.gserviceaccount.com/?recursive=true
+2022-11-23 07:47:20,444 DEBUG    urllib3.connectionpool Starting new HTTP connection (1): metadata.google.internal:80
+2022-11-23 07:47:20,446 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/554650739751-compute@developer.gserviceaccount.com/?recursive=true HTTP/1.1" 200 155
+2022-11-23 07:47:20,447 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/554650739751-compute@developer.gserviceaccount.com/token
+2022-11-23 07:47:20,450 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/554650739751-compute@developer.gserviceaccount.com/token HTTP/1.1" 200 266
+2022-11-23 07:47:20,460 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/554650739751-compute@developer.gserviceaccount.com/?recursive=true
+2022-11-23 07:47:20,461 DEBUG    urllib3.connectionpool Starting new HTTP connection (1): metadata.google.internal:80
+2022-11-23 07:47:20,463 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/554650739751-compute@developer.gserviceaccount.com/?recursive=true HTTP/1.1" 200 155
+2022-11-23 07:47:20,464 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/554650739751-compute@developer.gserviceaccount.com/token?scopes=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloud-platform%2Chttps%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email
+2022-11-23 07:47:20,467 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/554650739751-compute@developer.gserviceaccount.com/token?scopes=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloud-platform%2Chttps%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email HTTP/1.1" 200 266
+2022-11-23 07:47:20,470 INFO     root            Display format: "json"
+2022-11-23 07:47:20,470 INFO     ___FILE_ONLY___ {
+  "Secret": "ya29.c.b0Aa9VdylsjuTwcldYGEa9cTP5WsSUOKjrecdhiktRNhznQPt4q-2WGPA6CXyZS6Y7npUMbwGhY2SqUK8fRhRpWeSBGX_9mgIuRWQ1F5MejhsnxGEJTYkkTdUvX28gc0WGbXVGjBv5E5dsQS587NX7isU_SgNNrVUw7YM5Nen5tJipIZxV4p9MTdSVjxw_SBFTRRgXZ4MMQ_k............................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................",
+  "Username": "_dcgcloud_token"
+}
+2022-11-23 07:47:20,471 INFO     ___FILE_ONLY___ 
+
+2022-11-23 07:47:20,471 DEBUG    root            SDK update checks are disabled.

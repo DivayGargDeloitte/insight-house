@@ -1,0 +1,10 @@
+2022-11-16 09:54:35,259 DEBUG    root            Loaded Command Group: ['gcloud', 'run']
+2022-11-16 09:54:35,298 DEBUG    root            Loaded Command Group: ['gcloud', 'run', 'deploy']
+2022-11-16 09:54:35,316 DEBUG    root            Running [gcloud.run.deploy] with arguments: [SERVICE: "gcr.io/insight-tool-321814/docker_test_insight/preprocessing_cloudbuild_test_4"]
+2022-11-16 09:54:35,317 INFO     ___FILE_ONLY___ Deploying from source. To deploy a container use [--image]. See https://cloud.google.com/run/docs/deploying-source-code for more details.
+
+2022-11-16 09:54:50,144 INFO     ___FILE_ONLY___ 
+
+Command killed by keyboard interrupt
+
+

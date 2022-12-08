@@ -1,0 +1,8 @@
+2022-11-16 09:54:59,909 DEBUG    root            Loaded Command Group: ['gcloud', 'run']
+2022-11-16 09:54:59,950 DEBUG    root            Loaded Command Group: ['gcloud', 'run', 'deploy']
+2022-11-16 09:54:59,969 DEBUG    root            Running [gcloud.run.deploy] with arguments: [--image: "gcr.io/insight-tool-321814/docker_test_insight/preprocessing_cloudbuild_test_4"]
+2022-11-16 09:55:16,575 INFO     ___FILE_ONLY___ 
+
+Command killed by keyboard interrupt
+
+

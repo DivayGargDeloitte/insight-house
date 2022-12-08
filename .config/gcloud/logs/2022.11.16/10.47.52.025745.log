@@ -1,0 +1,95 @@
+2022-11-16 10:47:52,026 DEBUG    root            Loaded Command Group: ['gcloud', 'run']
+2022-11-16 10:47:52,069 DEBUG    root            Loaded Command Group: ['gcloud', 'run', 'deploy']
+2022-11-16 10:47:52,088 DEBUG    root            Running [gcloud.run.deploy] with arguments: [--allow-unauthenticated: "True", --image: "gcr.io/insight-tool-321814/docker_test_insight/preprocessing_cloudbuild_test_4", --region: "asia-east1", SERVICE: "hmprd"]
+2022-11-16 10:47:52,096 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/554650739751-compute@developer.gserviceaccount.com/?recursive=true
+2022-11-16 10:47:52,099 DEBUG    urllib3.connectionpool Starting new HTTP connection (1): metadata.google.internal:80
+2022-11-16 10:47:52,101 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/554650739751-compute@developer.gserviceaccount.com/?recursive=true HTTP/1.1" 200 155
+2022-11-16 10:47:52,101 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/554650739751-compute@developer.gserviceaccount.com/token
+2022-11-16 10:47:52,104 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/554650739751-compute@developer.gserviceaccount.com/token HTTP/1.1" 200 268
+2022-11-16 10:47:52,115 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/554650739751-compute@developer.gserviceaccount.com/?recursive=true
+2022-11-16 10:47:52,117 DEBUG    urllib3.connectionpool Starting new HTTP connection (1): metadata.google.internal:80
+2022-11-16 10:47:52,120 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/554650739751-compute@developer.gserviceaccount.com/?recursive=true HTTP/1.1" 200 155
+2022-11-16 10:47:52,121 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/554650739751-compute@developer.gserviceaccount.com/token
+2022-11-16 10:47:52,123 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/554650739751-compute@developer.gserviceaccount.com/token HTTP/1.1" 200 268
+2022-11-16 10:47:52,145 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/554650739751-compute@developer.gserviceaccount.com/?recursive=true
+2022-11-16 10:47:52,146 DEBUG    urllib3.connectionpool Starting new HTTP connection (1): metadata.google.internal:80
+2022-11-16 10:47:52,148 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/554650739751-compute@developer.gserviceaccount.com/?recursive=true HTTP/1.1" 200 155
+2022-11-16 10:47:52,149 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/554650739751-compute@developer.gserviceaccount.com/token
+2022-11-16 10:47:52,152 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/554650739751-compute@developer.gserviceaccount.com/token HTTP/1.1" 200 268
+2022-11-16 10:47:52,158 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/554650739751-compute@developer.gserviceaccount.com/?recursive=true
+2022-11-16 10:47:52,160 DEBUG    urllib3.connectionpool Starting new HTTP connection (1): metadata.google.internal:80
+2022-11-16 10:47:52,162 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/554650739751-compute@developer.gserviceaccount.com/?recursive=true HTTP/1.1" 200 155
+2022-11-16 10:47:52,162 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/554650739751-compute@developer.gserviceaccount.com/token
+2022-11-16 10:47:52,165 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/554650739751-compute@developer.gserviceaccount.com/token HTTP/1.1" 200 268
+2022-11-16 10:47:52,173 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): asia-east1-run.googleapis.com:443
+2022-11-16 10:47:52,946 DEBUG    urllib3.connectionpool https://asia-east1-run.googleapis.com:443 "GET /apis/serving.knative.dev/v1/namespaces/insight-tool-321814/services/hmprd?alt=json HTTP/1.1" 200 None
+2022-11-16 10:47:52,952 INFO     ___FILE_ONLY___ Deploying container to Cloud Run service [[1mhmprd[m] in project [[1minsight-tool-321814[m] region [[1masia-east1[m]
+
+2022-11-16 10:47:52,953 INFO     ___FILE_ONLY___ Deploying...
+2022-11-16 10:47:52,960 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): asia-east1-run.googleapis.com:443
+2022-11-16 10:47:54,078 DEBUG    urllib3.connectionpool https://asia-east1-run.googleapis.com:443 "PUT /apis/serving.knative.dev/v1/namespaces/insight-tool-321814/services/hmprd?alt=json HTTP/1.1" 200 None
+2022-11-16 10:47:54,086 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): run.googleapis.com:443
+2022-11-16 10:47:55,123 DEBUG    urllib3.connectionpool https://run.googleapis.com:443 "GET /v1/projects/insight-tool-321814/locations/asia-east1/services/hmprd:getIamPolicy?alt=json HTTP/1.1" 200 None
+2022-11-16 10:47:55,128 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): run.googleapis.com:443
+2022-11-16 10:47:56,130 DEBUG    urllib3.connectionpool https://run.googleapis.com:443 "POST /v1/projects/insight-tool-321814/locations/asia-east1/services/hmprd:setIamPolicy?alt=json HTTP/1.1" 403 None
+2022-11-16 10:47:56,136 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): asia-east1-run.googleapis.com:443
+2022-11-16 10:47:56,901 DEBUG    urllib3.connectionpool https://asia-east1-run.googleapis.com:443 "GET /apis/serving.knative.dev/v1/namespaces/insight-tool-321814/services/hmprd?alt=json HTTP/1.1" 200 None
+2022-11-16 10:47:57,909 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): asia-east1-run.googleapis.com:443
+2022-11-16 10:47:58,683 DEBUG    urllib3.connectionpool https://asia-east1-run.googleapis.com:443 "GET /apis/serving.knative.dev/v1/namespaces/insight-tool-321814/services/hmprd?alt=json HTTP/1.1" 200 None
+2022-11-16 10:47:59,693 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): asia-east1-run.googleapis.com:443
+2022-11-16 10:48:00,446 DEBUG    urllib3.connectionpool https://asia-east1-run.googleapis.com:443 "GET /apis/serving.knative.dev/v1/namespaces/insight-tool-321814/services/hmprd?alt=json HTTP/1.1" 200 None
+2022-11-16 10:48:01,456 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): asia-east1-run.googleapis.com:443
+2022-11-16 10:48:02,221 DEBUG    urllib3.connectionpool https://asia-east1-run.googleapis.com:443 "GET /apis/serving.knative.dev/v1/namespaces/insight-tool-321814/services/hmprd?alt=json HTTP/1.1" 200 None
+2022-11-16 10:48:03,233 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): asia-east1-run.googleapis.com:443
+2022-11-16 10:48:03,998 DEBUG    urllib3.connectionpool https://asia-east1-run.googleapis.com:443 "GET /apis/serving.knative.dev/v1/namespaces/insight-tool-321814/services/hmprd?alt=json HTTP/1.1" 200 None
+2022-11-16 10:48:05,008 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): asia-east1-run.googleapis.com:443
+2022-11-16 10:48:05,753 DEBUG    urllib3.connectionpool https://asia-east1-run.googleapis.com:443 "GET /apis/serving.knative.dev/v1/namespaces/insight-tool-321814/services/hmprd?alt=json HTTP/1.1" 200 None
+2022-11-16 10:48:06,762 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): asia-east1-run.googleapis.com:443
+2022-11-16 10:48:07,526 DEBUG    urllib3.connectionpool https://asia-east1-run.googleapis.com:443 "GET /apis/serving.knative.dev/v1/namespaces/insight-tool-321814/services/hmprd?alt=json HTTP/1.1" 200 None
+2022-11-16 10:48:08,535 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): asia-east1-run.googleapis.com:443
+2022-11-16 10:48:09,310 DEBUG    urllib3.connectionpool https://asia-east1-run.googleapis.com:443 "GET /apis/serving.knative.dev/v1/namespaces/insight-tool-321814/services/hmprd?alt=json HTTP/1.1" 200 None
+2022-11-16 10:48:10,320 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): asia-east1-run.googleapis.com:443
+2022-11-16 10:48:11,073 DEBUG    urllib3.connectionpool https://asia-east1-run.googleapis.com:443 "GET /apis/serving.knative.dev/v1/namespaces/insight-tool-321814/services/hmprd?alt=json HTTP/1.1" 200 None
+2022-11-16 10:48:12,084 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): asia-east1-run.googleapis.com:443
+2022-11-16 10:48:12,840 DEBUG    urllib3.connectionpool https://asia-east1-run.googleapis.com:443 "GET /apis/serving.knative.dev/v1/namespaces/insight-tool-321814/services/hmprd?alt=json HTTP/1.1" 200 None
+2022-11-16 10:48:13,850 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): asia-east1-run.googleapis.com:443
+2022-11-16 10:48:14,599 DEBUG    urllib3.connectionpool https://asia-east1-run.googleapis.com:443 "GET /apis/serving.knative.dev/v1/namespaces/insight-tool-321814/services/hmprd?alt=json HTTP/1.1" 200 None
+2022-11-16 10:48:15,609 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): asia-east1-run.googleapis.com:443
+2022-11-16 10:48:16,353 DEBUG    urllib3.connectionpool https://asia-east1-run.googleapis.com:443 "GET /apis/serving.knative.dev/v1/namespaces/insight-tool-321814/services/hmprd?alt=json HTTP/1.1" 200 None
+2022-11-16 10:48:16,362 INFO     ___FILE_ONLY___   Setting IAM policy failed, try "gcloud beta run services add-iam-policy-binding --region=asia-east1 --member=allUsers --role=roles/run.invoker hmprd"
+
+2022-11-16 10:48:16,363 DEBUG    root            (gcloud.run.deploy) The user-provided container failed to start and listen on the port defined provided by the PORT=8080 environment variable. Logs for this revision might contain more information.
+
+Logs URL: https://console.cloud.google.com/logs/viewer?project=insight-tool-321814&resource=cloud_run_revision/service_name/hmprd/revision_name/hmprd-00002-qek&advancedFilter=resource.type%3D%22cloud_run_revision%22%0Aresource.labels.service_name%3D%22hmprd%22%0Aresource.labels.revision_name%3D%22hmprd-00002-qek%22 
+For more troubleshooting guidance, see https://cloud.google.com/run/docs/troubleshooting#container-failed-to-start
+Traceback (most recent call last):
+  File "/usr/lib/google-cloud-sdk/lib/googlecloudsdk/calliope/cli.py", line 987, in Execute
+    resources = calliope_command.Run(cli=self, args=args)
+  File "/usr/lib/google-cloud-sdk/lib/googlecloudsdk/calliope/backend.py", line 807, in Run
+    resources = command_instance.Run(args)
+  File "/usr/lib/google-cloud-sdk/lib/surface/run/deploy.py", line 273, in Run
+    service = operations.ReleaseService(
+  File "/usr/lib/google-cloud-sdk/lib/googlecloudsdk/command_lib/run/serverless_operations.py", line 1145, in ReleaseService
+    self.WaitForCondition(poller)
+  File "/usr/lib/google-cloud-sdk/lib/googlecloudsdk/command_lib/run/serverless_operations.py", line 627, in WaitForCondition
+    return waiter.PollUntilDone(poller, None, wait_ceiling_ms=1000)
+  File "/usr/lib/google-cloud-sdk/lib/googlecloudsdk/api_lib/util/waiter.py", line 322, in PollUntilDone
+    operation = retryer.RetryOnResult(
+  File "/usr/lib/google-cloud-sdk/lib/googlecloudsdk/core/util/retry.py", line 239, in RetryOnResult
+    result = func(*args, **kwargs)
+  File "/usr/lib/google-cloud-sdk/lib/googlecloudsdk/command_lib/run/serverless_operations.py", line 248, in Poll
+    self._PollTerminalSubconditions(conditions, conditions_message)
+  File "/usr/lib/google-cloud-sdk/lib/googlecloudsdk/command_lib/run/serverless_operations.py", line 228, in _PollTerminalSubconditions
+    self._PossiblyFailStage(condition, message)
+  File "/usr/lib/google-cloud-sdk/lib/googlecloudsdk/command_lib/run/serverless_operations.py", line 345, in _PossiblyFailStage
+    self._tracker.FailStage(condition, self._resource_fail_type(message),
+  File "/usr/lib/google-cloud-sdk/lib/googlecloudsdk/core/console/progress_tracker.py", line 940, in FailStage
+    raise failure_exception  # pylint: disable=raising-bad-type
+googlecloudsdk.command_lib.run.exceptions.DeploymentFailedError: The user-provided container failed to start and listen on the port defined provided by the PORT=8080 environment variable. Logs for this revision might contain more information.
+
+Logs URL: https://console.cloud.google.com/logs/viewer?project=insight-tool-321814&resource=cloud_run_revision/service_name/hmprd/revision_name/hmprd-00002-qek&advancedFilter=resource.type%3D%22cloud_run_revision%22%0Aresource.labels.service_name%3D%22hmprd%22%0Aresource.labels.revision_name%3D%22hmprd-00002-qek%22 
+For more troubleshooting guidance, see https://cloud.google.com/run/docs/troubleshooting#container-failed-to-start
+2022-11-16 10:48:16,382 ERROR    root            (gcloud.run.deploy) The user-provided container failed to start and listen on the port defined provided by the PORT=8080 environment variable. Logs for this revision might contain more information.
+
+Logs URL: https://console.cloud.google.com/logs/viewer?project=insight-tool-321814&resource=cloud_run_revision/service_name/hmprd/revision_name/hmprd-00002-qek&advancedFilter=resource.type%3D%22cloud_run_revision%22%0Aresource.labels.service_name%3D%22hmprd%22%0Aresource.labels.revision_name%3D%22hmprd-00002-qek%22 
+For more troubleshooting guidance, see https://cloud.google.com/run/docs/troubleshooting#container-failed-to-start

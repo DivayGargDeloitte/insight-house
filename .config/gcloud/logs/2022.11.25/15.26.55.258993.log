@@ -1,0 +1,15 @@
+2022-11-25 15:26:55,259 DEBUG    root            Loaded Command Group: ['gcloud', 'run']
+2022-11-25 15:26:55,301 DEBUG    root            Loaded Command Group: ['gcloud', 'run', 'deploy']
+2022-11-25 15:26:55,320 DEBUG    root            Running [gcloud.run.deploy] with arguments: [--image: "gcr.io/insight-tool-321814/docker_test_insight/flask:latest2"]
+2022-11-25 15:27:07,033 DEBUG    root            (gcloud.run.deploy) Invalid resource name [flask_new]. The name must use only lowercase alphanumeric characters and dashes, cannot begin or end with a dash, and cannot be longer than 63 characters.
+Traceback (most recent call last):
+  File "/usr/lib/google-cloud-sdk/lib/googlecloudsdk/calliope/cli.py", line 987, in Execute
+    resources = calliope_command.Run(cli=self, args=args)
+  File "/usr/lib/google-cloud-sdk/lib/googlecloudsdk/calliope/backend.py", line 807, in Run
+    resources = command_instance.Run(args)
+  File "/usr/lib/google-cloud-sdk/lib/surface/run/deploy.py", line 182, in Run
+    flags.ValidateResource(service_ref)
+  File "/usr/lib/google-cloud-sdk/lib/googlecloudsdk/command_lib/run/flags.py", line 1616, in ValidateResource
+    raise serverless_exceptions.ArgumentError(
+googlecloudsdk.command_lib.run.exceptions.ArgumentError: Invalid resource name [flask_new]. The name must use only lowercase alphanumeric characters and dashes, cannot begin or end with a dash, and cannot be longer than 63 characters.
+2022-11-25 15:27:07,049 ERROR    root            (gcloud.run.deploy) Invalid resource name [flask_new]. The name must use only lowercase alphanumeric characters and dashes, cannot begin or end with a dash, and cannot be longer than 63 characters.

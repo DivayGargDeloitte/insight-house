@@ -1,0 +1,19 @@
+2022-11-14 13:21:13,363 DEBUG    root            Loaded Command Group: ['gcloud', 'init']
+2022-11-14 13:21:13,365 DEBUG    root            Running [gcloud.init] with arguments: []
+2022-11-14 13:21:13,365 INFO     ___FILE_ONLY___ Welcome! This command will take you through the configuration of gcloud.
+
+
+2022-11-14 13:21:13,366 INFO     ___FILE_ONLY___ Settings from your current configuration [default] are:
+
+2022-11-14 13:21:13,380 INFO     ___FILE_ONLY___ core:
+  account: 554650739751-compute@developer.gserviceaccount.com
+  disable_usage_reporting: 'True'
+  project: insight-tool-321814
+
+2022-11-14 13:21:13,380 INFO     ___FILE_ONLY___ 
+
+2022-11-14 14:10:12,940 INFO     ___FILE_ONLY___ 
+
+Command killed by keyboard interrupt
+
+

@@ -1,0 +1,1172 @@
+2022-11-10 14:32:40,908 DEBUG    root            Loaded Command Group: ['gcloud', 'builds']
+2022-11-10 14:32:40,926 DEBUG    root            Loaded Command Group: ['gcloud', 'builds', 'submit']
+2022-11-10 14:32:40,951 DEBUG    root            Running [gcloud.builds.submit] with arguments: [--config: "cloudbuild.yaml"]
+2022-11-10 14:32:40,962 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/554650739751-compute@developer.gserviceaccount.com/?recursive=true
+2022-11-10 14:32:40,964 DEBUG    urllib3.connectionpool Starting new HTTP connection (1): metadata.google.internal:80
+2022-11-10 14:32:40,966 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/554650739751-compute@developer.gserviceaccount.com/?recursive=true HTTP/1.1" 200 155
+2022-11-10 14:32:40,966 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/554650739751-compute@developer.gserviceaccount.com/token
+2022-11-10 14:32:40,969 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/554650739751-compute@developer.gserviceaccount.com/token HTTP/1.1" 200 267
+2022-11-10 14:32:40,984 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/554650739751-compute@developer.gserviceaccount.com/?recursive=true
+2022-11-10 14:32:40,985 DEBUG    urllib3.connectionpool Starting new HTTP connection (1): metadata.google.internal:80
+2022-11-10 14:32:40,987 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/554650739751-compute@developer.gserviceaccount.com/?recursive=true HTTP/1.1" 200 155
+2022-11-10 14:32:40,987 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/554650739751-compute@developer.gserviceaccount.com/token
+2022-11-10 14:32:40,990 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/554650739751-compute@developer.gserviceaccount.com/token HTTP/1.1" 200 267
+2022-11-10 14:32:41,011 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2022-11-10 14:32:41,059 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /storage/v1/b/insight-tool-321814_cloudbuild?alt=json HTTP/1.1" 200 664
+2022-11-10 14:32:41,066 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2022-11-10 14:32:41,183 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /storage/v1/b?alt=json&maxResults=1000&prefix=insight-tool-321814_cloudbuild&project=insight-tool-321814 HTTP/1.1" 200 810
+2022-11-10 14:32:41,187 INFO     root            Using default gcloudignore file:
+--------------------------------------------------
+# This file specifies files that are *not* uploaded to Google Cloud
+# using gcloud. It follows the same syntax as .gitignore, with the addition of
+# "#!include" directives (which insert the entries of the given .gitignore-style
+# file at that point).
+#
+# For more information, run:
+#   $ gcloud topic gcloudignore
+#
+.gcloudignore
+# If you would like to upload your .git directory, .gitignore file or files
+# from your .gitignore file, remove the corresponding line
+# below:
+.git
+.gitignore
+
+--------------------------------------------------
+2022-11-10 14:32:41,188 DEBUG    root            Skipping file [.git]
+2022-11-10 14:32:41,189 DEBUG    root            Skipping file [Prediction/.git]
+2022-11-10 14:32:41,191 INFO     ___FILE_ONLY___ Creating temporary tarball archive of 32 file(s) totalling 105.4 KiB before compression.
+
+2022-11-10 14:32:41,220 DEBUG    root            Added dir [Prediction]
+2022-11-10 14:32:41,220 DEBUG    root            Added dir [.ipynb_checkpoints]
+2022-11-10 14:32:41,221 DEBUG    root            Added dir [Training]
+2022-11-10 14:32:41,221 DEBUG    root            Added dir [Preprocessing]
+2022-11-10 14:32:41,222 DEBUG    root            Added dir [Prediction/.ipynb_checkpoints]
+2022-11-10 14:32:41,222 DEBUG    root            Added dir [Training/.ipynb_checkpoints]
+2022-11-10 14:32:41,222 DEBUG    root            Added dir [Preprocessing/.ipynb_checkpoints]
+2022-11-10 14:32:41,223 DEBUG    root            Added [cloudbuild_2.yaml]
+2022-11-10 14:32:41,225 DEBUG    root            Added [cloudbuild_test.ipynb]
+2022-11-10 14:32:41,226 DEBUG    root            Added [docker-compose.yaml]
+2022-11-10 14:32:41,226 DEBUG    root            Added [cloudbuild.yaml]
+2022-11-10 14:32:41,227 DEBUG    root            Added [Prediction/prediction_dockerizationz.ipynb]
+2022-11-10 14:32:41,228 DEBUG    root            Added [Prediction/Prediction.py]
+2022-11-10 14:32:41,229 DEBUG    root            Added [Prediction/requirements.txt]
+2022-11-10 14:32:41,230 DEBUG    root            Added [Prediction/Dockerfile]
+2022-11-10 14:32:41,230 DEBUG    root            Added [Prediction/.ipynb_checkpoints/Prediction-checkpoint.py]
+2022-11-10 14:32:41,231 DEBUG    root            Added [Prediction/.ipynb_checkpoints/prediction_dockerizationz-checkpoint.ipynb]
+2022-11-10 14:32:41,231 DEBUG    root            Added [Prediction/.ipynb_checkpoints/Dockerfile-checkpoint]
+2022-11-10 14:32:41,232 DEBUG    root            Added [Prediction/.ipynb_checkpoints/requirements-checkpoint.txt]
+2022-11-10 14:32:41,232 DEBUG    root            Added [.ipynb_checkpoints/docker-compose-checkpoint.yaml]
+2022-11-10 14:32:41,233 DEBUG    root            Added [.ipynb_checkpoints/cloudbuild-checkpoint.yaml]
+2022-11-10 14:32:41,233 DEBUG    root            Added [.ipynb_checkpoints/cloudbuild_2-checkpoint.yaml]
+2022-11-10 14:32:41,236 DEBUG    root            Added [.ipynb_checkpoints/cloudbuild_test-checkpoint.ipynb]
+2022-11-10 14:32:41,237 DEBUG    root            Added [Training/training_dockerisation.ipynb]
+2022-11-10 14:32:41,238 DEBUG    root            Added [Training/requirements.txt]
+2022-11-10 14:32:41,238 DEBUG    root            Added [Training/training.py]
+2022-11-10 14:32:41,239 DEBUG    root            Added [Training/Dockerfile]
+2022-11-10 14:32:41,239 DEBUG    root            Added [Training/.ipynb_checkpoints/Dockerfile-checkpoint]
+2022-11-10 14:32:41,240 DEBUG    root            Added [Training/.ipynb_checkpoints/training-checkpoint.py]
+2022-11-10 14:32:41,240 DEBUG    root            Added [Training/.ipynb_checkpoints/training_dockerisation-checkpoint.ipynb]
+2022-11-10 14:32:41,241 DEBUG    root            Added [Training/.ipynb_checkpoints/requirements-checkpoint.txt]
+2022-11-10 14:32:41,241 DEBUG    root            Added [Preprocessing/preprocessing.py]
+2022-11-10 14:32:41,242 DEBUG    root            Added [Preprocessing/requirements.txt]
+2022-11-10 14:32:41,243 DEBUG    root            Added [Preprocessing/preprocessing_dockerization.ipynb]
+2022-11-10 14:32:41,244 DEBUG    root            Added [Preprocessing/Dockerfile]
+2022-11-10 14:32:41,245 DEBUG    root            Added [Preprocessing/.ipynb_checkpoints/Dockerfile-checkpoint]
+2022-11-10 14:32:41,246 DEBUG    root            Added [Preprocessing/.ipynb_checkpoints/preprocessing_dockerization-checkpoint.ipynb]
+2022-11-10 14:32:41,246 DEBUG    root            Added [Preprocessing/.ipynb_checkpoints/requirements-checkpoint.txt]
+2022-11-10 14:32:41,246 DEBUG    root            Added [Preprocessing/.ipynb_checkpoints/preprocessing-checkpoint.py]
+2022-11-10 14:32:41,247 INFO     ___FILE_ONLY___ Uploading tarball of [.] to [gs://insight-tool-321814_cloudbuild/source/1668090761.005794-77c709c329f1430fa527ff8eb13518a0.tgz]
+
+2022-11-10 14:32:41,250 INFO     root            Uploading [/tmp/tmpriyrouoc/file.tgz] to [insight-tool-321814_cloudbuild/source/1668090761.005794-77c709c329f1430fa527ff8eb13518a0.tgz]
+2022-11-10 14:32:41,256 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2022-11-10 14:32:41,458 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "POST /upload/storage/v1/b/insight-tool-321814_cloudbuild/o?alt=json&name=source%2F1668090761.005794-77c709c329f1430fa527ff8eb13518a0.tgz&uploadType=multipart HTTP/1.1" 200 1019
+2022-11-10 14:32:41,461 DEBUG    root            submitting build: <Build
+ images: ['gcr.io/insight-tool-321814/docker_test_insight/training_cloudbuild_test']
+ secrets: []
+ source: <Source
+ storageSource: <StorageSource
+ bucket: 'insight-tool-321814_cloudbuild'
+ generation: 1668090761357660
+ object: 'source/1668090761.005794-77c709c329f1430fa527ff8eb13518a0.tgz'>>
+ steps: [<BuildStep
+ allowExitCodes: []
+ args: ['build', '-t', 'gcr.io/insight-tool-321814/docker_test_insight/training_cloudbuild_test', '.']
+ dir: 'Training'
+ env: []
+ id: 'training_build'
+ name: 'gcr.io/cloud-builders/docker'
+ secretEnv: []
+ volumes: []
+ waitFor: []>]
+ tags: []
+ warnings: []>
+2022-11-10 14:32:41,468 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/554650739751-compute@developer.gserviceaccount.com/?recursive=true
+2022-11-10 14:32:41,469 DEBUG    urllib3.connectionpool Starting new HTTP connection (1): metadata.google.internal:80
+2022-11-10 14:32:41,471 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/554650739751-compute@developer.gserviceaccount.com/?recursive=true HTTP/1.1" 200 155
+2022-11-10 14:32:41,472 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/554650739751-compute@developer.gserviceaccount.com/token
+2022-11-10 14:32:41,474 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/554650739751-compute@developer.gserviceaccount.com/token HTTP/1.1" 200 267
+2022-11-10 14:32:41,481 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/554650739751-compute@developer.gserviceaccount.com/?recursive=true
+2022-11-10 14:32:41,483 DEBUG    urllib3.connectionpool Starting new HTTP connection (1): metadata.google.internal:80
+2022-11-10 14:32:41,484 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/554650739751-compute@developer.gserviceaccount.com/?recursive=true HTTP/1.1" 200 155
+2022-11-10 14:32:41,485 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/554650739751-compute@developer.gserviceaccount.com/token
+2022-11-10 14:32:41,488 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/554650739751-compute@developer.gserviceaccount.com/token HTTP/1.1" 200 267
+2022-11-10 14:32:41,499 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudbuild.googleapis.com:443
+2022-11-10 14:32:42,146 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "POST /v1/projects/insight-tool-321814/locations/global/builds?alt=json HTTP/1.1" 200 None
+2022-11-10 14:32:42,156 INFO     ___FILE_ONLY___ Created [https://cloudbuild.googleapis.com/v1/projects/insight-tool-321814/locations/global/builds/3879e4e8-443b-4434-bce8-9380a11c028d].
+
+2022-11-10 14:32:42,157 INFO     ___FILE_ONLY___ Logs are available at [ https://console.cloud.google.com/cloud-build/builds/3879e4e8-443b-4434-bce8-9380a11c028d?project=554650739751 ].
+
+2022-11-10 14:32:42,159 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudbuild.googleapis.com:443
+2022-11-10 14:32:42,285 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/insight-tool-321814/locations/global/builds/3879e4e8-443b-4434-bce8-9380a11c028d?alt=json HTTP/1.1" 200 None
+2022-11-10 14:32:42,295 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/554650739751-compute@developer.gserviceaccount.com/?recursive=true
+2022-11-10 14:32:42,297 DEBUG    urllib3.connectionpool Starting new HTTP connection (1): metadata.google.internal:80
+2022-11-10 14:32:42,299 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/554650739751-compute@developer.gserviceaccount.com/?recursive=true HTTP/1.1" 200 155
+2022-11-10 14:32:42,300 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/554650739751-compute@developer.gserviceaccount.com/token
+2022-11-10 14:32:42,302 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/554650739751-compute@developer.gserviceaccount.com/token HTTP/1.1" 200 266
+2022-11-10 14:32:42,318 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/554650739751-compute@developer.gserviceaccount.com/?recursive=true
+2022-11-10 14:32:42,319 DEBUG    urllib3.connectionpool Starting new HTTP connection (1): metadata.google.internal:80
+2022-11-10 14:32:42,321 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/554650739751-compute@developer.gserviceaccount.com/?recursive=true HTTP/1.1" 200 155
+2022-11-10 14:32:42,322 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/554650739751-compute@developer.gserviceaccount.com/token
+2022-11-10 14:32:42,324 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/554650739751-compute@developer.gserviceaccount.com/token HTTP/1.1" 200 266
+2022-11-10 14:32:42,327 DEBUG    root            GCS logfile url is https://storage.googleapis.com/554650739751.cloudbuild-logs.googleusercontent.com/log-3879e4e8-443b-4434-bce8-9380a11c028d.txt
+2022-11-10 14:32:42,329 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2022-11-10 14:32:42,332 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudbuild.googleapis.com:443
+2022-11-10 14:32:42,411 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /554650739751.cloudbuild-logs.googleusercontent.com/log-3879e4e8-443b-4434-bce8-9380a11c028d.txt HTTP/1.1" 404 257
+2022-11-10 14:32:42,413 DEBUG    root            Reading GCS logfile: 404 (no log yet; keep polling)
+2022-11-10 14:32:42,456 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/insight-tool-321814/locations/global/builds/3879e4e8-443b-4434-bce8-9380a11c028d?alt=json HTTP/1.1" 200 None
+2022-11-10 14:32:43,416 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2022-11-10 14:32:43,454 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /554650739751.cloudbuild-logs.googleusercontent.com/log-3879e4e8-443b-4434-bce8-9380a11c028d.txt HTTP/1.1" 416 164
+2022-11-10 14:32:43,456 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-11-10 14:32:43,463 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudbuild.googleapis.com:443
+2022-11-10 14:32:43,546 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/insight-tool-321814/locations/global/builds/3879e4e8-443b-4434-bce8-9380a11c028d?alt=json HTTP/1.1" 200 None
+2022-11-10 14:32:44,459 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2022-11-10 14:32:44,554 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudbuild.googleapis.com:443
+2022-11-10 14:32:44,582 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /554650739751.cloudbuild-logs.googleusercontent.com/log-3879e4e8-443b-4434-bce8-9380a11c028d.txt HTTP/1.1" 206 207
+2022-11-10 14:32:44,583 DEBUG    root            Reading GCS logfile: 206 (read 207 bytes)
+2022-11-10 14:32:44,584 INFO     ___FILE_ONLY___ ----------------------------- REMOTE BUILD OUTPUT ------------------------------
+
+2022-11-10 14:32:44,584 INFO     ___FILE_ONLY___ starting build "3879e4e8-443b-4434-bce8-9380a11c028d"
+
+FETCHSOURCE
+Fetching storage object: gs://insight-tool-321814_cloudbuild/source/1668090761.005794-77c709c329f1430fa527ff8eb13518a0.tgz#1668090761357660
+
+2022-11-10 14:32:44,668 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/insight-tool-321814/locations/global/builds/3879e4e8-443b-4434-bce8-9380a11c028d?alt=json HTTP/1.1" 200 None
+2022-11-10 14:32:45,587 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2022-11-10 14:32:45,623 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /554650739751.cloudbuild-logs.googleusercontent.com/log-3879e4e8-443b-4434-bce8-9380a11c028d.txt HTTP/1.1" 416 166
+2022-11-10 14:32:45,625 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-11-10 14:32:45,676 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudbuild.googleapis.com:443
+2022-11-10 14:32:45,758 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/insight-tool-321814/locations/global/builds/3879e4e8-443b-4434-bce8-9380a11c028d?alt=json HTTP/1.1" 200 None
+2022-11-10 14:32:46,628 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2022-11-10 14:32:46,675 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /554650739751.cloudbuild-logs.googleusercontent.com/log-3879e4e8-443b-4434-bce8-9380a11c028d.txt HTTP/1.1" 416 166
+2022-11-10 14:32:46,676 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-11-10 14:32:46,766 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudbuild.googleapis.com:443
+2022-11-10 14:32:46,878 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/insight-tool-321814/locations/global/builds/3879e4e8-443b-4434-bce8-9380a11c028d?alt=json HTTP/1.1" 200 None
+2022-11-10 14:32:47,680 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2022-11-10 14:32:47,715 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /554650739751.cloudbuild-logs.googleusercontent.com/log-3879e4e8-443b-4434-bce8-9380a11c028d.txt HTTP/1.1" 416 166
+2022-11-10 14:32:47,716 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-11-10 14:32:47,886 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudbuild.googleapis.com:443
+2022-11-10 14:32:47,973 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/insight-tool-321814/locations/global/builds/3879e4e8-443b-4434-bce8-9380a11c028d?alt=json HTTP/1.1" 200 None
+2022-11-10 14:32:48,720 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2022-11-10 14:32:48,761 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /554650739751.cloudbuild-logs.googleusercontent.com/log-3879e4e8-443b-4434-bce8-9380a11c028d.txt HTTP/1.1" 416 166
+2022-11-10 14:32:48,763 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-11-10 14:32:48,980 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudbuild.googleapis.com:443
+2022-11-10 14:32:49,323 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/insight-tool-321814/locations/global/builds/3879e4e8-443b-4434-bce8-9380a11c028d?alt=json HTTP/1.1" 200 None
+2022-11-10 14:32:49,766 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2022-11-10 14:32:49,807 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /554650739751.cloudbuild-logs.googleusercontent.com/log-3879e4e8-443b-4434-bce8-9380a11c028d.txt HTTP/1.1" 416 166
+2022-11-10 14:32:49,809 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-11-10 14:32:50,330 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudbuild.googleapis.com:443
+2022-11-10 14:32:50,435 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/insight-tool-321814/locations/global/builds/3879e4e8-443b-4434-bce8-9380a11c028d?alt=json HTTP/1.1" 200 None
+2022-11-10 14:32:50,813 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2022-11-10 14:32:50,864 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /554650739751.cloudbuild-logs.googleusercontent.com/log-3879e4e8-443b-4434-bce8-9380a11c028d.txt HTTP/1.1" 416 166
+2022-11-10 14:32:50,866 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-11-10 14:32:51,442 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudbuild.googleapis.com:443
+2022-11-10 14:32:51,529 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/insight-tool-321814/locations/global/builds/3879e4e8-443b-4434-bce8-9380a11c028d?alt=json HTTP/1.1" 200 None
+2022-11-10 14:32:51,870 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2022-11-10 14:32:51,988 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /554650739751.cloudbuild-logs.googleusercontent.com/log-3879e4e8-443b-4434-bce8-9380a11c028d.txt HTTP/1.1" 206 371
+2022-11-10 14:32:51,990 DEBUG    root            Reading GCS logfile: 206 (read 371 bytes)
+2022-11-10 14:32:51,990 INFO     ___FILE_ONLY___ Copying gs://insight-tool-321814_cloudbuild/source/1668090761.005794-77c709c329f1430fa527ff8eb13518a0.tgz#1668090761357660...
+/ [0 files][    0.0 B/ 13.7 KiB]                                                / [1 files][ 13.7 KiB/ 13.7 KiB]                                                
+Operation completed over 1 objects/13.7 KiB.
+
+2022-11-10 14:32:52,536 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudbuild.googleapis.com:443
+2022-11-10 14:32:52,625 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/insight-tool-321814/locations/global/builds/3879e4e8-443b-4434-bce8-9380a11c028d?alt=json HTTP/1.1" 200 None
+2022-11-10 14:32:52,993 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2022-11-10 14:32:53,034 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /554650739751.cloudbuild-logs.googleusercontent.com/log-3879e4e8-443b-4434-bce8-9380a11c028d.txt HTTP/1.1" 416 166
+2022-11-10 14:32:53,036 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-11-10 14:32:53,632 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudbuild.googleapis.com:443
+2022-11-10 14:32:53,718 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/insight-tool-321814/locations/global/builds/3879e4e8-443b-4434-bce8-9380a11c028d?alt=json HTTP/1.1" 200 None
+2022-11-10 14:32:54,039 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2022-11-10 14:32:54,167 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /554650739751.cloudbuild-logs.googleusercontent.com/log-3879e4e8-443b-4434-bce8-9380a11c028d.txt HTTP/1.1" 206 6
+2022-11-10 14:32:54,169 DEBUG    root            Reading GCS logfile: 206 (read 6 bytes)
+2022-11-10 14:32:54,169 INFO     ___FILE_ONLY___ BUILD
+
+2022-11-10 14:32:54,725 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudbuild.googleapis.com:443
+2022-11-10 14:32:54,819 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/insight-tool-321814/locations/global/builds/3879e4e8-443b-4434-bce8-9380a11c028d?alt=json HTTP/1.1" 200 None
+2022-11-10 14:32:55,173 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2022-11-10 14:32:55,286 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /554650739751.cloudbuild-logs.googleusercontent.com/log-3879e4e8-443b-4434-bce8-9380a11c028d.txt HTTP/1.1" 206 63
+2022-11-10 14:32:55,288 DEBUG    root            Reading GCS logfile: 206 (read 63 bytes)
+2022-11-10 14:32:55,289 INFO     ___FILE_ONLY___ Already have image (with digest): gcr.io/cloud-builders/docker
+
+2022-11-10 14:32:55,826 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudbuild.googleapis.com:443
+2022-11-10 14:32:55,916 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/insight-tool-321814/locations/global/builds/3879e4e8-443b-4434-bce8-9380a11c028d?alt=json HTTP/1.1" 200 None
+2022-11-10 14:32:56,292 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2022-11-10 14:32:56,416 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /554650739751.cloudbuild-logs.googleusercontent.com/log-3879e4e8-443b-4434-bce8-9380a11c028d.txt HTTP/1.1" 206 1369
+2022-11-10 14:32:56,418 DEBUG    root            Reading GCS logfile: 206 (read 1369 bytes)
+2022-11-10 14:32:56,419 INFO     ___FILE_ONLY___ Sending build context to Docker daemon  17.41kB
+Step 1/6 : FROM gcr.io/deeplearning-platform-release/base-cpu
+latest: Pulling from deeplearning-platform-release/base-cpu
+eaead16dc43b: Pulling fs layer
+6529fe2a781d: Pulling fs layer
+470effa3df00: Pulling fs layer
+4f4fb700ef54: Pulling fs layer
+81f7870f3a99: Pulling fs layer
+97e572c9d0d3: Pulling fs layer
+67c86225922e: Pulling fs layer
+f0be7e3b4260: Pulling fs layer
+27519836c4fe: Pulling fs layer
+8114d85b6dca: Pulling fs layer
+4f2efc2c2115: Pulling fs layer
+8b38fa015e72: Pulling fs layer
+15b21dd7632f: Pulling fs layer
+15c1e55a1fdc: Pulling fs layer
+92394077f3fc: Pulling fs layer
+adc7c41f6a21: Pulling fs layer
+dd2f3ccdd187: Pulling fs layer
+7d108414db7f: Pulling fs layer
+c0c5eb2fe5ca: Pulling fs layer
+87f6b5e0c563: Pulling fs layer
+9993b2c47e68: Pulling fs layer
+52e0ea262be3: Pulling fs layer
+4f4fb700ef54: Waiting
+81f7870f3a99: Waiting
+97e572c9d0d3: Waiting
+67c86225922e: Waiting
+f0be7e3b4260: Waiting
+27519836c4fe: Waiting
+8114d85b6dca: Waiting
+4f2efc2c2115: Waiting
+8b38fa015e72: Waiting
+7d108414db7f: Waiting
+15b21dd7632f: Waiting
+15c1e55a1fdc: Waiting
+92394077f3fc: Waiting
+adc7c41f6a21: Waiting
+dd2f3ccdd187: Waiting
+87f6b5e0c563: Waiting
+9993b2c47e68: Waiting
+52e0ea262be3: Waiting
+c0c5eb2fe5ca: Waiting
+470effa3df00: Download complete
+4f4fb700ef54: Verifying Checksum
+4f4fb700ef54: Download complete
+
+2022-11-10 14:32:56,923 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudbuild.googleapis.com:443
+2022-11-10 14:32:57,010 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/insight-tool-321814/locations/global/builds/3879e4e8-443b-4434-bce8-9380a11c028d?alt=json HTTP/1.1" 200 None
+2022-11-10 14:32:57,422 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2022-11-10 14:32:57,576 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /554650739751.cloudbuild-logs.googleusercontent.com/log-3879e4e8-443b-4434-bce8-9380a11c028d.txt HTTP/1.1" 206 325
+2022-11-10 14:32:57,578 DEBUG    root            Reading GCS logfile: 206 (read 325 bytes)
+2022-11-10 14:32:57,578 INFO     ___FILE_ONLY___ eaead16dc43b: Verifying Checksum
+eaead16dc43b: Download complete
+6529fe2a781d: Verifying Checksum
+6529fe2a781d: Download complete
+67c86225922e: Verifying Checksum
+67c86225922e: Download complete
+f0be7e3b4260: Verifying Checksum
+f0be7e3b4260: Download complete
+27519836c4fe: Verifying Checksum
+27519836c4fe: Download complete
+
+2022-11-10 14:32:58,017 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudbuild.googleapis.com:443
+2022-11-10 14:32:58,107 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/insight-tool-321814/locations/global/builds/3879e4e8-443b-4434-bce8-9380a11c028d?alt=json HTTP/1.1" 200 None
+2022-11-10 14:32:58,581 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2022-11-10 14:32:58,616 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /554650739751.cloudbuild-logs.googleusercontent.com/log-3879e4e8-443b-4434-bce8-9380a11c028d.txt HTTP/1.1" 416 167
+2022-11-10 14:32:58,618 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-11-10 14:32:59,115 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudbuild.googleapis.com:443
+2022-11-10 14:32:59,202 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/insight-tool-321814/locations/global/builds/3879e4e8-443b-4434-bce8-9380a11c028d?alt=json HTTP/1.1" 200 None
+2022-11-10 14:32:59,622 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2022-11-10 14:32:59,663 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /554650739751.cloudbuild-logs.googleusercontent.com/log-3879e4e8-443b-4434-bce8-9380a11c028d.txt HTTP/1.1" 416 167
+2022-11-10 14:32:59,665 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-11-10 14:33:00,209 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudbuild.googleapis.com:443
+2022-11-10 14:33:00,295 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/insight-tool-321814/locations/global/builds/3879e4e8-443b-4434-bce8-9380a11c028d?alt=json HTTP/1.1" 200 None
+2022-11-10 14:33:00,668 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2022-11-10 14:33:00,791 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /554650739751.cloudbuild-logs.googleusercontent.com/log-3879e4e8-443b-4434-bce8-9380a11c028d.txt HTTP/1.1" 206 324
+2022-11-10 14:33:00,793 DEBUG    root            Reading GCS logfile: 206 (read 324 bytes)
+2022-11-10 14:33:00,793 INFO     ___FILE_ONLY___ 97e572c9d0d3: Download complete
+4f2efc2c2115: Verifying Checksum
+4f2efc2c2115: Download complete
+8b38fa015e72: Verifying Checksum
+8b38fa015e72: Download complete
+15b21dd7632f: Verifying Checksum
+15b21dd7632f: Download complete
+15c1e55a1fdc: Download complete
+92394077f3fc: Verifying Checksum
+92394077f3fc: Download complete
+
+2022-11-10 14:33:01,304 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudbuild.googleapis.com:443
+2022-11-10 14:33:01,399 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/insight-tool-321814/locations/global/builds/3879e4e8-443b-4434-bce8-9380a11c028d?alt=json HTTP/1.1" 200 None
+2022-11-10 14:33:01,798 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2022-11-10 14:33:01,926 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /554650739751.cloudbuild-logs.googleusercontent.com/log-3879e4e8-443b-4434-bce8-9380a11c028d.txt HTTP/1.1" 206 520
+2022-11-10 14:33:01,927 DEBUG    root            Reading GCS logfile: 206 (read 520 bytes)
+2022-11-10 14:33:01,928 INFO     ___FILE_ONLY___ adc7c41f6a21: Verifying Checksum
+adc7c41f6a21: Download complete
+dd2f3ccdd187: Verifying Checksum
+dd2f3ccdd187: Download complete
+7d108414db7f: Verifying Checksum
+7d108414db7f: Download complete
+8114d85b6dca: Verifying Checksum
+8114d85b6dca: Download complete
+c0c5eb2fe5ca: Verifying Checksum
+c0c5eb2fe5ca: Download complete
+87f6b5e0c563: Verifying Checksum
+87f6b5e0c563: Download complete
+52e0ea262be3: Verifying Checksum
+52e0ea262be3: Download complete
+81f7870f3a99: Verifying Checksum
+81f7870f3a99: Download complete
+
+2022-11-10 14:33:02,409 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudbuild.googleapis.com:443
+2022-11-10 14:33:02,492 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/insight-tool-321814/locations/global/builds/3879e4e8-443b-4434-bce8-9380a11c028d?alt=json HTTP/1.1" 200 None
+2022-11-10 14:33:02,931 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2022-11-10 14:33:03,055 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /554650739751.cloudbuild-logs.googleusercontent.com/log-3879e4e8-443b-4434-bce8-9380a11c028d.txt HTTP/1.1" 206 28
+2022-11-10 14:33:03,057 DEBUG    root            Reading GCS logfile: 206 (read 28 bytes)
+2022-11-10 14:33:03,057 INFO     ___FILE_ONLY___ eaead16dc43b: Pull complete
+
+2022-11-10 14:33:03,499 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudbuild.googleapis.com:443
+2022-11-10 14:33:03,586 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/insight-tool-321814/locations/global/builds/3879e4e8-443b-4434-bce8-9380a11c028d?alt=json HTTP/1.1" 200 None
+2022-11-10 14:33:04,060 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2022-11-10 14:33:04,187 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /554650739751.cloudbuild-logs.googleusercontent.com/log-3879e4e8-443b-4434-bce8-9380a11c028d.txt HTTP/1.1" 206 28
+2022-11-10 14:33:04,189 DEBUG    root            Reading GCS logfile: 206 (read 28 bytes)
+2022-11-10 14:33:04,190 INFO     ___FILE_ONLY___ 6529fe2a781d: Pull complete
+
+2022-11-10 14:33:04,593 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudbuild.googleapis.com:443
+2022-11-10 14:33:04,940 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/insight-tool-321814/locations/global/builds/3879e4e8-443b-4434-bce8-9380a11c028d?alt=json HTTP/1.1" 200 None
+2022-11-10 14:33:05,193 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2022-11-10 14:33:05,309 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /554650739751.cloudbuild-logs.googleusercontent.com/log-3879e4e8-443b-4434-bce8-9380a11c028d.txt HTTP/1.1" 206 56
+2022-11-10 14:33:05,311 DEBUG    root            Reading GCS logfile: 206 (read 56 bytes)
+2022-11-10 14:33:05,311 INFO     ___FILE_ONLY___ 470effa3df00: Pull complete
+4f4fb700ef54: Pull complete
+
+2022-11-10 14:33:05,947 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudbuild.googleapis.com:443
+2022-11-10 14:33:06,034 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/insight-tool-321814/locations/global/builds/3879e4e8-443b-4434-bce8-9380a11c028d?alt=json HTTP/1.1" 200 None
+2022-11-10 14:33:06,315 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2022-11-10 14:33:06,350 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /554650739751.cloudbuild-logs.googleusercontent.com/log-3879e4e8-443b-4434-bce8-9380a11c028d.txt HTTP/1.1" 416 167
+2022-11-10 14:33:06,352 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-11-10 14:33:07,041 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudbuild.googleapis.com:443
+2022-11-10 14:33:07,354 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2022-11-10 14:33:07,385 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/insight-tool-321814/locations/global/builds/3879e4e8-443b-4434-bce8-9380a11c028d?alt=json HTTP/1.1" 200 None
+2022-11-10 14:33:07,390 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /554650739751.cloudbuild-logs.googleusercontent.com/log-3879e4e8-443b-4434-bce8-9380a11c028d.txt HTTP/1.1" 416 167
+2022-11-10 14:33:07,392 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-11-10 14:33:08,392 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudbuild.googleapis.com:443
+2022-11-10 14:33:08,394 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2022-11-10 14:33:08,434 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /554650739751.cloudbuild-logs.googleusercontent.com/log-3879e4e8-443b-4434-bce8-9380a11c028d.txt HTTP/1.1" 416 167
+2022-11-10 14:33:08,435 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-11-10 14:33:08,490 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/insight-tool-321814/locations/global/builds/3879e4e8-443b-4434-bce8-9380a11c028d?alt=json HTTP/1.1" 200 None
+2022-11-10 14:33:09,439 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2022-11-10 14:33:09,477 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /554650739751.cloudbuild-logs.googleusercontent.com/log-3879e4e8-443b-4434-bce8-9380a11c028d.txt HTTP/1.1" 416 167
+2022-11-10 14:33:09,478 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-11-10 14:33:09,498 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudbuild.googleapis.com:443
+2022-11-10 14:33:09,580 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/insight-tool-321814/locations/global/builds/3879e4e8-443b-4434-bce8-9380a11c028d?alt=json HTTP/1.1" 200 None
+2022-11-10 14:33:10,482 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2022-11-10 14:33:10,520 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /554650739751.cloudbuild-logs.googleusercontent.com/log-3879e4e8-443b-4434-bce8-9380a11c028d.txt HTTP/1.1" 416 167
+2022-11-10 14:33:10,522 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-11-10 14:33:10,588 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudbuild.googleapis.com:443
+2022-11-10 14:33:10,673 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/insight-tool-321814/locations/global/builds/3879e4e8-443b-4434-bce8-9380a11c028d?alt=json HTTP/1.1" 200 None
+2022-11-10 14:33:11,526 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2022-11-10 14:33:11,569 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /554650739751.cloudbuild-logs.googleusercontent.com/log-3879e4e8-443b-4434-bce8-9380a11c028d.txt HTTP/1.1" 416 167
+2022-11-10 14:33:11,571 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-11-10 14:33:11,681 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudbuild.googleapis.com:443
+2022-11-10 14:33:11,774 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/insight-tool-321814/locations/global/builds/3879e4e8-443b-4434-bce8-9380a11c028d?alt=json HTTP/1.1" 200 None
+2022-11-10 14:33:12,574 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2022-11-10 14:33:12,621 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /554650739751.cloudbuild-logs.googleusercontent.com/log-3879e4e8-443b-4434-bce8-9380a11c028d.txt HTTP/1.1" 416 167
+2022-11-10 14:33:12,623 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-11-10 14:33:12,781 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudbuild.googleapis.com:443
+2022-11-10 14:33:12,865 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/insight-tool-321814/locations/global/builds/3879e4e8-443b-4434-bce8-9380a11c028d?alt=json HTTP/1.1" 200 None
+2022-11-10 14:33:13,626 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2022-11-10 14:33:13,751 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /554650739751.cloudbuild-logs.googleusercontent.com/log-3879e4e8-443b-4434-bce8-9380a11c028d.txt HTTP/1.1" 206 65
+2022-11-10 14:33:13,753 DEBUG    root            Reading GCS logfile: 206 (read 65 bytes)
+2022-11-10 14:33:13,753 INFO     ___FILE_ONLY___ 9993b2c47e68: Verifying Checksum
+9993b2c47e68: Download complete
+
+2022-11-10 14:33:13,872 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudbuild.googleapis.com:443
+2022-11-10 14:33:13,961 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/insight-tool-321814/locations/global/builds/3879e4e8-443b-4434-bce8-9380a11c028d?alt=json HTTP/1.1" 200 None
+2022-11-10 14:33:14,756 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2022-11-10 14:33:14,794 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /554650739751.cloudbuild-logs.googleusercontent.com/log-3879e4e8-443b-4434-bce8-9380a11c028d.txt HTTP/1.1" 416 167
+2022-11-10 14:33:14,796 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-11-10 14:33:14,969 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudbuild.googleapis.com:443
+2022-11-10 14:33:15,048 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/insight-tool-321814/locations/global/builds/3879e4e8-443b-4434-bce8-9380a11c028d?alt=json HTTP/1.1" 200 None
+2022-11-10 14:33:15,799 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2022-11-10 14:33:15,837 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /554650739751.cloudbuild-logs.googleusercontent.com/log-3879e4e8-443b-4434-bce8-9380a11c028d.txt HTTP/1.1" 416 167
+2022-11-10 14:33:15,839 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-11-10 14:33:16,055 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudbuild.googleapis.com:443
+2022-11-10 14:33:16,142 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/insight-tool-321814/locations/global/builds/3879e4e8-443b-4434-bce8-9380a11c028d?alt=json HTTP/1.1" 200 None
+2022-11-10 14:33:16,842 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2022-11-10 14:33:16,886 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /554650739751.cloudbuild-logs.googleusercontent.com/log-3879e4e8-443b-4434-bce8-9380a11c028d.txt HTTP/1.1" 416 167
+2022-11-10 14:33:16,888 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-11-10 14:33:17,149 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudbuild.googleapis.com:443
+2022-11-10 14:33:17,236 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/insight-tool-321814/locations/global/builds/3879e4e8-443b-4434-bce8-9380a11c028d?alt=json HTTP/1.1" 200 None
+2022-11-10 14:33:17,891 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2022-11-10 14:33:17,934 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /554650739751.cloudbuild-logs.googleusercontent.com/log-3879e4e8-443b-4434-bce8-9380a11c028d.txt HTTP/1.1" 416 167
+2022-11-10 14:33:17,936 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-11-10 14:33:18,244 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudbuild.googleapis.com:443
+2022-11-10 14:33:18,331 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/insight-tool-321814/locations/global/builds/3879e4e8-443b-4434-bce8-9380a11c028d?alt=json HTTP/1.1" 200 None
+2022-11-10 14:33:18,939 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2022-11-10 14:33:18,975 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /554650739751.cloudbuild-logs.googleusercontent.com/log-3879e4e8-443b-4434-bce8-9380a11c028d.txt HTTP/1.1" 416 167
+2022-11-10 14:33:18,977 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-11-10 14:33:19,338 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudbuild.googleapis.com:443
+2022-11-10 14:33:19,424 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/insight-tool-321814/locations/global/builds/3879e4e8-443b-4434-bce8-9380a11c028d?alt=json HTTP/1.1" 200 None
+2022-11-10 14:33:19,980 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2022-11-10 14:33:20,022 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /554650739751.cloudbuild-logs.googleusercontent.com/log-3879e4e8-443b-4434-bce8-9380a11c028d.txt HTTP/1.1" 416 167
+2022-11-10 14:33:20,024 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-11-10 14:33:20,432 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudbuild.googleapis.com:443
+2022-11-10 14:33:20,524 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/insight-tool-321814/locations/global/builds/3879e4e8-443b-4434-bce8-9380a11c028d?alt=json HTTP/1.1" 200 None
+2022-11-10 14:33:21,027 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2022-11-10 14:33:21,062 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /554650739751.cloudbuild-logs.googleusercontent.com/log-3879e4e8-443b-4434-bce8-9380a11c028d.txt HTTP/1.1" 416 167
+2022-11-10 14:33:21,063 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-11-10 14:33:21,531 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudbuild.googleapis.com:443
+2022-11-10 14:33:21,613 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/insight-tool-321814/locations/global/builds/3879e4e8-443b-4434-bce8-9380a11c028d?alt=json HTTP/1.1" 200 None
+2022-11-10 14:33:22,066 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2022-11-10 14:33:22,102 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /554650739751.cloudbuild-logs.googleusercontent.com/log-3879e4e8-443b-4434-bce8-9380a11c028d.txt HTTP/1.1" 416 167
+2022-11-10 14:33:22,104 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-11-10 14:33:22,621 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudbuild.googleapis.com:443
+2022-11-10 14:33:22,710 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/insight-tool-321814/locations/global/builds/3879e4e8-443b-4434-bce8-9380a11c028d?alt=json HTTP/1.1" 200 None
+2022-11-10 14:33:23,106 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2022-11-10 14:33:23,148 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /554650739751.cloudbuild-logs.googleusercontent.com/log-3879e4e8-443b-4434-bce8-9380a11c028d.txt HTTP/1.1" 416 167
+2022-11-10 14:33:23,149 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-11-10 14:33:23,718 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudbuild.googleapis.com:443
+2022-11-10 14:33:23,810 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/insight-tool-321814/locations/global/builds/3879e4e8-443b-4434-bce8-9380a11c028d?alt=json HTTP/1.1" 200 None
+2022-11-10 14:33:24,153 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2022-11-10 14:33:24,206 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /554650739751.cloudbuild-logs.googleusercontent.com/log-3879e4e8-443b-4434-bce8-9380a11c028d.txt HTTP/1.1" 416 167
+2022-11-10 14:33:24,208 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-11-10 14:33:24,818 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudbuild.googleapis.com:443
+2022-11-10 14:33:24,902 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/insight-tool-321814/locations/global/builds/3879e4e8-443b-4434-bce8-9380a11c028d?alt=json HTTP/1.1" 200 None
+2022-11-10 14:33:25,211 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2022-11-10 14:33:25,247 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /554650739751.cloudbuild-logs.googleusercontent.com/log-3879e4e8-443b-4434-bce8-9380a11c028d.txt HTTP/1.1" 416 167
+2022-11-10 14:33:25,249 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-11-10 14:33:25,909 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudbuild.googleapis.com:443
+2022-11-10 14:33:25,991 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/insight-tool-321814/locations/global/builds/3879e4e8-443b-4434-bce8-9380a11c028d?alt=json HTTP/1.1" 200 None
+2022-11-10 14:33:26,252 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2022-11-10 14:33:26,287 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /554650739751.cloudbuild-logs.googleusercontent.com/log-3879e4e8-443b-4434-bce8-9380a11c028d.txt HTTP/1.1" 416 167
+2022-11-10 14:33:26,289 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-11-10 14:33:26,999 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudbuild.googleapis.com:443
+2022-11-10 14:33:27,082 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/insight-tool-321814/locations/global/builds/3879e4e8-443b-4434-bce8-9380a11c028d?alt=json HTTP/1.1" 200 None
+2022-11-10 14:33:27,293 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2022-11-10 14:33:27,332 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /554650739751.cloudbuild-logs.googleusercontent.com/log-3879e4e8-443b-4434-bce8-9380a11c028d.txt HTTP/1.1" 416 167
+2022-11-10 14:33:27,333 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-11-10 14:33:28,089 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudbuild.googleapis.com:443
+2022-11-10 14:33:28,172 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/insight-tool-321814/locations/global/builds/3879e4e8-443b-4434-bce8-9380a11c028d?alt=json HTTP/1.1" 200 None
+2022-11-10 14:33:28,337 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2022-11-10 14:33:28,460 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /554650739751.cloudbuild-logs.googleusercontent.com/log-3879e4e8-443b-4434-bce8-9380a11c028d.txt HTTP/1.1" 206 28
+2022-11-10 14:33:28,462 DEBUG    root            Reading GCS logfile: 206 (read 28 bytes)
+2022-11-10 14:33:28,462 INFO     ___FILE_ONLY___ 81f7870f3a99: Pull complete
+
+2022-11-10 14:33:29,180 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudbuild.googleapis.com:443
+2022-11-10 14:33:29,264 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/insight-tool-321814/locations/global/builds/3879e4e8-443b-4434-bce8-9380a11c028d?alt=json HTTP/1.1" 200 None
+2022-11-10 14:33:29,465 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2022-11-10 14:33:29,506 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /554650739751.cloudbuild-logs.googleusercontent.com/log-3879e4e8-443b-4434-bce8-9380a11c028d.txt HTTP/1.1" 416 167
+2022-11-10 14:33:29,508 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-11-10 14:33:30,271 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudbuild.googleapis.com:443
+2022-11-10 14:33:30,353 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/insight-tool-321814/locations/global/builds/3879e4e8-443b-4434-bce8-9380a11c028d?alt=json HTTP/1.1" 200 None
+2022-11-10 14:33:30,511 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2022-11-10 14:33:30,551 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /554650739751.cloudbuild-logs.googleusercontent.com/log-3879e4e8-443b-4434-bce8-9380a11c028d.txt HTTP/1.1" 416 167
+2022-11-10 14:33:30,553 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-11-10 14:33:31,360 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudbuild.googleapis.com:443
+2022-11-10 14:33:31,442 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/insight-tool-321814/locations/global/builds/3879e4e8-443b-4434-bce8-9380a11c028d?alt=json HTTP/1.1" 200 None
+2022-11-10 14:33:31,556 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2022-11-10 14:33:31,595 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /554650739751.cloudbuild-logs.googleusercontent.com/log-3879e4e8-443b-4434-bce8-9380a11c028d.txt HTTP/1.1" 416 167
+2022-11-10 14:33:31,597 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-11-10 14:33:32,450 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudbuild.googleapis.com:443
+2022-11-10 14:33:32,539 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/insight-tool-321814/locations/global/builds/3879e4e8-443b-4434-bce8-9380a11c028d?alt=json HTTP/1.1" 200 None
+2022-11-10 14:33:32,601 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2022-11-10 14:33:32,643 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /554650739751.cloudbuild-logs.googleusercontent.com/log-3879e4e8-443b-4434-bce8-9380a11c028d.txt HTTP/1.1" 416 167
+2022-11-10 14:33:32,645 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-11-10 14:33:33,546 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudbuild.googleapis.com:443
+2022-11-10 14:33:33,631 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/insight-tool-321814/locations/global/builds/3879e4e8-443b-4434-bce8-9380a11c028d?alt=json HTTP/1.1" 200 None
+2022-11-10 14:33:33,648 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2022-11-10 14:33:33,684 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /554650739751.cloudbuild-logs.googleusercontent.com/log-3879e4e8-443b-4434-bce8-9380a11c028d.txt HTTP/1.1" 416 167
+2022-11-10 14:33:33,686 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-11-10 14:33:34,638 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudbuild.googleapis.com:443
+2022-11-10 14:33:34,689 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2022-11-10 14:33:34,722 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/insight-tool-321814/locations/global/builds/3879e4e8-443b-4434-bce8-9380a11c028d?alt=json HTTP/1.1" 200 None
+2022-11-10 14:33:34,732 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /554650739751.cloudbuild-logs.googleusercontent.com/log-3879e4e8-443b-4434-bce8-9380a11c028d.txt HTTP/1.1" 416 167
+2022-11-10 14:33:34,734 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-11-10 14:33:35,730 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudbuild.googleapis.com:443
+2022-11-10 14:33:35,737 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2022-11-10 14:33:35,772 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /554650739751.cloudbuild-logs.googleusercontent.com/log-3879e4e8-443b-4434-bce8-9380a11c028d.txt HTTP/1.1" 416 167
+2022-11-10 14:33:35,774 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-11-10 14:33:35,818 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/insight-tool-321814/locations/global/builds/3879e4e8-443b-4434-bce8-9380a11c028d?alt=json HTTP/1.1" 200 None
+2022-11-10 14:33:36,777 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2022-11-10 14:33:36,816 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /554650739751.cloudbuild-logs.googleusercontent.com/log-3879e4e8-443b-4434-bce8-9380a11c028d.txt HTTP/1.1" 416 167
+2022-11-10 14:33:36,818 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-11-10 14:33:36,825 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudbuild.googleapis.com:443
+2022-11-10 14:33:36,912 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/insight-tool-321814/locations/global/builds/3879e4e8-443b-4434-bce8-9380a11c028d?alt=json HTTP/1.1" 200 None
+2022-11-10 14:33:37,821 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2022-11-10 14:33:37,865 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /554650739751.cloudbuild-logs.googleusercontent.com/log-3879e4e8-443b-4434-bce8-9380a11c028d.txt HTTP/1.1" 416 167
+2022-11-10 14:33:37,866 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-11-10 14:33:37,919 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudbuild.googleapis.com:443
+2022-11-10 14:33:38,061 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/insight-tool-321814/locations/global/builds/3879e4e8-443b-4434-bce8-9380a11c028d?alt=json HTTP/1.1" 200 None
+2022-11-10 14:33:38,870 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2022-11-10 14:33:38,908 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /554650739751.cloudbuild-logs.googleusercontent.com/log-3879e4e8-443b-4434-bce8-9380a11c028d.txt HTTP/1.1" 416 167
+2022-11-10 14:33:38,910 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-11-10 14:33:39,068 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudbuild.googleapis.com:443
+2022-11-10 14:33:39,154 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/insight-tool-321814/locations/global/builds/3879e4e8-443b-4434-bce8-9380a11c028d?alt=json HTTP/1.1" 200 None
+2022-11-10 14:33:39,914 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2022-11-10 14:33:39,955 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /554650739751.cloudbuild-logs.googleusercontent.com/log-3879e4e8-443b-4434-bce8-9380a11c028d.txt HTTP/1.1" 416 167
+2022-11-10 14:33:39,957 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-11-10 14:33:40,161 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudbuild.googleapis.com:443
+2022-11-10 14:33:40,247 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/insight-tool-321814/locations/global/builds/3879e4e8-443b-4434-bce8-9380a11c028d?alt=json HTTP/1.1" 200 None
+2022-11-10 14:33:40,961 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2022-11-10 14:33:40,999 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /554650739751.cloudbuild-logs.googleusercontent.com/log-3879e4e8-443b-4434-bce8-9380a11c028d.txt HTTP/1.1" 416 167
+2022-11-10 14:33:41,001 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-11-10 14:33:41,254 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudbuild.googleapis.com:443
+2022-11-10 14:33:41,345 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/insight-tool-321814/locations/global/builds/3879e4e8-443b-4434-bce8-9380a11c028d?alt=json HTTP/1.1" 200 None
+2022-11-10 14:33:42,004 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2022-11-10 14:33:42,047 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /554650739751.cloudbuild-logs.googleusercontent.com/log-3879e4e8-443b-4434-bce8-9380a11c028d.txt HTTP/1.1" 416 167
+2022-11-10 14:33:42,049 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-11-10 14:33:42,352 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudbuild.googleapis.com:443
+2022-11-10 14:33:42,435 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/insight-tool-321814/locations/global/builds/3879e4e8-443b-4434-bce8-9380a11c028d?alt=json HTTP/1.1" 200 None
+2022-11-10 14:33:43,053 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2022-11-10 14:33:43,091 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /554650739751.cloudbuild-logs.googleusercontent.com/log-3879e4e8-443b-4434-bce8-9380a11c028d.txt HTTP/1.1" 416 167
+2022-11-10 14:33:43,093 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-11-10 14:33:43,442 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudbuild.googleapis.com:443
+2022-11-10 14:33:43,527 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/insight-tool-321814/locations/global/builds/3879e4e8-443b-4434-bce8-9380a11c028d?alt=json HTTP/1.1" 200 None
+2022-11-10 14:33:44,096 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2022-11-10 14:33:44,133 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /554650739751.cloudbuild-logs.googleusercontent.com/log-3879e4e8-443b-4434-bce8-9380a11c028d.txt HTTP/1.1" 416 167
+2022-11-10 14:33:44,135 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-11-10 14:33:44,534 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudbuild.googleapis.com:443
+2022-11-10 14:33:44,620 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/insight-tool-321814/locations/global/builds/3879e4e8-443b-4434-bce8-9380a11c028d?alt=json HTTP/1.1" 200 None
+2022-11-10 14:33:45,138 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2022-11-10 14:33:45,172 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /554650739751.cloudbuild-logs.googleusercontent.com/log-3879e4e8-443b-4434-bce8-9380a11c028d.txt HTTP/1.1" 416 167
+2022-11-10 14:33:45,174 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-11-10 14:33:45,627 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudbuild.googleapis.com:443
+2022-11-10 14:33:45,712 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/insight-tool-321814/locations/global/builds/3879e4e8-443b-4434-bce8-9380a11c028d?alt=json HTTP/1.1" 200 None
+2022-11-10 14:33:46,177 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2022-11-10 14:33:46,232 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /554650739751.cloudbuild-logs.googleusercontent.com/log-3879e4e8-443b-4434-bce8-9380a11c028d.txt HTTP/1.1" 416 167
+2022-11-10 14:33:46,234 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-11-10 14:33:46,719 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudbuild.googleapis.com:443
+2022-11-10 14:33:46,801 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/insight-tool-321814/locations/global/builds/3879e4e8-443b-4434-bce8-9380a11c028d?alt=json HTTP/1.1" 200 None
+2022-11-10 14:33:47,237 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2022-11-10 14:33:47,345 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /554650739751.cloudbuild-logs.googleusercontent.com/log-3879e4e8-443b-4434-bce8-9380a11c028d.txt HTTP/1.1" 206 28
+2022-11-10 14:33:47,347 DEBUG    root            Reading GCS logfile: 206 (read 28 bytes)
+2022-11-10 14:33:47,347 INFO     ___FILE_ONLY___ 97e572c9d0d3: Pull complete
+
+2022-11-10 14:33:47,808 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudbuild.googleapis.com:443
+2022-11-10 14:33:47,892 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/insight-tool-321814/locations/global/builds/3879e4e8-443b-4434-bce8-9380a11c028d?alt=json HTTP/1.1" 200 None
+2022-11-10 14:33:48,350 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2022-11-10 14:33:48,524 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /554650739751.cloudbuild-logs.googleusercontent.com/log-3879e4e8-443b-4434-bce8-9380a11c028d.txt HTTP/1.1" 206 84
+2022-11-10 14:33:48,526 DEBUG    root            Reading GCS logfile: 206 (read 84 bytes)
+2022-11-10 14:33:48,526 INFO     ___FILE_ONLY___ 67c86225922e: Pull complete
+f0be7e3b4260: Pull complete
+27519836c4fe: Pull complete
+
+2022-11-10 14:33:48,899 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudbuild.googleapis.com:443
+2022-11-10 14:33:48,982 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/insight-tool-321814/locations/global/builds/3879e4e8-443b-4434-bce8-9380a11c028d?alt=json HTTP/1.1" 200 None
+2022-11-10 14:33:49,530 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2022-11-10 14:33:49,563 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /554650739751.cloudbuild-logs.googleusercontent.com/log-3879e4e8-443b-4434-bce8-9380a11c028d.txt HTTP/1.1" 416 167
+2022-11-10 14:33:49,565 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-11-10 14:33:49,990 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudbuild.googleapis.com:443
+2022-11-10 14:33:50,072 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/insight-tool-321814/locations/global/builds/3879e4e8-443b-4434-bce8-9380a11c028d?alt=json HTTP/1.1" 200 None
+2022-11-10 14:33:50,568 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2022-11-10 14:33:50,606 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /554650739751.cloudbuild-logs.googleusercontent.com/log-3879e4e8-443b-4434-bce8-9380a11c028d.txt HTTP/1.1" 416 167
+2022-11-10 14:33:50,607 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-11-10 14:33:51,079 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudbuild.googleapis.com:443
+2022-11-10 14:33:51,165 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/insight-tool-321814/locations/global/builds/3879e4e8-443b-4434-bce8-9380a11c028d?alt=json HTTP/1.1" 200 None
+2022-11-10 14:33:51,611 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2022-11-10 14:33:51,651 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /554650739751.cloudbuild-logs.googleusercontent.com/log-3879e4e8-443b-4434-bce8-9380a11c028d.txt HTTP/1.1" 416 167
+2022-11-10 14:33:51,652 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-11-10 14:33:52,173 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudbuild.googleapis.com:443
+2022-11-10 14:33:52,259 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/insight-tool-321814/locations/global/builds/3879e4e8-443b-4434-bce8-9380a11c028d?alt=json HTTP/1.1" 200 None
+2022-11-10 14:33:52,656 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2022-11-10 14:33:52,699 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /554650739751.cloudbuild-logs.googleusercontent.com/log-3879e4e8-443b-4434-bce8-9380a11c028d.txt HTTP/1.1" 416 167
+2022-11-10 14:33:52,701 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-11-10 14:33:53,266 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudbuild.googleapis.com:443
+2022-11-10 14:33:53,353 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/insight-tool-321814/locations/global/builds/3879e4e8-443b-4434-bce8-9380a11c028d?alt=json HTTP/1.1" 200 None
+2022-11-10 14:33:53,704 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2022-11-10 14:33:53,742 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /554650739751.cloudbuild-logs.googleusercontent.com/log-3879e4e8-443b-4434-bce8-9380a11c028d.txt HTTP/1.1" 416 167
+2022-11-10 14:33:53,743 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-11-10 14:33:54,360 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudbuild.googleapis.com:443
+2022-11-10 14:33:54,449 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/insight-tool-321814/locations/global/builds/3879e4e8-443b-4434-bce8-9380a11c028d?alt=json HTTP/1.1" 200 None
+2022-11-10 14:33:54,747 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2022-11-10 14:33:54,783 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /554650739751.cloudbuild-logs.googleusercontent.com/log-3879e4e8-443b-4434-bce8-9380a11c028d.txt HTTP/1.1" 416 167
+2022-11-10 14:33:54,784 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-11-10 14:33:55,456 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudbuild.googleapis.com:443
+2022-11-10 14:33:55,544 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/insight-tool-321814/locations/global/builds/3879e4e8-443b-4434-bce8-9380a11c028d?alt=json HTTP/1.1" 200 None
+2022-11-10 14:33:55,788 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2022-11-10 14:33:55,826 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /554650739751.cloudbuild-logs.googleusercontent.com/log-3879e4e8-443b-4434-bce8-9380a11c028d.txt HTTP/1.1" 416 167
+2022-11-10 14:33:55,828 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-11-10 14:33:56,551 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudbuild.googleapis.com:443
+2022-11-10 14:33:56,637 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/insight-tool-321814/locations/global/builds/3879e4e8-443b-4434-bce8-9380a11c028d?alt=json HTTP/1.1" 200 None
+2022-11-10 14:33:56,831 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2022-11-10 14:33:56,963 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /554650739751.cloudbuild-logs.googleusercontent.com/log-3879e4e8-443b-4434-bce8-9380a11c028d.txt HTTP/1.1" 206 112
+2022-11-10 14:33:56,965 DEBUG    root            Reading GCS logfile: 206 (read 112 bytes)
+2022-11-10 14:33:56,965 INFO     ___FILE_ONLY___ 8114d85b6dca: Pull complete
+4f2efc2c2115: Pull complete
+8b38fa015e72: Pull complete
+15b21dd7632f: Pull complete
+
+2022-11-10 14:33:57,644 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudbuild.googleapis.com:443
+2022-11-10 14:33:57,726 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/insight-tool-321814/locations/global/builds/3879e4e8-443b-4434-bce8-9380a11c028d?alt=json HTTP/1.1" 200 None
+2022-11-10 14:33:57,968 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2022-11-10 14:33:58,087 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /554650739751.cloudbuild-logs.googleusercontent.com/log-3879e4e8-443b-4434-bce8-9380a11c028d.txt HTTP/1.1" 206 196
+2022-11-10 14:33:58,089 DEBUG    root            Reading GCS logfile: 206 (read 196 bytes)
+2022-11-10 14:33:58,089 INFO     ___FILE_ONLY___ 15c1e55a1fdc: Pull complete
+92394077f3fc: Pull complete
+adc7c41f6a21: Pull complete
+dd2f3ccdd187: Pull complete
+7d108414db7f: Pull complete
+c0c5eb2fe5ca: Pull complete
+87f6b5e0c563: Pull complete
+
+2022-11-10 14:33:58,734 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudbuild.googleapis.com:443
+2022-11-10 14:33:59,080 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/insight-tool-321814/locations/global/builds/3879e4e8-443b-4434-bce8-9380a11c028d?alt=json HTTP/1.1" 200 None
+2022-11-10 14:33:59,092 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2022-11-10 14:33:59,133 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /554650739751.cloudbuild-logs.googleusercontent.com/log-3879e4e8-443b-4434-bce8-9380a11c028d.txt HTTP/1.1" 416 167
+2022-11-10 14:33:59,135 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-11-10 14:34:00,087 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudbuild.googleapis.com:443
+2022-11-10 14:34:00,138 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2022-11-10 14:34:00,173 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/insight-tool-321814/locations/global/builds/3879e4e8-443b-4434-bce8-9380a11c028d?alt=json HTTP/1.1" 200 None
+2022-11-10 14:34:00,177 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /554650739751.cloudbuild-logs.googleusercontent.com/log-3879e4e8-443b-4434-bce8-9380a11c028d.txt HTTP/1.1" 416 167
+2022-11-10 14:34:00,179 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-11-10 14:34:01,180 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudbuild.googleapis.com:443
+2022-11-10 14:34:01,183 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2022-11-10 14:34:01,219 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /554650739751.cloudbuild-logs.googleusercontent.com/log-3879e4e8-443b-4434-bce8-9380a11c028d.txt HTTP/1.1" 416 167
+2022-11-10 14:34:01,221 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-11-10 14:34:01,271 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/insight-tool-321814/locations/global/builds/3879e4e8-443b-4434-bce8-9380a11c028d?alt=json HTTP/1.1" 200 None
+2022-11-10 14:34:02,226 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2022-11-10 14:34:02,272 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /554650739751.cloudbuild-logs.googleusercontent.com/log-3879e4e8-443b-4434-bce8-9380a11c028d.txt HTTP/1.1" 416 167
+2022-11-10 14:34:02,275 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-11-10 14:34:02,280 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudbuild.googleapis.com:443
+2022-11-10 14:34:02,371 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/insight-tool-321814/locations/global/builds/3879e4e8-443b-4434-bce8-9380a11c028d?alt=json HTTP/1.1" 200 None
+2022-11-10 14:34:03,278 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2022-11-10 14:34:03,320 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /554650739751.cloudbuild-logs.googleusercontent.com/log-3879e4e8-443b-4434-bce8-9380a11c028d.txt HTTP/1.1" 416 167
+2022-11-10 14:34:03,322 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-11-10 14:34:03,380 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudbuild.googleapis.com:443
+2022-11-10 14:34:03,468 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/insight-tool-321814/locations/global/builds/3879e4e8-443b-4434-bce8-9380a11c028d?alt=json HTTP/1.1" 200 None
+2022-11-10 14:34:04,325 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2022-11-10 14:34:04,361 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /554650739751.cloudbuild-logs.googleusercontent.com/log-3879e4e8-443b-4434-bce8-9380a11c028d.txt HTTP/1.1" 416 167
+2022-11-10 14:34:04,363 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-11-10 14:34:04,475 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudbuild.googleapis.com:443
+2022-11-10 14:34:04,561 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/insight-tool-321814/locations/global/builds/3879e4e8-443b-4434-bce8-9380a11c028d?alt=json HTTP/1.1" 200 None
+2022-11-10 14:34:05,366 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2022-11-10 14:34:05,403 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /554650739751.cloudbuild-logs.googleusercontent.com/log-3879e4e8-443b-4434-bce8-9380a11c028d.txt HTTP/1.1" 416 167
+2022-11-10 14:34:05,405 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-11-10 14:34:05,568 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudbuild.googleapis.com:443
+2022-11-10 14:34:05,658 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/insight-tool-321814/locations/global/builds/3879e4e8-443b-4434-bce8-9380a11c028d?alt=json HTTP/1.1" 200 None
+2022-11-10 14:34:06,408 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2022-11-10 14:34:06,446 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /554650739751.cloudbuild-logs.googleusercontent.com/log-3879e4e8-443b-4434-bce8-9380a11c028d.txt HTTP/1.1" 416 167
+2022-11-10 14:34:06,448 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-11-10 14:34:06,665 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudbuild.googleapis.com:443
+2022-11-10 14:34:06,755 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/insight-tool-321814/locations/global/builds/3879e4e8-443b-4434-bce8-9380a11c028d?alt=json HTTP/1.1" 200 None
+2022-11-10 14:34:07,451 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2022-11-10 14:34:07,490 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /554650739751.cloudbuild-logs.googleusercontent.com/log-3879e4e8-443b-4434-bce8-9380a11c028d.txt HTTP/1.1" 416 167
+2022-11-10 14:34:07,492 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-11-10 14:34:07,762 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudbuild.googleapis.com:443
+2022-11-10 14:34:08,086 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/insight-tool-321814/locations/global/builds/3879e4e8-443b-4434-bce8-9380a11c028d?alt=json HTTP/1.1" 200 None
+2022-11-10 14:34:08,495 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2022-11-10 14:34:08,532 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /554650739751.cloudbuild-logs.googleusercontent.com/log-3879e4e8-443b-4434-bce8-9380a11c028d.txt HTTP/1.1" 416 167
+2022-11-10 14:34:08,534 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-11-10 14:34:09,093 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudbuild.googleapis.com:443
+2022-11-10 14:34:09,176 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/insight-tool-321814/locations/global/builds/3879e4e8-443b-4434-bce8-9380a11c028d?alt=json HTTP/1.1" 200 None
+2022-11-10 14:34:09,537 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2022-11-10 14:34:09,576 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /554650739751.cloudbuild-logs.googleusercontent.com/log-3879e4e8-443b-4434-bce8-9380a11c028d.txt HTTP/1.1" 416 167
+2022-11-10 14:34:09,578 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-11-10 14:34:10,183 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudbuild.googleapis.com:443
+2022-11-10 14:34:10,270 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/insight-tool-321814/locations/global/builds/3879e4e8-443b-4434-bce8-9380a11c028d?alt=json HTTP/1.1" 200 None
+2022-11-10 14:34:10,582 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2022-11-10 14:34:10,619 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /554650739751.cloudbuild-logs.googleusercontent.com/log-3879e4e8-443b-4434-bce8-9380a11c028d.txt HTTP/1.1" 416 167
+2022-11-10 14:34:10,620 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-11-10 14:34:11,277 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudbuild.googleapis.com:443
+2022-11-10 14:34:11,367 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/insight-tool-321814/locations/global/builds/3879e4e8-443b-4434-bce8-9380a11c028d?alt=json HTTP/1.1" 200 None
+2022-11-10 14:34:11,624 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2022-11-10 14:34:11,662 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /554650739751.cloudbuild-logs.googleusercontent.com/log-3879e4e8-443b-4434-bce8-9380a11c028d.txt HTTP/1.1" 416 167
+2022-11-10 14:34:11,664 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-11-10 14:34:12,375 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudbuild.googleapis.com:443
+2022-11-10 14:34:12,456 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/insight-tool-321814/locations/global/builds/3879e4e8-443b-4434-bce8-9380a11c028d?alt=json HTTP/1.1" 200 None
+2022-11-10 14:34:12,668 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2022-11-10 14:34:12,713 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /554650739751.cloudbuild-logs.googleusercontent.com/log-3879e4e8-443b-4434-bce8-9380a11c028d.txt HTTP/1.1" 416 167
+2022-11-10 14:34:12,714 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-11-10 14:34:13,464 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudbuild.googleapis.com:443
+2022-11-10 14:34:13,550 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/insight-tool-321814/locations/global/builds/3879e4e8-443b-4434-bce8-9380a11c028d?alt=json HTTP/1.1" 200 None
+2022-11-10 14:34:13,718 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2022-11-10 14:34:13,758 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /554650739751.cloudbuild-logs.googleusercontent.com/log-3879e4e8-443b-4434-bce8-9380a11c028d.txt HTTP/1.1" 416 167
+2022-11-10 14:34:13,760 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-11-10 14:34:14,557 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudbuild.googleapis.com:443
+2022-11-10 14:34:14,641 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/insight-tool-321814/locations/global/builds/3879e4e8-443b-4434-bce8-9380a11c028d?alt=json HTTP/1.1" 200 None
+2022-11-10 14:34:14,763 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2022-11-10 14:34:14,802 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /554650739751.cloudbuild-logs.googleusercontent.com/log-3879e4e8-443b-4434-bce8-9380a11c028d.txt HTTP/1.1" 416 167
+2022-11-10 14:34:14,804 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-11-10 14:34:15,648 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudbuild.googleapis.com:443
+2022-11-10 14:34:15,732 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/insight-tool-321814/locations/global/builds/3879e4e8-443b-4434-bce8-9380a11c028d?alt=json HTTP/1.1" 200 None
+2022-11-10 14:34:15,807 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2022-11-10 14:34:15,842 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /554650739751.cloudbuild-logs.googleusercontent.com/log-3879e4e8-443b-4434-bce8-9380a11c028d.txt HTTP/1.1" 416 167
+2022-11-10 14:34:15,844 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-11-10 14:34:16,740 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudbuild.googleapis.com:443
+2022-11-10 14:34:16,830 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/insight-tool-321814/locations/global/builds/3879e4e8-443b-4434-bce8-9380a11c028d?alt=json HTTP/1.1" 200 None
+2022-11-10 14:34:16,846 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2022-11-10 14:34:16,881 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /554650739751.cloudbuild-logs.googleusercontent.com/log-3879e4e8-443b-4434-bce8-9380a11c028d.txt HTTP/1.1" 416 167
+2022-11-10 14:34:16,883 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-11-10 14:34:17,837 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudbuild.googleapis.com:443
+2022-11-10 14:34:17,886 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2022-11-10 14:34:17,922 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /554650739751.cloudbuild-logs.googleusercontent.com/log-3879e4e8-443b-4434-bce8-9380a11c028d.txt HTTP/1.1" 416 167
+2022-11-10 14:34:17,924 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-11-10 14:34:17,925 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/insight-tool-321814/locations/global/builds/3879e4e8-443b-4434-bce8-9380a11c028d?alt=json HTTP/1.1" 200 None
+2022-11-10 14:34:18,927 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2022-11-10 14:34:18,932 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudbuild.googleapis.com:443
+2022-11-10 14:34:18,965 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /554650739751.cloudbuild-logs.googleusercontent.com/log-3879e4e8-443b-4434-bce8-9380a11c028d.txt HTTP/1.1" 416 167
+2022-11-10 14:34:18,966 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-11-10 14:34:19,018 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/insight-tool-321814/locations/global/builds/3879e4e8-443b-4434-bce8-9380a11c028d?alt=json HTTP/1.1" 200 None
+2022-11-10 14:34:19,970 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2022-11-10 14:34:20,012 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /554650739751.cloudbuild-logs.googleusercontent.com/log-3879e4e8-443b-4434-bce8-9380a11c028d.txt HTTP/1.1" 416 167
+2022-11-10 14:34:20,014 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-11-10 14:34:20,025 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudbuild.googleapis.com:443
+2022-11-10 14:34:20,109 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/insight-tool-321814/locations/global/builds/3879e4e8-443b-4434-bce8-9380a11c028d?alt=json HTTP/1.1" 200 None
+2022-11-10 14:34:21,018 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2022-11-10 14:34:21,053 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /554650739751.cloudbuild-logs.googleusercontent.com/log-3879e4e8-443b-4434-bce8-9380a11c028d.txt HTTP/1.1" 416 167
+2022-11-10 14:34:21,055 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-11-10 14:34:21,117 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudbuild.googleapis.com:443
+2022-11-10 14:34:21,199 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/insight-tool-321814/locations/global/builds/3879e4e8-443b-4434-bce8-9380a11c028d?alt=json HTTP/1.1" 200 None
+2022-11-10 14:34:22,058 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2022-11-10 14:34:22,094 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /554650739751.cloudbuild-logs.googleusercontent.com/log-3879e4e8-443b-4434-bce8-9380a11c028d.txt HTTP/1.1" 416 167
+2022-11-10 14:34:22,096 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-11-10 14:34:22,206 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudbuild.googleapis.com:443
+2022-11-10 14:34:22,291 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/insight-tool-321814/locations/global/builds/3879e4e8-443b-4434-bce8-9380a11c028d?alt=json HTTP/1.1" 200 None
+2022-11-10 14:34:23,099 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2022-11-10 14:34:23,138 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /554650739751.cloudbuild-logs.googleusercontent.com/log-3879e4e8-443b-4434-bce8-9380a11c028d.txt HTTP/1.1" 416 167
+2022-11-10 14:34:23,139 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-11-10 14:34:23,299 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudbuild.googleapis.com:443
+2022-11-10 14:34:23,384 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/insight-tool-321814/locations/global/builds/3879e4e8-443b-4434-bce8-9380a11c028d?alt=json HTTP/1.1" 200 None
+2022-11-10 14:34:24,142 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2022-11-10 14:34:24,184 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /554650739751.cloudbuild-logs.googleusercontent.com/log-3879e4e8-443b-4434-bce8-9380a11c028d.txt HTTP/1.1" 416 167
+2022-11-10 14:34:24,186 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-11-10 14:34:24,391 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudbuild.googleapis.com:443
+2022-11-10 14:34:24,480 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/insight-tool-321814/locations/global/builds/3879e4e8-443b-4434-bce8-9380a11c028d?alt=json HTTP/1.1" 200 None
+2022-11-10 14:34:25,189 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2022-11-10 14:34:25,227 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /554650739751.cloudbuild-logs.googleusercontent.com/log-3879e4e8-443b-4434-bce8-9380a11c028d.txt HTTP/1.1" 416 167
+2022-11-10 14:34:25,229 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-11-10 14:34:25,488 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudbuild.googleapis.com:443
+2022-11-10 14:34:25,576 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/insight-tool-321814/locations/global/builds/3879e4e8-443b-4434-bce8-9380a11c028d?alt=json HTTP/1.1" 200 None
+2022-11-10 14:34:26,232 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2022-11-10 14:34:26,268 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /554650739751.cloudbuild-logs.googleusercontent.com/log-3879e4e8-443b-4434-bce8-9380a11c028d.txt HTTP/1.1" 416 167
+2022-11-10 14:34:26,270 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-11-10 14:34:26,583 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudbuild.googleapis.com:443
+2022-11-10 14:34:26,677 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/insight-tool-321814/locations/global/builds/3879e4e8-443b-4434-bce8-9380a11c028d?alt=json HTTP/1.1" 200 None
+2022-11-10 14:34:27,274 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2022-11-10 14:34:27,309 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /554650739751.cloudbuild-logs.googleusercontent.com/log-3879e4e8-443b-4434-bce8-9380a11c028d.txt HTTP/1.1" 416 167
+2022-11-10 14:34:27,311 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-11-10 14:34:27,683 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudbuild.googleapis.com:443
+2022-11-10 14:34:27,766 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/insight-tool-321814/locations/global/builds/3879e4e8-443b-4434-bce8-9380a11c028d?alt=json HTTP/1.1" 200 None
+2022-11-10 14:34:28,315 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2022-11-10 14:34:28,350 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /554650739751.cloudbuild-logs.googleusercontent.com/log-3879e4e8-443b-4434-bce8-9380a11c028d.txt HTTP/1.1" 416 167
+2022-11-10 14:34:28,352 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-11-10 14:34:28,774 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudbuild.googleapis.com:443
+2022-11-10 14:34:28,857 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/insight-tool-321814/locations/global/builds/3879e4e8-443b-4434-bce8-9380a11c028d?alt=json HTTP/1.1" 200 None
+2022-11-10 14:34:29,355 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2022-11-10 14:34:29,389 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /554650739751.cloudbuild-logs.googleusercontent.com/log-3879e4e8-443b-4434-bce8-9380a11c028d.txt HTTP/1.1" 416 167
+2022-11-10 14:34:29,390 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-11-10 14:34:29,864 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudbuild.googleapis.com:443
+2022-11-10 14:34:29,948 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/insight-tool-321814/locations/global/builds/3879e4e8-443b-4434-bce8-9380a11c028d?alt=json HTTP/1.1" 200 None
+2022-11-10 14:34:30,393 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2022-11-10 14:34:30,431 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /554650739751.cloudbuild-logs.googleusercontent.com/log-3879e4e8-443b-4434-bce8-9380a11c028d.txt HTTP/1.1" 416 167
+2022-11-10 14:34:30,433 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-11-10 14:34:30,955 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudbuild.googleapis.com:443
+2022-11-10 14:34:31,048 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/insight-tool-321814/locations/global/builds/3879e4e8-443b-4434-bce8-9380a11c028d?alt=json HTTP/1.1" 200 None
+2022-11-10 14:34:31,436 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2022-11-10 14:34:31,472 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /554650739751.cloudbuild-logs.googleusercontent.com/log-3879e4e8-443b-4434-bce8-9380a11c028d.txt HTTP/1.1" 416 167
+2022-11-10 14:34:31,474 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-11-10 14:34:32,055 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudbuild.googleapis.com:443
+2022-11-10 14:34:32,144 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/insight-tool-321814/locations/global/builds/3879e4e8-443b-4434-bce8-9380a11c028d?alt=json HTTP/1.1" 200 None
+2022-11-10 14:34:32,477 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2022-11-10 14:34:32,527 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /554650739751.cloudbuild-logs.googleusercontent.com/log-3879e4e8-443b-4434-bce8-9380a11c028d.txt HTTP/1.1" 416 167
+2022-11-10 14:34:32,528 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-11-10 14:34:33,151 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudbuild.googleapis.com:443
+2022-11-10 14:34:33,235 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/insight-tool-321814/locations/global/builds/3879e4e8-443b-4434-bce8-9380a11c028d?alt=json HTTP/1.1" 200 None
+2022-11-10 14:34:33,532 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2022-11-10 14:34:33,568 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /554650739751.cloudbuild-logs.googleusercontent.com/log-3879e4e8-443b-4434-bce8-9380a11c028d.txt HTTP/1.1" 416 167
+2022-11-10 14:34:33,570 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-11-10 14:34:34,242 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudbuild.googleapis.com:443
+2022-11-10 14:34:34,327 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/insight-tool-321814/locations/global/builds/3879e4e8-443b-4434-bce8-9380a11c028d?alt=json HTTP/1.1" 200 None
+2022-11-10 14:34:34,573 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2022-11-10 14:34:34,611 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /554650739751.cloudbuild-logs.googleusercontent.com/log-3879e4e8-443b-4434-bce8-9380a11c028d.txt HTTP/1.1" 416 167
+2022-11-10 14:34:34,612 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-11-10 14:34:35,334 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudbuild.googleapis.com:443
+2022-11-10 14:34:35,616 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2022-11-10 14:34:35,653 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /554650739751.cloudbuild-logs.googleusercontent.com/log-3879e4e8-443b-4434-bce8-9380a11c028d.txt HTTP/1.1" 416 167
+2022-11-10 14:34:35,654 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-11-10 14:34:35,678 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/insight-tool-321814/locations/global/builds/3879e4e8-443b-4434-bce8-9380a11c028d?alt=json HTTP/1.1" 200 None
+2022-11-10 14:34:36,658 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2022-11-10 14:34:36,685 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudbuild.googleapis.com:443
+2022-11-10 14:34:36,696 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /554650739751.cloudbuild-logs.googleusercontent.com/log-3879e4e8-443b-4434-bce8-9380a11c028d.txt HTTP/1.1" 416 167
+2022-11-10 14:34:36,698 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-11-10 14:34:36,771 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/insight-tool-321814/locations/global/builds/3879e4e8-443b-4434-bce8-9380a11c028d?alt=json HTTP/1.1" 200 None
+2022-11-10 14:34:37,701 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2022-11-10 14:34:37,742 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /554650739751.cloudbuild-logs.googleusercontent.com/log-3879e4e8-443b-4434-bce8-9380a11c028d.txt HTTP/1.1" 416 167
+2022-11-10 14:34:37,744 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-11-10 14:34:37,778 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudbuild.googleapis.com:443
+2022-11-10 14:34:37,864 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/insight-tool-321814/locations/global/builds/3879e4e8-443b-4434-bce8-9380a11c028d?alt=json HTTP/1.1" 200 None
+2022-11-10 14:34:38,747 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2022-11-10 14:34:38,786 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /554650739751.cloudbuild-logs.googleusercontent.com/log-3879e4e8-443b-4434-bce8-9380a11c028d.txt HTTP/1.1" 416 167
+2022-11-10 14:34:38,788 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-11-10 14:34:38,872 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudbuild.googleapis.com:443
+2022-11-10 14:34:39,236 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/insight-tool-321814/locations/global/builds/3879e4e8-443b-4434-bce8-9380a11c028d?alt=json HTTP/1.1" 200 None
+2022-11-10 14:34:39,791 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2022-11-10 14:34:39,825 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /554650739751.cloudbuild-logs.googleusercontent.com/log-3879e4e8-443b-4434-bce8-9380a11c028d.txt HTTP/1.1" 416 167
+2022-11-10 14:34:39,827 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-11-10 14:34:40,244 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudbuild.googleapis.com:443
+2022-11-10 14:34:40,334 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/insight-tool-321814/locations/global/builds/3879e4e8-443b-4434-bce8-9380a11c028d?alt=json HTTP/1.1" 200 None
+2022-11-10 14:34:40,830 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2022-11-10 14:34:40,869 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /554650739751.cloudbuild-logs.googleusercontent.com/log-3879e4e8-443b-4434-bce8-9380a11c028d.txt HTTP/1.1" 416 167
+2022-11-10 14:34:40,871 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-11-10 14:34:41,341 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudbuild.googleapis.com:443
+2022-11-10 14:34:41,429 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/insight-tool-321814/locations/global/builds/3879e4e8-443b-4434-bce8-9380a11c028d?alt=json HTTP/1.1" 200 None
+2022-11-10 14:34:41,874 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2022-11-10 14:34:41,915 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /554650739751.cloudbuild-logs.googleusercontent.com/log-3879e4e8-443b-4434-bce8-9380a11c028d.txt HTTP/1.1" 416 167
+2022-11-10 14:34:41,916 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-11-10 14:34:42,436 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudbuild.googleapis.com:443
+2022-11-10 14:34:42,523 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/insight-tool-321814/locations/global/builds/3879e4e8-443b-4434-bce8-9380a11c028d?alt=json HTTP/1.1" 200 None
+2022-11-10 14:34:42,920 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2022-11-10 14:34:42,962 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /554650739751.cloudbuild-logs.googleusercontent.com/log-3879e4e8-443b-4434-bce8-9380a11c028d.txt HTTP/1.1" 416 167
+2022-11-10 14:34:42,964 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-11-10 14:34:43,530 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudbuild.googleapis.com:443
+2022-11-10 14:34:43,613 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/insight-tool-321814/locations/global/builds/3879e4e8-443b-4434-bce8-9380a11c028d?alt=json HTTP/1.1" 200 None
+2022-11-10 14:34:43,967 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2022-11-10 14:34:44,016 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /554650739751.cloudbuild-logs.googleusercontent.com/log-3879e4e8-443b-4434-bce8-9380a11c028d.txt HTTP/1.1" 416 167
+2022-11-10 14:34:44,018 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-11-10 14:34:44,620 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudbuild.googleapis.com:443
+2022-11-10 14:34:44,709 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/insight-tool-321814/locations/global/builds/3879e4e8-443b-4434-bce8-9380a11c028d?alt=json HTTP/1.1" 200 None
+2022-11-10 14:34:45,022 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2022-11-10 14:34:45,064 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /554650739751.cloudbuild-logs.googleusercontent.com/log-3879e4e8-443b-4434-bce8-9380a11c028d.txt HTTP/1.1" 416 167
+2022-11-10 14:34:45,066 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-11-10 14:34:45,717 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudbuild.googleapis.com:443
+2022-11-10 14:34:45,802 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/insight-tool-321814/locations/global/builds/3879e4e8-443b-4434-bce8-9380a11c028d?alt=json HTTP/1.1" 200 None
+2022-11-10 14:34:46,069 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2022-11-10 14:34:46,112 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /554650739751.cloudbuild-logs.googleusercontent.com/log-3879e4e8-443b-4434-bce8-9380a11c028d.txt HTTP/1.1" 416 167
+2022-11-10 14:34:46,114 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-11-10 14:34:46,809 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudbuild.googleapis.com:443
+2022-11-10 14:34:46,894 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/insight-tool-321814/locations/global/builds/3879e4e8-443b-4434-bce8-9380a11c028d?alt=json HTTP/1.1" 200 None
+2022-11-10 14:34:47,117 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2022-11-10 14:34:47,153 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /554650739751.cloudbuild-logs.googleusercontent.com/log-3879e4e8-443b-4434-bce8-9380a11c028d.txt HTTP/1.1" 416 167
+2022-11-10 14:34:47,155 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-11-10 14:34:47,901 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudbuild.googleapis.com:443
+2022-11-10 14:34:47,989 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/insight-tool-321814/locations/global/builds/3879e4e8-443b-4434-bce8-9380a11c028d?alt=json HTTP/1.1" 200 None
+2022-11-10 14:34:48,159 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2022-11-10 14:34:48,196 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /554650739751.cloudbuild-logs.googleusercontent.com/log-3879e4e8-443b-4434-bce8-9380a11c028d.txt HTTP/1.1" 416 167
+2022-11-10 14:34:48,197 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-11-10 14:34:48,996 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudbuild.googleapis.com:443
+2022-11-10 14:34:49,142 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/insight-tool-321814/locations/global/builds/3879e4e8-443b-4434-bce8-9380a11c028d?alt=json HTTP/1.1" 200 None
+2022-11-10 14:34:49,201 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2022-11-10 14:34:49,241 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /554650739751.cloudbuild-logs.googleusercontent.com/log-3879e4e8-443b-4434-bce8-9380a11c028d.txt HTTP/1.1" 416 167
+2022-11-10 14:34:49,243 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-11-10 14:34:50,150 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudbuild.googleapis.com:443
+2022-11-10 14:34:50,235 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/insight-tool-321814/locations/global/builds/3879e4e8-443b-4434-bce8-9380a11c028d?alt=json HTTP/1.1" 200 None
+2022-11-10 14:34:50,246 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2022-11-10 14:34:50,284 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /554650739751.cloudbuild-logs.googleusercontent.com/log-3879e4e8-443b-4434-bce8-9380a11c028d.txt HTTP/1.1" 416 167
+2022-11-10 14:34:50,286 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-11-10 14:34:51,242 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudbuild.googleapis.com:443
+2022-11-10 14:34:51,290 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2022-11-10 14:34:51,321 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/insight-tool-321814/locations/global/builds/3879e4e8-443b-4434-bce8-9380a11c028d?alt=json HTTP/1.1" 200 None
+2022-11-10 14:34:51,326 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /554650739751.cloudbuild-logs.googleusercontent.com/log-3879e4e8-443b-4434-bce8-9380a11c028d.txt HTTP/1.1" 416 167
+2022-11-10 14:34:51,327 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-11-10 14:34:52,328 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudbuild.googleapis.com:443
+2022-11-10 14:34:52,331 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2022-11-10 14:34:52,367 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /554650739751.cloudbuild-logs.googleusercontent.com/log-3879e4e8-443b-4434-bce8-9380a11c028d.txt HTTP/1.1" 416 167
+2022-11-10 14:34:52,369 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-11-10 14:34:52,418 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/insight-tool-321814/locations/global/builds/3879e4e8-443b-4434-bce8-9380a11c028d?alt=json HTTP/1.1" 200 None
+2022-11-10 14:34:53,373 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2022-11-10 14:34:53,410 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /554650739751.cloudbuild-logs.googleusercontent.com/log-3879e4e8-443b-4434-bce8-9380a11c028d.txt HTTP/1.1" 416 167
+2022-11-10 14:34:53,412 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-11-10 14:34:53,426 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudbuild.googleapis.com:443
+2022-11-10 14:34:53,516 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/insight-tool-321814/locations/global/builds/3879e4e8-443b-4434-bce8-9380a11c028d?alt=json HTTP/1.1" 200 None
+2022-11-10 14:34:54,415 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2022-11-10 14:34:54,453 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /554650739751.cloudbuild-logs.googleusercontent.com/log-3879e4e8-443b-4434-bce8-9380a11c028d.txt HTTP/1.1" 416 167
+2022-11-10 14:34:54,454 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-11-10 14:34:54,523 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudbuild.googleapis.com:443
+2022-11-10 14:34:54,605 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/insight-tool-321814/locations/global/builds/3879e4e8-443b-4434-bce8-9380a11c028d?alt=json HTTP/1.1" 200 None
+2022-11-10 14:34:55,458 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2022-11-10 14:34:55,496 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /554650739751.cloudbuild-logs.googleusercontent.com/log-3879e4e8-443b-4434-bce8-9380a11c028d.txt HTTP/1.1" 416 167
+2022-11-10 14:34:55,498 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-11-10 14:34:55,612 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudbuild.googleapis.com:443
+2022-11-10 14:34:55,701 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/insight-tool-321814/locations/global/builds/3879e4e8-443b-4434-bce8-9380a11c028d?alt=json HTTP/1.1" 200 None
+2022-11-10 14:34:56,501 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2022-11-10 14:34:56,540 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /554650739751.cloudbuild-logs.googleusercontent.com/log-3879e4e8-443b-4434-bce8-9380a11c028d.txt HTTP/1.1" 416 167
+2022-11-10 14:34:56,542 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-11-10 14:34:56,708 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudbuild.googleapis.com:443
+2022-11-10 14:34:56,793 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/insight-tool-321814/locations/global/builds/3879e4e8-443b-4434-bce8-9380a11c028d?alt=json HTTP/1.1" 200 None
+2022-11-10 14:34:57,545 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2022-11-10 14:34:57,579 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /554650739751.cloudbuild-logs.googleusercontent.com/log-3879e4e8-443b-4434-bce8-9380a11c028d.txt HTTP/1.1" 416 167
+2022-11-10 14:34:57,581 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-11-10 14:34:57,801 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudbuild.googleapis.com:443
+2022-11-10 14:34:57,887 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/insight-tool-321814/locations/global/builds/3879e4e8-443b-4434-bce8-9380a11c028d?alt=json HTTP/1.1" 200 None
+2022-11-10 14:34:58,584 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2022-11-10 14:34:58,620 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /554650739751.cloudbuild-logs.googleusercontent.com/log-3879e4e8-443b-4434-bce8-9380a11c028d.txt HTTP/1.1" 416 167
+2022-11-10 14:34:58,622 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-11-10 14:34:58,894 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudbuild.googleapis.com:443
+2022-11-10 14:34:58,982 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/insight-tool-321814/locations/global/builds/3879e4e8-443b-4434-bce8-9380a11c028d?alt=json HTTP/1.1" 200 None
+2022-11-10 14:34:59,625 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2022-11-10 14:34:59,666 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /554650739751.cloudbuild-logs.googleusercontent.com/log-3879e4e8-443b-4434-bce8-9380a11c028d.txt HTTP/1.1" 416 167
+2022-11-10 14:34:59,667 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-11-10 14:34:59,989 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudbuild.googleapis.com:443
+2022-11-10 14:35:00,077 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/insight-tool-321814/locations/global/builds/3879e4e8-443b-4434-bce8-9380a11c028d?alt=json HTTP/1.1" 200 None
+2022-11-10 14:35:00,671 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2022-11-10 14:35:00,707 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /554650739751.cloudbuild-logs.googleusercontent.com/log-3879e4e8-443b-4434-bce8-9380a11c028d.txt HTTP/1.1" 416 167
+2022-11-10 14:35:00,708 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-11-10 14:35:01,084 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudbuild.googleapis.com:443
+2022-11-10 14:35:01,166 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/insight-tool-321814/locations/global/builds/3879e4e8-443b-4434-bce8-9380a11c028d?alt=json HTTP/1.1" 200 None
+2022-11-10 14:35:01,713 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2022-11-10 14:35:01,761 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /554650739751.cloudbuild-logs.googleusercontent.com/log-3879e4e8-443b-4434-bce8-9380a11c028d.txt HTTP/1.1" 416 167
+2022-11-10 14:35:01,764 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-11-10 14:35:02,174 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudbuild.googleapis.com:443
+2022-11-10 14:35:02,263 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/insight-tool-321814/locations/global/builds/3879e4e8-443b-4434-bce8-9380a11c028d?alt=json HTTP/1.1" 200 None
+2022-11-10 14:35:02,768 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2022-11-10 14:35:02,808 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /554650739751.cloudbuild-logs.googleusercontent.com/log-3879e4e8-443b-4434-bce8-9380a11c028d.txt HTTP/1.1" 416 167
+2022-11-10 14:35:02,809 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-11-10 14:35:03,270 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudbuild.googleapis.com:443
+2022-11-10 14:35:03,360 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/insight-tool-321814/locations/global/builds/3879e4e8-443b-4434-bce8-9380a11c028d?alt=json HTTP/1.1" 200 None
+2022-11-10 14:35:03,813 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2022-11-10 14:35:03,847 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /554650739751.cloudbuild-logs.googleusercontent.com/log-3879e4e8-443b-4434-bce8-9380a11c028d.txt HTTP/1.1" 416 167
+2022-11-10 14:35:03,848 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-11-10 14:35:04,367 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudbuild.googleapis.com:443
+2022-11-10 14:35:04,457 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/insight-tool-321814/locations/global/builds/3879e4e8-443b-4434-bce8-9380a11c028d?alt=json HTTP/1.1" 200 None
+2022-11-10 14:35:04,852 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2022-11-10 14:35:04,887 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /554650739751.cloudbuild-logs.googleusercontent.com/log-3879e4e8-443b-4434-bce8-9380a11c028d.txt HTTP/1.1" 416 167
+2022-11-10 14:35:04,889 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-11-10 14:35:05,464 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudbuild.googleapis.com:443
+2022-11-10 14:35:05,548 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/insight-tool-321814/locations/global/builds/3879e4e8-443b-4434-bce8-9380a11c028d?alt=json HTTP/1.1" 200 None
+2022-11-10 14:35:05,893 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2022-11-10 14:35:06,016 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /554650739751.cloudbuild-logs.googleusercontent.com/log-3879e4e8-443b-4434-bce8-9380a11c028d.txt HTTP/1.1" 206 28
+2022-11-10 14:35:06,018 DEBUG    root            Reading GCS logfile: 206 (read 28 bytes)
+2022-11-10 14:35:06,019 INFO     ___FILE_ONLY___ 9993b2c47e68: Pull complete
+
+2022-11-10 14:35:06,556 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudbuild.googleapis.com:443
+2022-11-10 14:35:06,639 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/insight-tool-321814/locations/global/builds/3879e4e8-443b-4434-bce8-9380a11c028d?alt=json HTTP/1.1" 200 None
+2022-11-10 14:35:07,022 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2022-11-10 14:35:07,142 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /554650739751.cloudbuild-logs.googleusercontent.com/log-3879e4e8-443b-4434-bce8-9380a11c028d.txt HTTP/1.1" 206 270
+2022-11-10 14:35:07,143 DEBUG    root            Reading GCS logfile: 206 (read 270 bytes)
+2022-11-10 14:35:07,144 INFO     ___FILE_ONLY___ 52e0ea262be3: Pull complete
+Digest: sha256:d2a00748eaa993fdb5fc941ee6695e6142b53192bff99e74b76e85a876f52379
+Status: Downloaded newer image for gcr.io/deeplearning-platform-release/base-cpu:latest
+ ---> f5c89f738019
+Step 2/6 : COPY requirements.txt /app/requirements.txt
+
+2022-11-10 14:35:07,646 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudbuild.googleapis.com:443
+2022-11-10 14:35:07,730 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/insight-tool-321814/locations/global/builds/3879e4e8-443b-4434-bce8-9380a11c028d?alt=json HTTP/1.1" 200 None
+2022-11-10 14:35:08,147 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2022-11-10 14:35:08,259 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /554650739751.cloudbuild-logs.googleusercontent.com/log-3879e4e8-443b-4434-bce8-9380a11c028d.txt HTTP/1.1" 206 278
+2022-11-10 14:35:08,261 DEBUG    root            Reading GCS logfile: 206 (read 278 bytes)
+2022-11-10 14:35:08,262 INFO     ___FILE_ONLY___  ---> 77b868ba8f29
+Step 3/6 : COPY training.py /app/training.py
+ ---> f70e5bde9ac3
+Step 4/6 : WORKDIR /app
+ ---> Running in d95d92055ddf
+Removing intermediate container d95d92055ddf
+ ---> 675894c50517
+Step 5/6 : RUN pip install -r requirements.txt
+ ---> Running in beb8b30a8442
+
+2022-11-10 14:35:08,737 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudbuild.googleapis.com:443
+2022-11-10 14:35:08,827 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/insight-tool-321814/locations/global/builds/3879e4e8-443b-4434-bce8-9380a11c028d?alt=json HTTP/1.1" 200 None
+2022-11-10 14:35:09,265 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2022-11-10 14:35:09,443 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /554650739751.cloudbuild-logs.googleusercontent.com/log-3879e4e8-443b-4434-bce8-9380a11c028d.txt HTTP/1.1" 416 167
+2022-11-10 14:35:09,445 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-11-10 14:35:09,834 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudbuild.googleapis.com:443
+2022-11-10 14:35:09,913 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/insight-tool-321814/locations/global/builds/3879e4e8-443b-4434-bce8-9380a11c028d?alt=json HTTP/1.1" 200 None
+2022-11-10 14:35:10,448 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2022-11-10 14:35:10,576 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /554650739751.cloudbuild-logs.googleusercontent.com/log-3879e4e8-443b-4434-bce8-9380a11c028d.txt HTTP/1.1" 206 1352
+2022-11-10 14:35:10,578 DEBUG    root            Reading GCS logfile: 206 (read 1352 bytes)
+2022-11-10 14:35:10,578 INFO     ___FILE_ONLY___ Requirement already satisfied: numpy in /opt/conda/lib/python3.7/site-packages (from -r requirements.txt (line 1)) (1.21.6)
+Requirement already satisfied: pandas in /opt/conda/lib/python3.7/site-packages (from -r requirements.txt (line 2)) (1.3.5)
+Requirement already satisfied: scikit-learn in /opt/conda/lib/python3.7/site-packages (from -r requirements.txt (line 3)) (1.0.2)
+Collecting google-cloud
+  Downloading google_cloud-0.34.0-py2.py3-none-any.whl (1.8 kB)
+Requirement already satisfied: python-dateutil>=2.7.3 in /opt/conda/lib/python3.7/site-packages (from pandas->-r requirements.txt (line 2)) (2.8.2)
+Requirement already satisfied: pytz>=2017.3 in /opt/conda/lib/python3.7/site-packages (from pandas->-r requirements.txt (line 2)) (2022.5)
+Requirement already satisfied: scipy>=1.1.0 in /opt/conda/lib/python3.7/site-packages (from scikit-learn->-r requirements.txt (line 3)) (1.7.3)
+Requirement already satisfied: threadpoolctl>=2.0.0 in /opt/conda/lib/python3.7/site-packages (from scikit-learn->-r requirements.txt (line 3)) (3.1.0)
+Requirement already satisfied: joblib>=0.11 in /opt/conda/lib/python3.7/site-packages (from scikit-learn->-r requirements.txt (line 3)) (1.2.0)
+Requirement already satisfied: six>=1.5 in /opt/conda/lib/python3.7/site-packages (from python-dateutil>=2.7.3->pandas->-r requirements.txt (line 2)) (1.16.0)
+
+2022-11-10 14:35:10,920 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudbuild.googleapis.com:443
+2022-11-10 14:35:11,268 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/insight-tool-321814/locations/global/builds/3879e4e8-443b-4434-bce8-9380a11c028d?alt=json HTTP/1.1" 200 None
+2022-11-10 14:35:11,582 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2022-11-10 14:35:11,621 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /554650739751.cloudbuild-logs.googleusercontent.com/log-3879e4e8-443b-4434-bce8-9380a11c028d.txt HTTP/1.1" 416 167
+2022-11-10 14:35:11,623 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-11-10 14:35:12,275 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudbuild.googleapis.com:443
+2022-11-10 14:35:12,361 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/insight-tool-321814/locations/global/builds/3879e4e8-443b-4434-bce8-9380a11c028d?alt=json HTTP/1.1" 200 None
+2022-11-10 14:35:12,626 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2022-11-10 14:35:12,659 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /554650739751.cloudbuild-logs.googleusercontent.com/log-3879e4e8-443b-4434-bce8-9380a11c028d.txt HTTP/1.1" 416 167
+2022-11-10 14:35:12,661 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-11-10 14:35:13,368 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudbuild.googleapis.com:443
+2022-11-10 14:35:13,451 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/insight-tool-321814/locations/global/builds/3879e4e8-443b-4434-bce8-9380a11c028d?alt=json HTTP/1.1" 200 None
+2022-11-10 14:35:13,665 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2022-11-10 14:35:13,776 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /554650739751.cloudbuild-logs.googleusercontent.com/log-3879e4e8-443b-4434-bce8-9380a11c028d.txt HTTP/1.1" 206 314
+2022-11-10 14:35:13,778 DEBUG    root            Reading GCS logfile: 206 (read 314 bytes)
+2022-11-10 14:35:13,778 INFO     ___FILE_ONLY___ Installing collected packages: google-cloud
+Successfully installed google-cloud-0.34.0
+[91mWARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+
+2022-11-10 14:35:14,459 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudbuild.googleapis.com:443
+2022-11-10 14:35:14,542 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/insight-tool-321814/locations/global/builds/3879e4e8-443b-4434-bce8-9380a11c028d?alt=json HTTP/1.1" 200 None
+2022-11-10 14:35:14,781 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2022-11-10 14:35:14,894 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /554650739751.cloudbuild-logs.googleusercontent.com/log-3879e4e8-443b-4434-bce8-9380a11c028d.txt HTTP/1.1" 206 139
+2022-11-10 14:35:14,896 DEBUG    root            Reading GCS logfile: 206 (read 139 bytes)
+2022-11-10 14:35:14,896 INFO     ___FILE_ONLY___ [0mRemoving intermediate container beb8b30a8442
+ ---> 6e0a5b6ba9e8
+Step 6/6 : CMD ["python", "training.py"]
+ ---> Running in c4b0533792b8
+
+2022-11-10 14:35:15,550 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudbuild.googleapis.com:443
+2022-11-10 14:35:15,632 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/insight-tool-321814/locations/global/builds/3879e4e8-443b-4434-bce8-9380a11c028d?alt=json HTTP/1.1" 200 None
+2022-11-10 14:35:15,900 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2022-11-10 14:35:16,018 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /554650739751.cloudbuild-logs.googleusercontent.com/log-3879e4e8-443b-4434-bce8-9380a11c028d.txt HTTP/1.1" 206 280
+2022-11-10 14:35:16,019 DEBUG    root            Reading GCS logfile: 206 (read 280 bytes)
+2022-11-10 14:35:16,020 INFO     ___FILE_ONLY___ Removing intermediate container c4b0533792b8
+ ---> 9b9764cdc305
+Successfully built 9b9764cdc305
+Successfully tagged gcr.io/insight-tool-321814/docker_test_insight/training_cloudbuild_test:latest
+PUSH
+Pushing gcr.io/insight-tool-321814/docker_test_insight/training_cloudbuild_test
+
+2022-11-10 14:35:16,640 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudbuild.googleapis.com:443
+2022-11-10 14:35:16,725 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/insight-tool-321814/locations/global/builds/3879e4e8-443b-4434-bce8-9380a11c028d?alt=json HTTP/1.1" 200 None
+2022-11-10 14:35:17,023 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2022-11-10 14:35:17,138 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /554650739751.cloudbuild-logs.googleusercontent.com/log-3879e4e8-443b-4434-bce8-9380a11c028d.txt HTTP/1.1" 206 1518
+2022-11-10 14:35:17,139 DEBUG    root            Reading GCS logfile: 206 (read 1518 bytes)
+2022-11-10 14:35:17,140 INFO     ___FILE_ONLY___ The push refers to repository [gcr.io/insight-tool-321814/docker_test_insight/training_cloudbuild_test]
+57adb942ab50: Preparing
+fd698b3e84d2: Preparing
+058ad040294a: Preparing
+2ce63e75bec6: Preparing
+ee470c1be53d: Preparing
+affd8f958786: Preparing
+d9807b9e6598: Preparing
+159d73d7356c: Preparing
+b6a3d584445c: Preparing
+9c2c2f9a22a6: Preparing
+11e4526fac3c: Preparing
+60f7ab6b2229: Preparing
+9b55c6d23a55: Preparing
+bb078aa13c77: Preparing
+c99f4484fa81: Preparing
+14a72aa542a8: Preparing
+d207b04446b4: Preparing
+9e49809a77aa: Preparing
+9b3c3bd1f8de: Preparing
+5f70bf18a086: Preparing
+dbf08d497500: Preparing
+83b459ce565c: Preparing
+5f70bf18a086: Preparing
+3cab8b825015: Preparing
+b362faadeffc: Preparing
+f4462d5b2da2: Preparing
+affd8f958786: Waiting
+d9807b9e6598: Waiting
+159d73d7356c: Waiting
+b6a3d584445c: Waiting
+9c2c2f9a22a6: Waiting
+11e4526fac3c: Waiting
+60f7ab6b2229: Waiting
+9b55c6d23a55: Waiting
+bb078aa13c77: Waiting
+c99f4484fa81: Waiting
+14a72aa542a8: Waiting
+d207b04446b4: Waiting
+9e49809a77aa: Waiting
+5f70bf18a086: Waiting
+dbf08d497500: Waiting
+83b459ce565c: Waiting
+3cab8b825015: Waiting
+b362faadeffc: Waiting
+f4462d5b2da2: Waiting
+9b3c3bd1f8de: Waiting
+2ce63e75bec6: Layer already exists
+ee470c1be53d: Layer already exists
+affd8f958786: Layer already exists
+d9807b9e6598: Layer already exists
+159d73d7356c: Layer already exists
+b6a3d584445c: Layer already exists
+9c2c2f9a22a6: Layer already exists
+11e4526fac3c: Layer already exists
+9b55c6d23a55: Layer already exists
+60f7ab6b2229: Layer already exists
+
+2022-11-10 14:35:17,733 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudbuild.googleapis.com:443
+2022-11-10 14:35:17,818 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/insight-tool-321814/locations/global/builds/3879e4e8-443b-4434-bce8-9380a11c028d?alt=json HTTP/1.1" 200 None
+2022-11-10 14:35:18,143 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2022-11-10 14:35:18,258 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /554650739751.cloudbuild-logs.googleusercontent.com/log-3879e4e8-443b-4434-bce8-9380a11c028d.txt HTTP/1.1" 206 420
+2022-11-10 14:35:18,260 DEBUG    root            Reading GCS logfile: 206 (read 420 bytes)
+2022-11-10 14:35:18,260 INFO     ___FILE_ONLY___ bb078aa13c77: Layer already exists
+c99f4484fa81: Layer already exists
+d207b04446b4: Layer already exists
+14a72aa542a8: Layer already exists
+9e49809a77aa: Layer already exists
+9b3c3bd1f8de: Layer already exists
+5f70bf18a086: Layer already exists
+83b459ce565c: Layer already exists
+dbf08d497500: Layer already exists
+3cab8b825015: Layer already exists
+b362faadeffc: Layer already exists
+f4462d5b2da2: Layer already exists
+
+2022-11-10 14:35:18,826 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudbuild.googleapis.com:443
+2022-11-10 14:35:18,912 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/insight-tool-321814/locations/global/builds/3879e4e8-443b-4434-bce8-9380a11c028d?alt=json HTTP/1.1" 200 None
+2022-11-10 14:35:19,263 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2022-11-10 14:35:19,376 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /554650739751.cloudbuild-logs.googleusercontent.com/log-3879e4e8-443b-4434-bce8-9380a11c028d.txt HTTP/1.1" 206 63
+2022-11-10 14:35:19,378 DEBUG    root            Reading GCS logfile: 206 (read 63 bytes)
+2022-11-10 14:35:19,378 INFO     ___FILE_ONLY___ 57adb942ab50: Pushed
+058ad040294a: Pushed
+fd698b3e84d2: Pushed
+
+2022-11-10 14:35:19,919 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudbuild.googleapis.com:443
+2022-11-10 14:35:19,999 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/insight-tool-321814/locations/global/builds/3879e4e8-443b-4434-bce8-9380a11c028d?alt=json HTTP/1.1" 200 None
+2022-11-10 14:35:20,382 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2022-11-10 14:35:20,502 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /554650739751.cloudbuild-logs.googleusercontent.com/log-3879e4e8-443b-4434-bce8-9380a11c028d.txt HTTP/1.1" 206 104
+2022-11-10 14:35:20,504 DEBUG    root            Reading GCS logfile: 206 (read 104 bytes)
+2022-11-10 14:35:20,504 INFO     ___FILE_ONLY___ latest: digest: sha256:b31682eeede18950fa5bae5e3b314cbf35ae04e89c9e414dce898244596f9649 size: 5750
+DONE
+
+2022-11-10 14:35:21,007 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudbuild.googleapis.com:443
+2022-11-10 14:35:21,086 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/insight-tool-321814/locations/global/builds/3879e4e8-443b-4434-bce8-9380a11c028d?alt=json HTTP/1.1" 200 None
+2022-11-10 14:35:21,508 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2022-11-10 14:35:21,546 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /554650739751.cloudbuild-logs.googleusercontent.com/log-3879e4e8-443b-4434-bce8-9380a11c028d.txt HTTP/1.1" 416 167
+2022-11-10 14:35:21,548 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-11-10 14:35:22,551 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2022-11-10 14:35:22,590 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /554650739751.cloudbuild-logs.googleusercontent.com/log-3879e4e8-443b-4434-bce8-9380a11c028d.txt HTTP/1.1" 416 167
+2022-11-10 14:35:22,591 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-11-10 14:35:22,592 INFO     ___FILE_ONLY___ --------------------------------------------------------------------------------
+
+2022-11-10 14:35:22,594 INFO     root            Display format: "
+        table(
+          id,
+          createTime.date('%Y-%m-%dT%H:%M:%S%Oz', undefined='-'),
+          duration(start=startTime,end=finishTime,precision=0,calendar=false,undefined="  -").slice(2:).join(""):label=DURATION,
+          build_source(undefined="-"):label=SOURCE,
+          build_images(undefined="-"):label=IMAGES,
+          status
+        )
+      "
+2022-11-10 14:35:22,603 INFO     ___FILE_ONLY___ ID
+2022-11-10 14:35:22,603 INFO     ___FILE_ONLY___                                     
+2022-11-10 14:35:22,603 INFO     ___FILE_ONLY___ CREATE_TIME
+2022-11-10 14:35:22,603 INFO     ___FILE_ONLY___                 
+2022-11-10 14:35:22,604 INFO     ___FILE_ONLY___ DURATION
+2022-11-10 14:35:22,604 INFO     ___FILE_ONLY___   
+2022-11-10 14:35:22,604 INFO     ___FILE_ONLY___ SOURCE
+2022-11-10 14:35:22,604 INFO     ___FILE_ONLY___                                                                                              
+2022-11-10 14:35:22,604 INFO     ___FILE_ONLY___ IMAGES
+2022-11-10 14:35:22,604 INFO     ___FILE_ONLY___                                                                              
+2022-11-10 14:35:22,604 INFO     ___FILE_ONLY___ STATUS
+2022-11-10 14:35:22,605 INFO     ___FILE_ONLY___ 
+
+2022-11-10 14:35:22,605 INFO     ___FILE_ONLY___ 3879e4e8-443b-4434-bce8-9380a11c028d
+2022-11-10 14:35:22,605 INFO     ___FILE_ONLY___   
+2022-11-10 14:35:22,605 INFO     ___FILE_ONLY___ 2022-11-10T14:32:41+00:00
+2022-11-10 14:35:22,605 INFO     ___FILE_ONLY___   
+2022-11-10 14:35:22,605 INFO     ___FILE_ONLY___ 2M38S
+2022-11-10 14:35:22,605 INFO     ___FILE_ONLY___      
+2022-11-10 14:35:22,605 INFO     ___FILE_ONLY___ gs://insight-tool-321814_cloudbuild/source/1668090761.005794-77c709c329f1430fa527ff8eb13518a0.tgz
+2022-11-10 14:35:22,605 INFO     ___FILE_ONLY___   
+2022-11-10 14:35:22,605 INFO     ___FILE_ONLY___ gcr.io/insight-tool-321814/docker_test_insight/training_cloudbuild_test (+1 more)
+2022-11-10 14:35:22,605 INFO     ___FILE_ONLY___   
+2022-11-10 14:35:22,605 INFO     ___FILE_ONLY___ SUCCESS
+2022-11-10 14:35:22,606 INFO     ___FILE_ONLY___ 
+
+2022-11-10 14:35:22,606 DEBUG    root            SDK update checks are disabled.

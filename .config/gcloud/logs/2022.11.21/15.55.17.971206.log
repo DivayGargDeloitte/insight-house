@@ -1,0 +1,10 @@
+2022-11-21 15:55:18,047 DEBUG    root            Loaded Command Group: ['gcloud', 'container', 'images']
+2022-11-21 15:55:18,469 DEBUG    root            Loaded Command Group: ['gcloud', 'container', 'images', 'list']
+2022-11-21 15:55:18,471 DEBUG    root            Loaded Command Group: ['gcloud', 'alpha', 'container', 'images']
+2022-11-21 15:55:18,472 DEBUG    root            Loaded Command Group: ['gcloud', 'alpha', 'container', 'images', 'list']
+2022-11-21 15:55:18,474 DEBUG    root            Loaded Command Group: ['gcloud', 'beta', 'container', 'images']
+2022-11-21 15:55:18,476 DEBUG    root            Loaded Command Group: ['gcloud', 'beta', 'container', 'images', 'list']
+2022-11-21 15:55:18,477 ERROR    root            (gcloud.container.images.list) unrecognized arguments: gcr.io/insight-tool-321814/docker_test_insight 
+
+To search the help text of gcloud commands, run:
+  gcloud help -- SEARCH_TERMS

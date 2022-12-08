@@ -1,0 +1,119 @@
+2022-11-16 10:44:27,271 DEBUG    root            Loaded Command Group: ['gcloud', 'run']
+2022-11-16 10:44:27,313 DEBUG    root            Loaded Command Group: ['gcloud', 'run', 'deploy']
+2022-11-16 10:44:27,333 DEBUG    root            Running [gcloud.run.deploy] with arguments: [--image: "gcr.io/insight-tool-321814/docker_test_insight/preprocessing_cloudbuild_test_4", --region: "asia-east1", SERVICE: "hmprd"]
+2022-11-16 10:44:27,341 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/554650739751-compute@developer.gserviceaccount.com/?recursive=true
+2022-11-16 10:44:27,344 DEBUG    urllib3.connectionpool Starting new HTTP connection (1): metadata.google.internal:80
+2022-11-16 10:44:27,346 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/554650739751-compute@developer.gserviceaccount.com/?recursive=true HTTP/1.1" 200 155
+2022-11-16 10:44:27,347 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/554650739751-compute@developer.gserviceaccount.com/token
+2022-11-16 10:44:27,351 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/554650739751-compute@developer.gserviceaccount.com/token HTTP/1.1" 200 268
+2022-11-16 10:44:27,362 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/554650739751-compute@developer.gserviceaccount.com/?recursive=true
+2022-11-16 10:44:27,364 DEBUG    urllib3.connectionpool Starting new HTTP connection (1): metadata.google.internal:80
+2022-11-16 10:44:27,367 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/554650739751-compute@developer.gserviceaccount.com/?recursive=true HTTP/1.1" 200 155
+2022-11-16 10:44:27,368 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/554650739751-compute@developer.gserviceaccount.com/token
+2022-11-16 10:44:27,371 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/554650739751-compute@developer.gserviceaccount.com/token HTTP/1.1" 200 268
+2022-11-16 10:44:27,395 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/554650739751-compute@developer.gserviceaccount.com/?recursive=true
+2022-11-16 10:44:27,397 DEBUG    urllib3.connectionpool Starting new HTTP connection (1): metadata.google.internal:80
+2022-11-16 10:44:27,399 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/554650739751-compute@developer.gserviceaccount.com/?recursive=true HTTP/1.1" 200 155
+2022-11-16 10:44:27,399 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/554650739751-compute@developer.gserviceaccount.com/token
+2022-11-16 10:44:27,403 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/554650739751-compute@developer.gserviceaccount.com/token HTTP/1.1" 200 268
+2022-11-16 10:44:27,409 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/554650739751-compute@developer.gserviceaccount.com/?recursive=true
+2022-11-16 10:44:27,411 DEBUG    urllib3.connectionpool Starting new HTTP connection (1): metadata.google.internal:80
+2022-11-16 10:44:27,413 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/554650739751-compute@developer.gserviceaccount.com/?recursive=true HTTP/1.1" 200 155
+2022-11-16 10:44:27,414 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/554650739751-compute@developer.gserviceaccount.com/token
+2022-11-16 10:44:27,417 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/554650739751-compute@developer.gserviceaccount.com/token HTTP/1.1" 200 268
+2022-11-16 10:44:27,425 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): asia-east1-run.googleapis.com:443
+2022-11-16 10:44:28,252 DEBUG    urllib3.connectionpool https://asia-east1-run.googleapis.com:443 "GET /apis/serving.knative.dev/v1/namespaces/insight-tool-321814/services/hmprd?alt=json HTTP/1.1" 404 None
+2022-11-16 10:44:28,258 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): asia-east1-run.googleapis.com:443
+2022-11-16 10:44:29,237 DEBUG    urllib3.connectionpool https://asia-east1-run.googleapis.com:443 "POST /v1/projects/insight-tool-321814/locations/asia-east1/services/hmprd:testIamPermissions?alt=json HTTP/1.1" 200 None
+2022-11-16 10:44:29,239 INFO     ___FILE_ONLY___ This service will require authentication to be invoked.
+
+2022-11-16 10:44:29,240 INFO     ___FILE_ONLY___ Deploying container to Cloud Run service [[1mhmprd[m] in project [[1minsight-tool-321814[m] region [[1masia-east1[m]
+
+2022-11-16 10:44:29,241 INFO     ___FILE_ONLY___ Deploying new service...
+2022-11-16 10:44:29,247 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): asia-east1-run.googleapis.com:443
+2022-11-16 10:44:31,121 DEBUG    urllib3.connectionpool https://asia-east1-run.googleapis.com:443 "POST /apis/serving.knative.dev/v1/namespaces/insight-tool-321814/services?alt=json HTTP/1.1" 200 None
+2022-11-16 10:44:31,129 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): asia-east1-run.googleapis.com:443
+2022-11-16 10:44:31,936 DEBUG    urllib3.connectionpool https://asia-east1-run.googleapis.com:443 "GET /apis/serving.knative.dev/v1/namespaces/insight-tool-321814/services/hmprd?alt=json HTTP/1.1" 200 None
+2022-11-16 10:44:32,945 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): asia-east1-run.googleapis.com:443
+2022-11-16 10:44:33,747 DEBUG    urllib3.connectionpool https://asia-east1-run.googleapis.com:443 "GET /apis/serving.knative.dev/v1/namespaces/insight-tool-321814/services/hmprd?alt=json HTTP/1.1" 200 None
+2022-11-16 10:44:34,756 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): asia-east1-run.googleapis.com:443
+2022-11-16 10:44:35,514 DEBUG    urllib3.connectionpool https://asia-east1-run.googleapis.com:443 "GET /apis/serving.knative.dev/v1/namespaces/insight-tool-321814/services/hmprd?alt=json HTTP/1.1" 200 None
+2022-11-16 10:44:36,523 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): asia-east1-run.googleapis.com:443
+2022-11-16 10:44:37,324 DEBUG    urllib3.connectionpool https://asia-east1-run.googleapis.com:443 "GET /apis/serving.knative.dev/v1/namespaces/insight-tool-321814/services/hmprd?alt=json HTTP/1.1" 200 None
+2022-11-16 10:44:38,333 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): asia-east1-run.googleapis.com:443
+2022-11-16 10:44:38,505 DEBUG    urllib3.connectionpool https://asia-east1-run.googleapis.com:443 "GET /apis/serving.knative.dev/v1/namespaces/insight-tool-321814/services/hmprd?alt=json HTTP/1.1" 200 None
+2022-11-16 10:44:39,514 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): asia-east1-run.googleapis.com:443
+2022-11-16 10:44:40,297 DEBUG    urllib3.connectionpool https://asia-east1-run.googleapis.com:443 "GET /apis/serving.knative.dev/v1/namespaces/insight-tool-321814/services/hmprd?alt=json HTTP/1.1" 200 None
+2022-11-16 10:44:41,306 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): asia-east1-run.googleapis.com:443
+2022-11-16 10:44:42,095 DEBUG    urllib3.connectionpool https://asia-east1-run.googleapis.com:443 "GET /apis/serving.knative.dev/v1/namespaces/insight-tool-321814/services/hmprd?alt=json HTTP/1.1" 200 None
+2022-11-16 10:44:43,103 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): asia-east1-run.googleapis.com:443
+2022-11-16 10:44:43,858 DEBUG    urllib3.connectionpool https://asia-east1-run.googleapis.com:443 "GET /apis/serving.knative.dev/v1/namespaces/insight-tool-321814/services/hmprd?alt=json HTTP/1.1" 200 None
+2022-11-16 10:44:44,867 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): asia-east1-run.googleapis.com:443
+2022-11-16 10:44:45,632 DEBUG    urllib3.connectionpool https://asia-east1-run.googleapis.com:443 "GET /apis/serving.knative.dev/v1/namespaces/insight-tool-321814/services/hmprd?alt=json HTTP/1.1" 200 None
+2022-11-16 10:44:46,641 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): asia-east1-run.googleapis.com:443
+2022-11-16 10:44:47,393 DEBUG    urllib3.connectionpool https://asia-east1-run.googleapis.com:443 "GET /apis/serving.knative.dev/v1/namespaces/insight-tool-321814/services/hmprd?alt=json HTTP/1.1" 200 None
+2022-11-16 10:44:48,401 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): asia-east1-run.googleapis.com:443
+2022-11-16 10:44:49,192 DEBUG    urllib3.connectionpool https://asia-east1-run.googleapis.com:443 "GET /apis/serving.knative.dev/v1/namespaces/insight-tool-321814/services/hmprd?alt=json HTTP/1.1" 200 None
+2022-11-16 10:44:50,201 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): asia-east1-run.googleapis.com:443
+2022-11-16 10:44:50,964 DEBUG    urllib3.connectionpool https://asia-east1-run.googleapis.com:443 "GET /apis/serving.knative.dev/v1/namespaces/insight-tool-321814/services/hmprd?alt=json HTTP/1.1" 200 None
+2022-11-16 10:44:51,973 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): asia-east1-run.googleapis.com:443
+2022-11-16 10:44:52,750 DEBUG    urllib3.connectionpool https://asia-east1-run.googleapis.com:443 "GET /apis/serving.knative.dev/v1/namespaces/insight-tool-321814/services/hmprd?alt=json HTTP/1.1" 200 None
+2022-11-16 10:44:53,759 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): asia-east1-run.googleapis.com:443
+2022-11-16 10:44:54,505 DEBUG    urllib3.connectionpool https://asia-east1-run.googleapis.com:443 "GET /apis/serving.knative.dev/v1/namespaces/insight-tool-321814/services/hmprd?alt=json HTTP/1.1" 200 None
+2022-11-16 10:44:55,514 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): asia-east1-run.googleapis.com:443
+2022-11-16 10:44:56,300 DEBUG    urllib3.connectionpool https://asia-east1-run.googleapis.com:443 "GET /apis/serving.knative.dev/v1/namespaces/insight-tool-321814/services/hmprd?alt=json HTTP/1.1" 200 None
+2022-11-16 10:44:57,310 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): asia-east1-run.googleapis.com:443
+2022-11-16 10:44:58,072 DEBUG    urllib3.connectionpool https://asia-east1-run.googleapis.com:443 "GET /apis/serving.knative.dev/v1/namespaces/insight-tool-321814/services/hmprd?alt=json HTTP/1.1" 200 None
+2022-11-16 10:44:59,081 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): asia-east1-run.googleapis.com:443
+2022-11-16 10:44:59,858 DEBUG    urllib3.connectionpool https://asia-east1-run.googleapis.com:443 "GET /apis/serving.knative.dev/v1/namespaces/insight-tool-321814/services/hmprd?alt=json HTTP/1.1" 200 None
+2022-11-16 10:45:00,867 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): asia-east1-run.googleapis.com:443
+2022-11-16 10:45:01,658 DEBUG    urllib3.connectionpool https://asia-east1-run.googleapis.com:443 "GET /apis/serving.knative.dev/v1/namespaces/insight-tool-321814/services/hmprd?alt=json HTTP/1.1" 200 None
+2022-11-16 10:45:02,674 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): asia-east1-run.googleapis.com:443
+2022-11-16 10:45:03,450 DEBUG    urllib3.connectionpool https://asia-east1-run.googleapis.com:443 "GET /apis/serving.knative.dev/v1/namespaces/insight-tool-321814/services/hmprd?alt=json HTTP/1.1" 200 None
+2022-11-16 10:45:04,459 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): asia-east1-run.googleapis.com:443
+2022-11-16 10:45:05,211 DEBUG    urllib3.connectionpool https://asia-east1-run.googleapis.com:443 "GET /apis/serving.knative.dev/v1/namespaces/insight-tool-321814/services/hmprd?alt=json HTTP/1.1" 200 None
+2022-11-16 10:45:06,220 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): asia-east1-run.googleapis.com:443
+2022-11-16 10:45:07,015 DEBUG    urllib3.connectionpool https://asia-east1-run.googleapis.com:443 "GET /apis/serving.knative.dev/v1/namespaces/insight-tool-321814/services/hmprd?alt=json HTTP/1.1" 200 None
+2022-11-16 10:45:08,024 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): asia-east1-run.googleapis.com:443
+2022-11-16 10:45:08,791 DEBUG    urllib3.connectionpool https://asia-east1-run.googleapis.com:443 "GET /apis/serving.knative.dev/v1/namespaces/insight-tool-321814/services/hmprd?alt=json HTTP/1.1" 200 None
+2022-11-16 10:45:09,800 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): asia-east1-run.googleapis.com:443
+2022-11-16 10:45:10,556 DEBUG    urllib3.connectionpool https://asia-east1-run.googleapis.com:443 "GET /apis/serving.knative.dev/v1/namespaces/insight-tool-321814/services/hmprd?alt=json HTTP/1.1" 200 None
+2022-11-16 10:45:11,567 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): asia-east1-run.googleapis.com:443
+2022-11-16 10:45:11,736 DEBUG    urllib3.connectionpool https://asia-east1-run.googleapis.com:443 "GET /apis/serving.knative.dev/v1/namespaces/insight-tool-321814/services/hmprd?alt=json HTTP/1.1" 200 None
+2022-11-16 10:45:12,746 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): asia-east1-run.googleapis.com:443
+2022-11-16 10:45:13,505 DEBUG    urllib3.connectionpool https://asia-east1-run.googleapis.com:443 "GET /apis/serving.knative.dev/v1/namespaces/insight-tool-321814/services/hmprd?alt=json HTTP/1.1" 200 None
+2022-11-16 10:45:14,514 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): asia-east1-run.googleapis.com:443
+2022-11-16 10:45:15,268 DEBUG    urllib3.connectionpool https://asia-east1-run.googleapis.com:443 "GET /apis/serving.knative.dev/v1/namespaces/insight-tool-321814/services/hmprd?alt=json HTTP/1.1" 200 None
+2022-11-16 10:45:16,277 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): asia-east1-run.googleapis.com:443
+2022-11-16 10:45:17,058 DEBUG    urllib3.connectionpool https://asia-east1-run.googleapis.com:443 "GET /apis/serving.knative.dev/v1/namespaces/insight-tool-321814/services/hmprd?alt=json HTTP/1.1" 200 None
+2022-11-16 10:45:18,067 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): asia-east1-run.googleapis.com:443
+2022-11-16 10:45:18,820 DEBUG    urllib3.connectionpool https://asia-east1-run.googleapis.com:443 "GET /apis/serving.knative.dev/v1/namespaces/insight-tool-321814/services/hmprd?alt=json HTTP/1.1" 200 None
+2022-11-16 10:45:19,829 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): asia-east1-run.googleapis.com:443
+2022-11-16 10:45:20,578 DEBUG    urllib3.connectionpool https://asia-east1-run.googleapis.com:443 "GET /apis/serving.knative.dev/v1/namespaces/insight-tool-321814/services/hmprd?alt=json HTTP/1.1" 200 None
+2022-11-16 10:45:21,587 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): asia-east1-run.googleapis.com:443
+2022-11-16 10:45:22,359 DEBUG    urllib3.connectionpool https://asia-east1-run.googleapis.com:443 "GET /apis/serving.knative.dev/v1/namespaces/insight-tool-321814/services/hmprd?alt=json HTTP/1.1" 200 None
+2022-11-16 10:45:23,368 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): asia-east1-run.googleapis.com:443
+2022-11-16 10:45:24,107 DEBUG    urllib3.connectionpool https://asia-east1-run.googleapis.com:443 "GET /apis/serving.knative.dev/v1/namespaces/insight-tool-321814/services/hmprd?alt=json HTTP/1.1" 200 None
+2022-11-16 10:45:25,116 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): asia-east1-run.googleapis.com:443
+2022-11-16 10:45:25,863 DEBUG    urllib3.connectionpool https://asia-east1-run.googleapis.com:443 "GET /apis/serving.knative.dev/v1/namespaces/insight-tool-321814/services/hmprd?alt=json HTTP/1.1" 200 None
+2022-11-16 10:45:26,871 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): asia-east1-run.googleapis.com:443
+2022-11-16 10:45:27,623 DEBUG    urllib3.connectionpool https://asia-east1-run.googleapis.com:443 "GET /apis/serving.knative.dev/v1/namespaces/insight-tool-321814/services/hmprd?alt=json HTTP/1.1" 200 None
+2022-11-16 10:45:28,632 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): asia-east1-run.googleapis.com:443
+2022-11-16 10:45:29,391 DEBUG    urllib3.connectionpool https://asia-east1-run.googleapis.com:443 "GET /apis/serving.knative.dev/v1/namespaces/insight-tool-321814/services/hmprd?alt=json HTTP/1.1" 200 None
+2022-11-16 10:45:30,400 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): asia-east1-run.googleapis.com:443
+2022-11-16 10:45:31,171 DEBUG    urllib3.connectionpool https://asia-east1-run.googleapis.com:443 "GET /apis/serving.knative.dev/v1/namespaces/insight-tool-321814/services/hmprd?alt=json HTTP/1.1" 200 None
+2022-11-16 10:45:32,180 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): asia-east1-run.googleapis.com:443
+2022-11-16 10:45:32,942 DEBUG    urllib3.connectionpool https://asia-east1-run.googleapis.com:443 "GET /apis/serving.knative.dev/v1/namespaces/insight-tool-321814/services/hmprd?alt=json HTTP/1.1" 200 None
+2022-11-16 10:45:33,950 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): asia-east1-run.googleapis.com:443
+2022-11-16 10:45:34,693 DEBUG    urllib3.connectionpool https://asia-east1-run.googleapis.com:443 "GET /apis/serving.knative.dev/v1/namespaces/insight-tool-321814/services/hmprd?alt=json HTTP/1.1" 200 None
+2022-11-16 10:45:35,702 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): asia-east1-run.googleapis.com:443
+2022-11-16 10:45:36,474 DEBUG    urllib3.connectionpool https://asia-east1-run.googleapis.com:443 "GET /apis/serving.knative.dev/v1/namespaces/insight-tool-321814/services/hmprd?alt=json HTTP/1.1" 200 None
+2022-11-16 10:45:37,482 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): asia-east1-run.googleapis.com:443
+2022-11-16 10:45:38,272 DEBUG    urllib3.connectionpool https://asia-east1-run.googleapis.com:443 "GET /apis/serving.knative.dev/v1/namespaces/insight-tool-321814/services/hmprd?alt=json HTTP/1.1" 200 None
+2022-11-16 10:45:39,281 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): asia-east1-run.googleapis.com:443
+2022-11-16 10:45:40,036 DEBUG    urllib3.connectionpool https://asia-east1-run.googleapis.com:443 "GET /apis/serving.knative.dev/v1/namespaces/insight-tool-321814/services/hmprd?alt=json HTTP/1.1" 200 None
+2022-11-16 10:45:41,045 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): asia-east1-run.googleapis.com:443
+2022-11-16 10:45:41,791 DEBUG    urllib3.connectionpool https://asia-east1-run.googleapis.com:443 "GET /apis/serving.knative.dev/v1/namespaces/insight-tool-321814/services/hmprd?alt=json HTTP/1.1" 200 None
+2022-11-16 10:45:42,800 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): asia-east1-run.googleapis.com:443
+2022-11-16 10:45:43,554 DEBUG    urllib3.connectionpool https://asia-east1-run.googleapis.com:443 "GET /apis/serving.knative.dev/v1/namespaces/insight-tool-321814/services/hmprd?alt=json HTTP/1.1" 200 None
+2022-11-16 10:45:44,564 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): asia-east1-run.googleapis.com:443

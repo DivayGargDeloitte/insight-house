@@ -1,0 +1,13 @@
+2022-11-16 09:54:02,129 DEBUG    root            Loaded Command Group: ['gcloud', 'run']
+2022-11-16 09:54:02,680 DEBUG    root            Loaded Command Group: ['gcloud', 'run', 'routes']
+2022-11-16 09:54:03,137 DEBUG    root            Loaded Command Group: ['gcloud', 'run', 'deploy']
+2022-11-16 09:54:03,225 DEBUG    root            Loaded Command Group: ['gcloud', 'run', 'services']
+2022-11-16 09:54:03,235 DEBUG    root            Loaded Command Group: ['gcloud', 'run', 'configurations']
+2022-11-16 09:54:03,254 DEBUG    root            No implementation for release track [GA] for element: [/usr/lib/google-cloud-sdk/lib/surface/run/jobs]
+2022-11-16 09:54:03,268 DEBUG    root            Loaded Command Group: ['gcloud', 'run', 'regions']
+2022-11-16 09:54:03,271 DEBUG    root            Loaded Command Group: ['gcloud', 'run', 'domain_mappings']
+2022-11-16 09:54:03,295 DEBUG    root            No implementation for release track [GA] for element: [/usr/lib/google-cloud-sdk/lib/surface/run/integrations]
+2022-11-16 09:54:03,297 DEBUG    root            Loaded Command Group: ['gcloud', 'run', 'revisions']
+2022-11-16 09:54:03,304 DEBUG    root            Loaded Command Group: ['gcloud', 'alpha', 'run']
+2022-11-16 09:54:03,306 DEBUG    root            Loaded Command Group: ['gcloud', 'beta', 'run']
+2022-11-16 09:54:03,308 ERROR    root            (gcloud.run) Invalid choice: 'gcr.io/insight-tool-321814/docker_test_insight/preprocessing_cloudbuild_test_4'.

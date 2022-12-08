@@ -1,0 +1,3 @@
+2022-11-29 18:01:13,018 DEBUG    root            Loaded Command Group: ['gcloud', 'functions']
+2022-11-29 18:01:13,075 DEBUG    root            Loaded Command Group: ['gcloud', 'functions', 'deploy']
+2022-11-29 18:01:13,103 ERROR    root            (gcloud.functions.deploy) argument --trigger-bucket: At most one of --trigger-bucket | --trigger-http | --trigger-topic | --trigger-event --trigger-resource | --trigger-event-filters --trigger-event-filters-path-pattern --trigger-channel can be specified.

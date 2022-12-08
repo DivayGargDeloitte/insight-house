@@ -1,0 +1,17 @@
+2022-11-29 18:13:02,754 DEBUG    root            Loaded Command Group: ['gcloud', 'functions']
+2022-11-29 18:13:02,849 DEBUG    root            Loaded Command Group: ['gcloud', 'functions', 'deploy']
+2022-11-29 18:13:02,895 DEBUG    root            Running [gcloud.functions.deploy] with arguments: [--allow-unauthenticated: "True", --entry-point: "hello_gcs", --region: "us-central1", --runtime: "python37", --source: "https://source.developers.google.com/projects/insight-tool-321814/repos/House-mlops/moveable-aliases/main", --trigger-event: "google.storage.object.finalize", NAME: "funtdeploy2"]
+2022-11-29 18:13:02,895 DEBUG    root            (gcloud.functions.deploy) You must provide --trigger-resource when using --trigger-event=google.storage.object.finalize
+Traceback (most recent call last):
+  File "/usr/lib/google-cloud-sdk/lib/googlecloudsdk/calliope/cli.py", line 987, in Execute
+    resources = calliope_command.Run(cli=self, args=args)
+  File "/usr/lib/google-cloud-sdk/lib/googlecloudsdk/calliope/backend.py", line 807, in Run
+    resources = command_instance.Run(args)
+  File "/usr/lib/google-cloud-sdk/lib/surface/functions/deploy.py", line 108, in Run
+    return command_v1.Run(args, track=self.ReleaseTrack())
+  File "/usr/lib/google-cloud-sdk/lib/googlecloudsdk/command_lib/functions/v1/deploy/command.py", line 347, in Run
+    trigger_util.ValidateTriggerArgs(args.trigger_event, args.trigger_resource,
+  File "/usr/lib/google-cloud-sdk/lib/googlecloudsdk/command_lib/functions/v1/deploy/trigger_util.py", line 97, in ValidateTriggerArgs
+    raise exceptions.FunctionsError(
+googlecloudsdk.api_lib.functions.v1.exceptions.FunctionsError: You must provide --trigger-resource when using --trigger-event=google.storage.object.finalize
+2022-11-29 18:13:02,897 ERROR    root            (gcloud.functions.deploy) You must provide --trigger-resource when using --trigger-event=google.storage.object.finalize
